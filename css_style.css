@@ -1,0 +1,136 @@
+.navbar-inverse 
+{
+    background-color: #9b59b6;
+    border-color: #8e44ad;
+    
+}
+.navbar-inverse .navbar-header
+{
+    margin-left: 5%;
+    
+}
+.navbar-inverse .navbar-header>a
+{
+    font-size: x-large;
+}
+.navbar-inverse .navbar-brand 
+{
+    color: #ecf0f1;
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus 
+{
+    color: #ecdbff;
+}
+.navbar-inverse .navbar-text 
+{
+    color: #ecf0f1;
+}
+.navbar-inverse .navbar-nav > li 
+{
+    font-size: large;   
+}
+.navbar-inverse .navbar-nav > li > a 
+{
+    color: #ecf0f1;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus 
+{
+    color: #ecdbff;
+}
+.navbar-inverse .navbar-nav > li > .dropdown-menu {
+    background-color: #9b59b6;
+}
+.navbar-inverse .navbar-nav > li > .dropdown-menu > li > a {
+    color: #ecf0f1;
+}
+.navbar-inverse .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-inverse .navbar-nav > li > .dropdown-menu > li > a:focus 
+{
+    color: #ecdbff;
+    background-color: #8e44ad;
+}
+@media (max-width: 767px)
+{
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a 
+    {
+        color: #ecf0f1;
+    }
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus 
+    {
+        color: #ecdbff;
+    }
+    .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus
+     {
+        color: #ecdbff;
+        background-color: #8e44ad;
+    }
+    #menulist
+    {
+        margin-top: 6%;
+    }
+    .name_cao
+    {
+        font-size: large;
+        margin-top: 1%;
+        margin-left: 40%;
+    }
+    
+}
+#textid
+{
+    font-size: large;
+}
+.row
+{
+    margin-top: 2%;
+}
+body 
+{ 
+    padding-top: 4%; 
+}
+.link
+{
+    font-size: large;
+    color: #000;
+}
+.content
+{
+    font-weight: lighter;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+
+.img_cao
+{
+    margin-left: 45%;
+}
+.name_cao
+{
+    font-size: large;
+    margin-top: 3.5%;
+}
+.introduction
+{
+    text-align: justify;
+    text-justify : inter-ideograph;
+    text-indent:4%
+}
+.list_ins
+{
+    text-align: justify;
+    text-justify : inter-ideograph;
+}
+.S_ins
+{
+    margin-top: 2%;
+    margin-left: -5%;
+}
