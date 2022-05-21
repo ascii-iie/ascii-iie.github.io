@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SN_Paperlist</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+        <link rel="stylesheet" href="css_style.css">
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+      </head>
+    <body>
+
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="true">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              
+              <a class="navbar-brand" >ASCII LAB</a>
+              </div>
+              <div class="navbar-collapse collapse in" id="navbar-collapse-1" aria-expanded="true">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="Home.html">Home</a></li>
+                  <li><a href="Team.html">Team</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-has
+          popup="true" aria-expanded="false">Group<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="NLG.html">Natural language Generation,NLG</a></li>
+                      <li><a href="NLU.html">Natural Language Understanding,NLU</a></li>
+                      <li><a href="SN.html">Social Network</a></li>
+                      
+                    </ul>
+                  </li> 
+                  <li><a href="About.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+        
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2 col-md-offset-1 col-lg-offset-1 col-xl-offset-1" id="menulist" >
+            <a href="SN.html" class="list-group-item  list-group-item-info" id="textid">Introduction</a>
+            <a href="SN_Paperlist.html" class="list-group-item  list-group-item-info active" id="textid">Paper list </a>
+        </div>
+
+        <div class="col-sm-8 column ">
+             <ol class="breadcrumb">
+                <li class="active">Menu
+                </li>
+                <li class="active">Paper list
+                </li>
+             </ol>
+            <table class="table">
+                <tbody>
+                <tr>
+                    <th>
+                        <a href="https://arxiv.org/pdf/2109.11800.pdf" class="link">AAAI2022: How Does Knowledge Graph Embedding Extrapolate to Unseen Data: a Semantic Evidence View </a>
+                        <p class="content">Ren Li, Yanan Cao, Qiannan Zhu, Guanqun Bi, Fang Fang, Yi Liu, Qian Li</p>
+                        <p class="content"><strong>Abstract:</strong>Knowledge Graph Embedding (KGE) aims to learn representations for entities and relations. Most KGE models have gained great success, especially on extrapolation scenarios. Specifically, given an unseen triple (h, r, t), a trained model can still correctly predict t from (h, r, ?), or h from (?, r, t), such extrapolation ability is impressive. However, most existing KGE works focus on the design of delicate triple modeling function, which mainly tell us how to measure the plausibility of observed triples, but we have limited understanding of why the methods can extrapolate to unseen data, and what are the important factors to help KGE extrapolate. Therefore in this work, we attempt to, from a data relevant view, study KGE extrapolation of two problems: 1. How does KGE extrapolate to unseen data? 2. How to design the KGE model with better extrapolation ability? For the problem 1, we first discuss the impact factors for extrapolation and from relation, entity and triple level respectively, propose three Semantic Evidences (SEs), which can be observed from training set and provide important semantic information for extrapolation to unseen data. Then we verify the effectiveness of SEs through extensive experiments on several typical KGE methods, and demonstrate that SEs serve as an important role for understanding the extrapolation ability of KGE. For the problem 2, to make better use of the SE information for more extrapolative knowledge representation, we propose a novel GNN-based KGE model, called Semantic Evidence aware Graph Neural Network (SE-GNN). Finally, through extensive experiments on FB15k-237 and WN18RR datasets, we show that SE-GNN achieves state-of-the-art performance on Knowledge Graph Completion task and perform a better extrapolation ability.</p>
+                        <a href="https://github.com/renli1024/SE-GNN">https://github.com/renli1024/SE-GNN</a>
+                    </th>
+                    
+                </tr>
+                </tbody>
+               
+            </table>
+        </div>
+    </div>
+</div>
+<div id="footer" class="container-fluid ">      
+  <nav class="navbar navbar-default text-center navbar-fixed-bottom" >
+      <div class="navbar-inner navbar-text text-center col-sm-12 column">
+  
+          <p class="text-muted credit " style="padding: 0.1%;">
+              Minzhuang Road, Haidian District, Beijing, China<a href="https://www.google.com/maps/place/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@39.97426,116.2137013,17z/data=!3m1!4b1!4m5!3m4!1s0x35f05a628b02e751:0x2504f0afe1d5772!8m2!3d39.9741944!4d116.2158916">(Map)</a> 100093
+          </p>
+      </div>
+  </nav>
+  </div>   
+
+    </body>
+</html>

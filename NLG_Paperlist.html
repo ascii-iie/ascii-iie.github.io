@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NLG_Paperlist</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css_style.css">
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   
+
+      </head>
+      
+    <body>
+
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="true">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              
+              <a class="navbar-brand" >ASCII LAB</a>
+              </div>
+              <div class="navbar-collapse collapse in" id="navbar-collapse-1" aria-expanded="true">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="Home.html">Home</a></li>
+                  <li><a href="Team.html">Team</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-has
+          popup="true" aria-expanded="false">Group<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="NLG.html">Natural language Generation,NLG</a></li>
+                      <li><a href="NLU.html">Natural Language Understanding,NLU</a></li>
+                      <li><a href="SN.html">Social Network</a></li>
+                      
+                    </ul>
+                  </li> 
+                  <li><a href="About.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+        
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2 col-md-offset-1 col-lg-offset-1 col-xl-offset-1" id="menulist" >
+            <a href="NLG.html" class="list-group-item  list-group-item-info" id="textid">Introduction</a>
+            <a href="NLG_Paperlist.html" class="list-group-item  list-group-item-info active" id="textid">Paper list </a>
+        </div>
+
+        <div class="col-sm-8 column ">
+             <ol class="breadcrumb">
+                <li class="active">Menu
+                </li>
+                <li class="active">Paper list
+                </li>
+             </ol>
+            <table class="table">
+                <tbody>
+                <tr>
+                    <th>
+                        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/17552" class="link">Flexible Non-Autoregressive Extractive Summarization with Threshold: How to Extract a Non-Fixed Number of Summary Sentences</a>
+                        <p class="content">Ruipeng Jia, Yanan Cao, Haichao Shi,Fang Fang, Pengfei Yin,Shi Wang </p>
+                        <p class="content"><strong>Abstract:</strong>Sentence-level extractive summarization is a fundamental yet challenging task, and recent powerful approaches prefer to pick sentences sorted by the predicted probabilities until the length limit is reached, a.k.a. ``Top-K Strategy''. This length limit is fixed based on the validation set, resulting in the lack of flexibility. In this work, we propose a more flexible and accurate non-autoregressive method for single document extractive summarization, extracting a non-fixed number of summary sentences without the sorting step. We call our approach ThresSum as it picks sentences simultaneously and individually from the source document when the predicted probabilities exceed a threshold. During training, the model enhances sentence representation through iterative refinement and the intermediate latent variables receive some weak supervision with soft labels, which are generated progressively by adjusting the temperature with a knowledge distillation algorithm. Specifically, the temperature is initialized with high value and drops along with the iteration until a temperature of 1. Experimental results on CNN/DM and NYT datasets have demonstrated the effectiveness of ThresSum, which significantly outperforms BERTSUMEXT with a substantial improvement of 0.74 ROUGE-1 score on CNN/DM. Our source code will be available on Github.</p>
+                        <a href="https://github.com/jiaruipeng1994/Extractive_Summarization">https://github.com/jiaruipeng1994/Extractive_Summarization</a>
+                    </th>
+                    
+                </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th>
+                            <a href="https://dl.acm.org/doi/10.1145/3340531.3412078" class="link">DistilSum:Distilling the Knowledge for Extractive Summarization</a>
+                            <p class="content">Ruipeng Jia, Yanan Cao, Haichao Shi,Fang Fang, Yanbing Liu,Jianlong Tan </p>
+                            <p class="content"><strong>Abstract:</strong>A popular choice for extractive summarization is to conceptualize it as sentence-level classification, supervised by binary labels. While the common metric ROUGE prefers to measure the text similarity, instead of the performance of classifier. For example, BERTSUMEXT, the best extractive classifier so far, only achieves a precision of 32.9% at the top 3 extracted sentences (P@3) on CNN/DM dataset. It is obvious that current approaches cannot model the complex relationship of sentences exactly with 0/1 targets. In this paper, we introduce DistilSum, which contains teacher mechanism and student model. Teacher mechanism produces high entropy soft targets at a high temperature. Our student model is trained with the same temperature to match these informative soft targets and tested with temperature of 1 to distill for ground-truth labels. Compared with large version of BERTSUMEXT, our experimental result on CNN/DM achieves a substantial improvement of 0.99 ROUGE-L score (text similarity) and 3.95 P@3 score (performance of classifier). Our source code will be available on Github.</p>
+                            <a href="https://github.com/jiaruipeng1994/Extractive_Summarization">https://github.com/jiaruipeng1994/Extractive_Summarization</a>
+                        </th>
+                        
+                    </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <a href="https://aclanthology.org/2020.emnlp-main.295/"class="link">Neural Extractive Summarization with Hierarchical Attentive Heterogeneous Graph Network</a>
+                                <p class="content">Ruipeng Jia, Yanan Cao, Hengzhu Tang, Fang Fang, Cong Cao, Shi Wang</p>
+                                <p class="content"><strong>Abstract:</strong>Sentence-level extractive text summarization is substantially a node classification task of network mining, adhering to the informative components and concise representations. There are lots of redundant phrases between extracted sentences, but it is difficult to model them exactly by the general supervised methods. Previous sentence encoders, especially BERT, specialize in modeling the relationship between source sentences. While, they have no ability to consider the overlaps of the target selected summary, and there are inherent dependencies among target labels of sentences. In this paper, we propose HAHSum (as shorthand for Hierarchical Attentive Heterogeneous Graph for Text Summarization), which well models different levels of information, including words and sentences, and spotlights redundancy dependencies between sentences. Our approach iteratively refines the sentence representations with redundancy-aware graph and delivers the label dependencies by message passing. Experiments on large scale benchmark corpus (CNN/DM, NYT, and NEWSROOM) demonstrate that HAHSum yields ground-breaking performance and outperforms previous extractive summarizers.</p>
+                                <a href="https://github.com/jiaruipeng1994/Extractive_Summarization">https://github.com/jiaruipeng1994/Extractive_Summarization</a>
+
+                            </th>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                       <tr>
+                            <th>
+                            <a href="https://aclanthology.org/2021.acl-long.31/?ref=https://githubhelp.com"class="link">Deep Differential Amplifier for Extractive Summarization</a>
+                            <p class="content">Ruipeng Jia, Yanan Cao, Fang Fang, Yuchen Zhou, Zheng Fang, Yanbing Liu, Shi Wang</p>
+                            <p class="content"><strong>Abstract:</strong>For sentence-level extractive summarization, there is a disproportionate ratio of selected and unselected sentences, leading to flatting the summary features when maximizing the accuracy. The imbalanced classification of summarization is inherent, which can’t be addressed by common algorithms easily. In this paper, we conceptualize the single-document extractive summarization as a rebalance problem and present a deep differential amplifier framework. Specifically, we first calculate and amplify the semantic difference between each sentence and all other sentences, and then apply the residual unit as the second item of the differential amplifier to deepen the architecture. Finally, to compensate for the imbalance, the corresponding objective loss of minority class is boosted by a weighted cross-entropy. In contrast to previous approaches, this model pays more attention to the pivotal information of one sentence, instead of all the informative context modeling by recurrent or Transformer architecture. We demonstrate experimentally on two benchmark datasets that our summarizer performs competitively against state-of-the-art methods. Our source code will be available on Github.</p>
+                            <a href="https://github.com/jiaruipeng1994/Extractive_Summarization">https://github.com/jiaruipeng1994/Extractive_Summarization</a>
+                            </th>
+                        </tr>
+                     </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-default text-center" >
+    <div class="navbar-inner navbar-text text-center col-sm-12 column">
+
+        <p class="text-muted credit " style="padding: 0.1%;">
+            Minzhuang Road, Haidian District, Beijing, China<a href="https://www.google.com/maps/place/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@39.97426,116.2137013,17z/data=!3m1!4b1!4m5!3m4!1s0x35f05a628b02e751:0x2504f0afe1d5772!8m2!3d39.9741944!4d116.2158916">(Map)</a> 100093
+        </p>
+    </div>
+</nav>
+</body>
+
+    </body>
+</html>

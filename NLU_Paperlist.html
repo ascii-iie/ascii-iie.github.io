@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NLU_Paperlist</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="css_style.css"> 
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   
+
+      </head>
+    <body>
+
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="true">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              
+              <a class="navbar-brand" >ASCII LAB</a>
+              </div>
+              <div class="navbar-collapse collapse in" id="navbar-collapse-1" aria-expanded="true">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="Home.html">Home</a></li>
+                  <li><a href="Team.html">Team</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-has
+          popup="true" aria-expanded="false">Group<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="NLG.html">Natural language Generation,NLG</a></li>
+                      <li><a href="NLU.html">Natural Language Understanding,NLU</a></li>
+                      <li><a href="SN.html">Social Network</a></li>
+                      
+                    </ul>
+                  </li> 
+                  <li><a href="About.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+        
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2 col-md-offset-1 col-lg-offset-1 col-xl-offset-1" id="menulist" >
+            <a href="NLU.html" class="list-group-item  list-group-item-info" id="textid">Introduction</a>
+            <a href="NLU_Paperlist.html" class="list-group-item  list-group-item-info active" id="textid">Paper list </a>
+        </div>
+
+        <div class="col-sm-8 column ">
+             <ol class="breadcrumb">
+                <li class="active">Menu
+                </li>
+                <li class="active">Paper list
+                </li>
+             </ol>
+            <table class="table">
+                <tbody>
+                <tr>
+                    <th>
+                        <a href="https://dl.acm.org/doi/abs/10.1145/3308558.3313517" class="link">WWW2019: Joint Entity Linking with Deep Reinforcement Learning</a>
+                        <p class="content">Zheng Fang, Yanan Cao, Qian Li, Dongjie Zhang, Zhenyu Zhang, Yanbing Liu</p>
+                        <p class="content"><strong>Abstract:</strong>Entity linking is the task of aligning mentions to corresponding entities in a given knowledge base. Previous studies have highlighted the necessity for entity linking systems to capture the global coherence. However, there are two common weaknesses in previous global models. First, most of them calculate the pairwise scores between all candidate entities and select the most relevant group of entities as the final result. In this process, the consistency among wrong entities as well as that among right ones are involved, which may introduce noise data and increase the model complexity. Second, the cues of previously disambiguated entities, which could contribute to the disambiguation of the subsequent mentions, are usually ignored by previous models. To address these problems, we convert the global linking into a sequence decision problem and propose a reinforcement learning model which makes decisions from a global perspective. Our model makes full use of the previous referred entities and explores the long-term influence of current selection on subsequent decisions. We conduct experiments on different types of datasets, the results show that our model outperforms state-of-the-art systems and has better generalization performance.</p>
+                        <a href="https://github.com/fangzheng123/RLEL_2019">https://github.com/fangzheng123/RLEL_2019</a>
+                    </th>
+                    
+                </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th>
+                            
+                                <a href="https://dl.acm.org/doi/abs/10.1145/3366423.3380146" class="link">WWW2020: High Quality Candidate Generation and Sequential Graph Attention Network for Entity Linking</a>
+                                <p class="content">Zheng Fang, Yanan Cao, Ren Li,Zhenyu Zhang, Yanbing Liu, Shi Wang</p>
+                                <p class="content"><strong>Abstract:</strong>Entity Linking (EL) is a task for mapping mentions in text to corresponding entities in knowledge base (KB). This task usually includes candidate generation (CG) and entity disambiguation (ED) stages. Recent EL systems based on neural network models have achieved good performance, but they still face two challenges: (i) Previous studies evaluate their models without considering the differences between candidate entities. In fact, the quality (gold recall in particular) of candidate sets has an effect on the EL results. So, how to promote the quality of candidates needs more attention. (ii) In order to utilize the topical coherence among the referred entities, many graph and sequence models are proposed for collective ED. However, graph-based models treat all candidate entities equally which may introduce much noise information. On the contrary, sequence models can only observe previous referred entities, ignoring the relevance between the current mention and its subsequent entities. To address the first problem, we propose a multi-strategy based CG method to generate high recall candidate sets. For the second problem, we design a Sequential Graph Attention Network (SeqGAT) which combines the advantages of graph and sequence methods. In our model, mentions are dealt with in a sequence manner. Given the current mention, SeqGAT dynamically encodes both its previous referred entities and subsequent ones, and assign different importance to these entities. In this way, it not only makes full use of the topical consistency, but also reduce noise interference. We conduct experiments on different types of datasets and compare our method with previous EL system on the open evaluation platform. The comparison results show that our model achieves significant improvements over the state-of-the-art methods.</p>
+                                <a href="https://github.com/fangzheng123/SGEL">https://github.com/fangzheng123/SGEL</a>
+                            
+                        </th>
+                        
+                    </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>
+                               
+                                    <a href="https://aclanthology.org/2021.emnlp-main.18/" class="link">EMNLP 2021: TEBNER: Domain Specific Named Entity Recognition with Type Expanded Boundary-aware Network</a>
+                                    <p class="content">Zheng Fang, Yanan Cao, Tai Li, Ruipeng Jia, Fang Fang, Yanmin Shang, Yuhai Lu</p>
+                                    <p class="content"><strong>Abstract:</strong>To alleviate label scarcity in Named Entity Recognition (NER) task, distantly supervised NER methods are widely applied to automatically label data and identify entities. Although the human effort is reduced, the generated incomplete and noisy annotations pose new challenges for learning effective neural models. In this paper, we propose a novel dictionary extension method which extracts new entities through the type expanded model. Moreover, we design a multi-granularity boundary-aware network which detects entity boundaries from both local and global perspectives. We conduct experiments on different types of datasets, the results show that our model outperforms previous state-of-the-art distantly supervised systems and even surpasses the supervised models.</p>
+                                    <a href="https://github.com/fangzheng123/TEBNER">https://github.com/fangzheng123/TEBNER</a>
+                                
+                            </th>
+                        </tr>
+                    </tbody>
+                    
+            </table>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-default text-center" >
+    <div class="navbar-inner navbar-text text-center col-sm-12 column">
+
+        <p class="text-muted credit " style="padding: 0.1%;">
+            Minzhuang Road, Haidian District, Beijing, China<a href="https://www.google.com/maps/place/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@39.97426,116.2137013,17z/data=!3m1!4b1!4m5!3m4!1s0x35f05a628b02e751:0x2504f0afe1d5772!8m2!3d39.9741944!4d116.2158916">(Map)</a> 100093
+        </p>
+    </div>
+</nav>
+</body>
+
+    </body>
+</html>
