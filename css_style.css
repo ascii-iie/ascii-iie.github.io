@@ -109,15 +109,26 @@ html, body
 }
 
 
-.img_cao
+.img_person
 {
     margin-left: 45%;
 }
-.name_cao
+.name_person
 {
     font-size: large;
     margin-top: 3.5%;
 }
+.img_team
+{
+    margin-left: 45%;
+}
+.name_team
+{
+    font-size: large;
+    margin-top: 3.5%;
+}
+
+
 .introduction
 {
     text-align: justify;
