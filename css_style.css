@@ -145,3 +145,20 @@ html, body
     margin-top: 2%;
     margin-left: -5%;
 }
+
+.txt_index
+{
+    text-align:center;
+    font-size: 44px;
+    background: #E6E6FA;
+}
+
+.txt_center
+{
+    text-align:center
+}
+
+.on {
+    color: red
+}
+
