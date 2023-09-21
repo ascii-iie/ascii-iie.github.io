@@ -65,10 +65,9 @@
                 <tbody>
                 <tr>
                     <th>
-                        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/17552" class="link">AAAI2021:Flexible Non-Autoregressive Extractive Summarization with Threshold: How to Extract a Non-Fixed Number of Summary Sentences</a>
-                        <p class="content">Ruipeng Jia, Yanan Cao, Haichao Shi,Fang Fang, Pengfei Yin,Shi Wang </p>
-                        <p class="content"><strong>Abstract:</strong>Sentence-level extractive summarization is a fundamental yet challenging task, and recent powerful approaches prefer to pick sentences sorted by the predicted probabilities until the length limit is reached, a.k.a. ``Top-K Strategy''. This length limit is fixed based on the validation set, resulting in the lack of flexibility. In this work, we propose a more flexible and accurate non-autoregressive method for single document extractive summarization, extracting a non-fixed number of summary sentences without the sorting step. We call our approach ThresSum as it picks sentences simultaneously and individually from the source document when the predicted probabilities exceed a threshold. During training, the model enhances sentence representation through iterative refinement and the intermediate latent variables receive some weak supervision with soft labels, which are generated progressively by adjusting the temperature with a knowledge distillation algorithm. Specifically, the temperature is initialized with high value and drops along with the iteration until a temperature of 1. Experimental results on CNN/DM and NYT datasets have demonstrated the effectiveness of ThresSum, which significantly outperforms BERTSUMEXT with a substantial improvement of 0.74 ROUGE-1 score on CNN/DM. Our source code will be available on Github.</p>
-                        <a href="https://github.com/jiaruipeng1994/Extractive_Summarization">https://github.com/jiaruipeng1994/Extractive_Summarization</a>
+                        <a href="https://aclanthology.org/2022.coling-1.42.pdf" class="link">COLING2022:Slot Dependency Modeling for Zero-shot Cross-domain Dialogue State Tracking</a>
+                        <p class="content">Qingyue Wang, Yanan Cao, Piji Li and Li Guo</p>
+                        <p class="content"><strong>Abstract:</strong>Zero-shot learning for Dialogue State Tracking (DST) focuses on generalizing to an unseen domain without the expense of collecting in domain data. However, previous zero-shot DST methods ignore the slot dependencies in a multidomain dialogue, resulting in sub-optimal performances when adapting to unseen domains. In this paper, we utilize slot prompts combination, slot values demonstration, and slot constraint object to model the slot-slot dependencies, slot-value dependency and slot-context dependency respectively. Specifically, each slot prompt consists of a slot-specific prompt and a slot-shared prompt to capture the shared knowledge across different domains. Experimental results show the effectiveness of our proposed method over existing state-of-art generation methods under zero-shot/few-shot settings.</p>
                     </th>
                     
                 </tr>
@@ -76,10 +75,9 @@
                 <tbody>
                     <tr>
                         <th>
-                            <a href="https://dl.acm.org/doi/10.1145/3340531.3412078" class="link">CIKM2020:DistilSum:Distilling the Knowledge for Extractive Summarization</a>
-                            <p class="content">Ruipeng Jia, Yanan Cao, Haichao Shi,Fang Fang, Yanbing Liu,Jianlong Tan </p>
-                            <p class="content"><strong>Abstract:</strong>A popular choice for extractive summarization is to conceptualize it as sentence-level classification, supervised by binary labels. While the common metric ROUGE prefers to measure the text similarity, instead of the performance of classifier. For example, BERTSUMEXT, the best extractive classifier so far, only achieves a precision of 32.9% at the top 3 extracted sentences (P@3) on CNN/DM dataset. It is obvious that current approaches cannot model the complex relationship of sentences exactly with 0/1 targets. In this paper, we introduce DistilSum, which contains teacher mechanism and student model. Teacher mechanism produces high entropy soft targets at a high temperature. Our student model is trained with the same temperature to match these informative soft targets and tested with temperature of 1 to distill for ground-truth labels. Compared with large version of BERTSUMEXT, our experimental result on CNN/DM achieves a substantial improvement of 0.99 ROUGE-L score (text similarity) and 3.95 P@3 score (performance of classifier). Our source code will be available on Github.</p>
-                            <a href="https://github.com/jiaruipeng1994/Extractive_Summarization">https://github.com/jiaruipeng1994/Extractive_Summarization</a>
+                            <a href="https://ieeexplore.ieee.org/document/9533938" class="link">IJCNN2021:Incorporating Specific Knowledge into End-to-End Task-oriented Dialogue Systems</a>
+                            <p class="content">Qingyue Wang, Yanan Cao, Junyan Jiang, Yafang Wang and Li Guo</p>
+                            <p class="content"><strong>Abstract:</strong>External knowledge is vital to many natural language processing tasks. However, current end-to-end dialogue systems often struggle to interface knowledge bases(KBs) with response smoothly and effectively. In this paper, we convert the raw knowledge into relation knowledge and integrated knowledge and then incorporate them into end-to-end task-oriented dialogue systems. The relation knowledge extracted from knowledge triples is combined with dialogue history, aiming to enhance semantic inputs and support better language understanding. Integrated knowledge involves entities and relations by graph attention, assisting the model in generating informative responses. The experimental results on three public dialogue datasets show that our model improves over the previous state-of-the-art models in sentence fluency and informativeness.</p>
                         </th>
                         
                     </tr>
@@ -88,6 +86,28 @@
             </div>
                     <div class="page-2">
                         <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/17552" class="link">AAAI2021:Flexible Non-Autoregressive Extractive Summarization with Threshold: How to Extract a Non-Fixed Number of Summary Sentences</a>
+                                        <p class="content">Ruipeng Jia, Yanan Cao, Haichao Shi,Fang Fang, Pengfei Yin,Shi Wang </p>
+                                        <p class="content"><strong>Abstract:</strong>Sentence-level extractive summarization is a fundamental yet challenging task, and recent powerful approaches prefer to pick sentences sorted by the predicted probabilities until the length limit is reached, a.k.a. ``Top-K Strategy''. This length limit is fixed based on the validation set, resulting in the lack of flexibility. In this work, we propose a more flexible and accurate non-autoregressive method for single document extractive summarization, extracting a non-fixed number of summary sentences without the sorting step. We call our approach ThresSum as it picks sentences simultaneously and individually from the source document when the predicted probabilities exceed a threshold. During training, the model enhances sentence representation through iterative refinement and the intermediate latent variables receive some weak supervision with soft labels, which are generated progressively by adjusting the temperature with a knowledge distillation algorithm. Specifically, the temperature is initialized with high value and drops along with the iteration until a temperature of 1. Experimental results on CNN/DM and NYT datasets have demonstrated the effectiveness of ThresSum, which significantly outperforms BERTSUMEXT with a substantial improvement of 0.74 ROUGE-1 score on CNN/DM. Our source code will be available on Github.</p>
+                                        <a href="https://github.com/jiaruipeng1994/Extractive_Summarization">https://github.com/jiaruipeng1994/Extractive_Summarization</a>
+                                    </th>
+                                    
+                                </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            <a href="https://dl.acm.org/doi/10.1145/3340531.3412078" class="link">CIKM2020:DistilSum:Distilling the Knowledge for Extractive Summarization</a>
+                                            <p class="content">Ruipeng Jia, Yanan Cao, Haichao Shi,Fang Fang, Yanbing Liu,Jianlong Tan </p>
+                                            <p class="content"><strong>Abstract:</strong>A popular choice for extractive summarization is to conceptualize it as sentence-level classification, supervised by binary labels. While the common metric ROUGE prefers to measure the text similarity, instead of the performance of classifier. For example, BERTSUMEXT, the best extractive classifier so far, only achieves a precision of 32.9% at the top 3 extracted sentences (P@3) on CNN/DM dataset. It is obvious that current approaches cannot model the complex relationship of sentences exactly with 0/1 targets. In this paper, we introduce DistilSum, which contains teacher mechanism and student model. Teacher mechanism produces high entropy soft targets at a high temperature. Our student model is trained with the same temperature to match these informative soft targets and tested with temperature of 1 to distill for ground-truth labels. Compared with large version of BERTSUMEXT, our experimental result on CNN/DM achieves a substantial improvement of 0.99 ROUGE-L score (text similarity) and 3.95 P@3 score (performance of classifier). Our source code will be available on Github.</p>
+                                            <a href="https://github.com/jiaruipeng1994/Extractive_Summarization">https://github.com/jiaruipeng1994/Extractive_Summarization</a>
+                                        </th>
+                                        
+                                    </tr>
+                                    </tbody>
                     <tbody>
                         <tr>
                             <th>
@@ -109,6 +129,15 @@
                             </th>
                         </tr>
                      </tbody>
+                     <tbody>
+                        <tr>
+                             <th>
+                             <a href="https://link.springer.com/content/pdf/10.1007/978-3-319-99365-2_44.pdf"class="link">KSEM2018:A Sequence Transformation Model for Chinese Named Entity Recognition</a>
+                             <p class="content">Qingyue Wang, Yanjing Song, Hao Liu, Yanan Cao and Li Guo</p>
+                             <p class="content"><strong>Abstract:</strong>Chinese Named Entity Recognition (NER), as one of basic natural language processing tasks, is still a tough problem due to Chinese polysemy and complexity. In recent years, most of previous works regard NER as a sequence tagging task, including statistical models and deep learning methods. In this paper, we innovatively consider NER as a sequence transformation task in which the unlabeled sequences (source texts) are converted to labeled sequences (NER labels). In order to model this sequence transformation task, we design a sequence-to-sequence neural network, which combines a Conditional Random Fields (CRF) layer to efficiently use sentence level tag information and the attention mechanism to capture the most important semantic information of the encoded sequence. In experiments, we evaluate different models both on a standard corpus consisting of news data and an unnormalized one consisting of short messages. Experimental results showed that our model outperforms the state-of-the-art methods on recognizing short interdependence entity.</p>
+                             </th>
+                         </tr>
+                      </tbody>
             </table>
         </div>
 
