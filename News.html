@@ -10,132 +10,14 @@
         <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
-        <script type="text/javascript">
-        window.onload = function() {
-            Page.arr = Page.pushArr();
-            Page.setClickPageNum();
-            Page.allContent("null");
-        }
-        var Page = {
-            defaultPerPageNum: 4,
-            arr: null,
-            removedBlankStr: function(str) {
-                var regex = /^\s*|\s*$/g;
-                return str.replace(regex, "");
-            },
-            setTotalPageNums: function() {
-                var pp = Number(Page.perPageNum('t1'));
-                var pnums = Page.arr.length / pp > parseInt(Page.arr.length / pp) ? parseInt(Page.arr.length / pp) + 1 : Page.arr.length / pp;
-                var div = document.getElementById('pagenum');
-                div.innerHTML = "";
-                for (var i = 0; i < pnums; i++) {
-                    var a = document.createElement('a');
-                    a.href = "#";
-                    a.innerHTML = i + 1;
-                    a.setAttribute('class', 'off');
-                    div.appendChild(a);
-                    div.innerHTML += "&nbsp;";
-                }
-                Page.setClickPageNum();
-            },
-            perPageNum: function(PerPageNum) {
-                var pv = document.getElementById(PerPageNum).value;
-                pv = Page.removedBlankStr(pv);
-                if ("" == pv || isNaN(pv) || (new RegExp(/^[-]*[0]+.*?$/g).test(pv)) || pv < 0) {
-                    pv = Page.defaultPerPageNum;
-                    document.getElementById(PerPageNum).value = pv;
-                }
-                document.getElementById('p1').innerHTML = pv;
-                return pv;
-            },
-            getClickPageNum: function(diva) {
-                return parseFloat(diva.innerHTML);
-            },
-            setClickPageNum: function() {
-                var divx = document.getElementById('pagenum');
-                var a = divx.children;
-                var len = a.length;
-                for (var i = 0; i < len; i++) {
-                    a[i].onclick = function() {
-                        this.className = "on";
-                        Page.allContent(this);
-                    };
-                }
-            },
-            pushArr: function() {
-                var arr = new Array();
-                var ul = document.getElementById('ul1');
-                var len = ul.children.length;
-                for (var i = 0; i < len; i++) {
-                    arr.push(ul.children[i]);
-                }
-                return arr;
-            },
-            allContent: function(divb) {
-                var ul = document.getElementById('ul1');
-                ul.innerHTML = "";
-                var pp = parseFloat(this.perPageNum('t1'));
-                if ("null" == divb) {
-                    divb = document.getElementById('pagenum').children[0];
-                    divb.className = "on";
-                }
-                var pg = this.getClickPageNum(divb); // 1 2 3
-                var ppj = pp * (pg - 1); // 0 4 8
-                var end = ppj + pp; // 4 8 12
-                var arr = this.arr;
-                var pnums = arr.length / pp > parseInt(arr.length / pp) ? parseInt(arr.length / pp) + 1 : arr.length / pp;
-                for (var i = ppj; i < end; i++) {
-                    var a = arr[i];
-                    if (null != a) {
-                        ul.appendChild(a);
-                    }
-                }
-            },
-            doAction: function() {
-                Page.perPageNum('t1');
-                Page.setTotalPageNums();
-                Page.allContent("null");
-            }
-        };
-    </script>
-    </head>
-
 <body>
 
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="true">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              
-              <a class="navbar-brand" href="index.html">ASCII LAB</a>
-              </div>
-              <div class="navbar-collapse collapse in" id="navbar-collapse-1" aria-expanded="true">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="Home.html">主页Home</a></li>
-                    <li><a href="Team.html">团队Team</a></li>
-                    <li><a href="News.html">新闻News</a></li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-has
-          popup="true" aria-expanded="false">研究小组Group<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="NLG.html">Natural language Generation,NLG</a></li>
-                      <li><a href="NLU.html">Natural Language Understanding,NLU</a></li>
-                      <li><a href="SN.html">Social Network</a></li>
-                      
-                    </ul>
-                  </li> 
-                  <li><a href="Seminar.html">讨论班Seminar</a></li>
-                </ul>
-              </div>
-            </div>
-        </nav>
+    <div id="head">
+        <iframe MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no src="head.html" width="100%"  height="auto">
+        </iframe>
+     </div>
         
-        <div class="container-fluid">
+        <div class="col-sm-12 column container-fluid">
             <div class="row">
                 <div class="col-sm-2 col-md-offset-1 col-lg-offset-1 col-xl-offset-1" id="menulist" >
                     <a href="News.html" class="list-group-item list-group-item-info active" id="textid">Acadamic News</a>
@@ -153,37 +35,17 @@
 
 
                 <div  class="col-sm-12 column">
-
                 <p style="font-size: large;"><strong>Acadamic News</strong></p>
                 <ul class="list-group list-group-flush">
-                    <div id='content'>
-                        <ul id="ul1">
-							<li class="list-group-item list_ins"><a href="./News/20230502.html">【Breaking News】中科院信工所ASCII LAB的4篇工作被ACL 2023主会接收</a></li>
-							<li class="list-group-item list_ins"><a href="./News/20230419.html">【榜样的力量】贾瑞鹏师兄荣获中国科学院院长特别奖</a></li>
-							<li class="list-group-item list_ins"><a href="./News/20230327.html">国家重点研发计划青年科学家项目启动会成功举办</a></li>
-                            <li class="list-group-item list_ins"><a href="./News/20230301.html">2023届毕业生预答辩成功举办</a></li>
-                            <li class="list-group-item list_ins"><a href="./News/20221017.html">【喜报】团队带头人曹亚男老师荣获2022年度中国科学院优秀导师称号</a></li>
-                            <li class="list-group-item list_ins"><a href="./News/20221210.html">CNCC 2022 学术论坛 | 网络空间测绘的前沿技术与挑战</a></li>
-                            <li class="list-group-item list_ins"><a href="./News/20220811.html">中科院青促会信工所小组成功举办首届学术沙龙</a></li>
-							
-                          
-                        </ul>
-                        <div id="pagenum" class="txt_center">
-                            <a href="#" class="on">1</a>&nbsp;
-                            <a href="#">2</a>&nbsp;
-                            <a href="#">3</a>
-                        </div>
-                        <input type="text" value="10" id="t1" />&nbsp;
-                        <input type="button" value="set" onclick="Page.doAction();" />&nbsp;&nbsp;Each Page
-                        <a id="p1"></a>
-                        Records</div>
-                        
-                    </div>
+							<li class="list-group-item list_ins"><a href="./News/20230502.html" style="color:black">【Breaking News】中科院信工所ASCII LAB的4篇工作被ACL 2023主会接收</a></li>
+							<li class="list-group-item list_ins"><a href="./News/20230419.html" style="color:black">【榜样的力量】贾瑞鹏师兄荣获中国科学院院长特别奖</a></li>
+							<li class="list-group-item list_ins"><a href="./News/20230327.html" style="color:black">国家重点研发计划青年科学家项目启动会成功举办</a></li>
+                            <li class="list-group-item list_ins"><a href="./News/20230301.html" style="color:black">2023届毕业生预答辩成功举办</a></li>
+                            <li class="list-group-item list_ins"><a href="./News/20221017.html" style="color:black">【喜报】团队带头人曹亚男老师荣获2022年度中国科学院优秀导师称号</a></li>
+                            <li class="list-group-item list_ins"><a href="./News/20221210.html" style="color:black">CNCC 2022 学术论坛 | 网络空间测绘的前沿技术与挑战</a></li>
+                            <li class="list-group-item list_ins"><a href="./News/20220811.html" style="color:black">中科院青促会信工所小组成功举办首届学术沙龙</a></li>
                 </ul>
-
-
-
-
+                
 
             </div>
                 

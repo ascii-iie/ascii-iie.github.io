@@ -9,69 +9,64 @@
         <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
         <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-   
+        <link rel="stylesheet" type="text/css" href="./Page/css/index.css"/>
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="./Page/js/index.js" type="text/javascript" charset="utf-8"></script>
 
       </head>
     <body>
 
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="true">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              
-              <a class="navbar-brand" href="index.html">ASCII LAB</a>
-              </div>
-              <div class="navbar-collapse collapse in" id="navbar-collapse-1" aria-expanded="true">
-                   <ul class="nav navbar-nav navbar-right">
-                    <li><a href="Home.html">主页Home</a></li>
-                    <li><a href="Team.html">团队Team</a></li>
-                    <li><a href="News.html">新闻News</a></li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-has
-          popup="true" aria-expanded="false">研究小组Group<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="NLG.html">Natural language Generation,NLG</a></li>
-                      <li><a href="NLU.html">Natural Language Understanding,NLU</a></li>
-                      <li><a href="SN.html">Social Network</a></li>
-                    </ul>
-                  </li>
-                    <li><a href="Seminar.html">讨论班Seminar</a></li>
-                </ul>
-
-                  </li> 
-                  <li><a href="About.html">About</a></li>
-                </ul>
-              </div>
-            </div>
-        </nav>
-        
+      <body>
+        <div id="head">
+            <iframe MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no src="head.html" width="100%"  height="auto">
+            </iframe>
+         </div>
+  
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-2 col-md-offset-1 col-lg-offset-1 col-xl-offset-1" id="menulist" >
-            <a href="NLU.html" class="list-group-item  list-group-item-info" id="textid">Introduction</a>
-            <a href="NLU_Paperlist.html" class="list-group-item  list-group-item-info active" id="textid">Paper list </a>
-        </div>
-
-        <div class="col-sm-8 column ">
-             <ol class="breadcrumb">
-                <li class="active">Menu
-                </li>
-                <li class="active">Paper list
-                </li>
-             </ol>
+        <div class="col-sm-10 col-md-offset-1 col-lg-offset-1 col-xl-offset-1">
+            <div class="page-1">
             <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>
+                                <a href="https://arxiv.org/abs/2305.17371" class="link">ACL2023: Towards Better Entity Linking with Multi-View enhanced Distillation</a>
+                                <p class="content">Yi Liu, Yuan Tian, Jianxun Lian, Xinlong Wang, Yanan Cao, Fang Fang, Wen Zhang, Haizhen Huang, Denvy Deng, Qi Zhang</p>
+                                <p class="content"><strong>Abstract:</strong>Dense retrieval is widely used for entity linking to retrieve entities from large-scale knowledge bases. Mainstream techniques are based on a dual-encoder framework, which encodes mentions and entities independently and calculates their relevances via rough interaction metrics, resulting in difficulty in explicitly modeling multiple mention-relevant parts within entities to match divergent mentions. Aiming at learning entity representations that can match divergent mentions, this paper proposes a Multi-View Enhanced Distillation (MVD) framework, which can effectively transfer knowledge of multiple fine-grained and mention-relevant parts within entities from cross-encoders to dual-encoders. Each entity is split into multiple views to avoid irrelevant information being over-squashed into the mention-relevant view. We further design cross-alignment and self-alignment mechanisms for this framework to facilitate fine-grained knowledge distillation from the teacher model to the student model. Meanwhile, we reserve a global-view that embeds the entity as a whole to prevent dispersal of uniform information. Experiments show our method achieves state-of-the-art performance on several entity linking benchmarks.</p>
+                                <a href="https://github.com/Noen61/MVD">https://github.com/Noen61/MVD</a>
+                            </th>
+                            
+                        </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <a href="https://aclanthology.org/2023.acl-long.17.pdf" class="link">ACL2023: Retrieve-and-Sample: Document-level Event Argument Extraction via Hybrid Retrieval Augmentation.</a>
+                                    <p class="content">Yubing Ren, Yanan Cao, Ping Guo, Fang Fang, Wei Ma, Zheng Lin</p>
+                                    <p class="content"><strong>Abstract:</strong>Recent studies have shown the effectiveness of retrieval augmentation in many generative NLP tasks. These retrieval-augmented methods allow models to explicitly acquire prior external knowledge in a non-parametric manner and regard the retrieved reference instances as cues to augment text generation. These methods use similarity-based retrieval, which is based on a simple hypothesis: the more the retrieved demonstration resembles the original input, the more likely the demonstration label resembles the input label. However, due to the complexity of event labels and sparsity of event arguments, this hypothesis does not always hold in document-level EAE. This raises an interesting question: How do we design the retrieval strategy for document-level EAE? We investigate various retrieval settings from the input and label distribution views in this paper. We further augment document-level EAE with pseudo demonstrations sampled from event semantic regions that can cover adequate alternatives in the same context and event schema. Through extensive experiments on RAMS and WikiEvents, we demonstrate the validity of our newly introduced retrieval-augmented methods and analyze why they work.</p>
+                                </th>
+                                
+                            </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <a href="https://aclanthology.org/2022.coling-1.221.pdf" class="link">COLING2021: TEBNER: Domain Specific Named Entity Recognition with Type Expanded Boundary-aware Network</a>
+                                        <p class="content">Yubing Ren, Yanan Cao, Fang Fang, Ping Guo, Zheng Lin, Wei Ma, Yi Liu.</p>
+                                        <p class="content"><strong>Abstract:</strong>Transforming the large amounts of unstructured text on the Internet into structured event knowledge is a critical, yet unsolved goal of NLP, especially when addressing document-level text. Existing methods struggle in Document-level Event Extraction (DEE) due to its two intrinsic challenges: (a) Nested arguments, which means one argument is the sub-string of another one. (b) Multiple events, which indicates we should identify multiple events and assemble the arguments for them. In this paper, we propose a role-interactive multi-event head attention network (CLIO) to solve these two challenges jointly. The key idea is to map different events to multiple subspaces (i.e. multi-event head). In each event subspace, we draw the semantic representation of each role closer to its corresponding arguments, then we determine whether the current event exists. To further optimize event representation, we propose an event representation enhancing strategy to regularize pre-trained embedding space to be more isotropic. Our experiments on two widely used DEE datasets show that CLIO achieves consistent improvements over previous methods.</p>
+                                    </th>
+                                    
+                                </tr>
+                                </tbody>
                 <tbody>
                 <tr>
                     <th>
-                        <a href="https://dl.acm.org/doi/abs/10.1145/3308558.3313517" class="link">WWW2019: Joint Entity Linking with Deep Reinforcement Learning</a>
-                        <p class="content">Zheng Fang, Yanan Cao, Qian Li, Dongjie Zhang, Zhenyu Zhang, Yanbing Liu</p>
-                        <p class="content"><strong>Abstract:</strong>Entity linking is the task of aligning mentions to corresponding entities in a given knowledge base. Previous studies have highlighted the necessity for entity linking systems to capture the global coherence. However, there are two common weaknesses in previous global models. First, most of them calculate the pairwise scores between all candidate entities and select the most relevant group of entities as the final result. In this process, the consistency among wrong entities as well as that among right ones are involved, which may introduce noise data and increase the model complexity. Second, the cues of previously disambiguated entities, which could contribute to the disambiguation of the subsequent mentions, are usually ignored by previous models. To address these problems, we convert the global linking into a sequence decision problem and propose a reinforcement learning model which makes decisions from a global perspective. Our model makes full use of the previous referred entities and explores the long-term influence of current selection on subsequent decisions. We conduct experiments on different types of datasets, the results show that our model outperforms state-of-the-art systems and has better generalization performance.</p>
-                        <a href="https://github.com/fangzheng123/RLEL_2019">https://github.com/fangzheng123/RLEL_2019</a>
+                        <a href="https://aclanthology.org/2021.emnlp-main.18/" class="link">EMNLP2021: TEBNER: Domain Specific Named Entity Recognition with Type Expanded Boundary-aware Network</a>
+                        <p class="content">Zheng Fang, Yanan Cao, Tai Li, Ruipeng Jia, Fang Fang, Yanmin Shang, Yuhai Lu</p>
+                        <p class="content"><strong>Abstract:</strong>To alleviate label scarcity in Named Entity Recognition (NER) task, distantly supervised NER methods are widely applied to automatically label data and identify entities. Although the human effort is reduced, the generated incomplete and noisy annotations pose new challenges for learning effective neural models. In this paper, we propose a novel dictionary extension method which extracts new entities through the type expanded model. Moreover, we design a multi-granularity boundary-aware network which detects entity boundaries from both local and global perspectives. We conduct experiments on different types of datasets, the results show that our model outperforms previous state-of-the-art distantly supervised systems and even surpasses the supervised models.</p>
+                        <a href="https://github.com/fangzheng123/TEBNER">https://github.com/fangzheng123/TEBNER</a>
                     </th>
                     
                 </tr>
@@ -80,40 +75,56 @@
                     <tr>
                         <th>
                             
-                                <a href="https://dl.acm.org/doi/abs/10.1145/3366423.3380146" class="link">WWW2020: High Quality Candidate Generation and Sequential Graph Attention Network for Entity Linking</a>
-                                <p class="content">Zheng Fang, Yanan Cao, Ren Li,Zhenyu Zhang, Yanbing Liu, Shi Wang</p>
-                                <p class="content"><strong>Abstract:</strong>Entity Linking (EL) is a task for mapping mentions in text to corresponding entities in knowledge base (KB). This task usually includes candidate generation (CG) and entity disambiguation (ED) stages. Recent EL systems based on neural network models have achieved good performance, but they still face two challenges: (i) Previous studies evaluate their models without considering the differences between candidate entities. In fact, the quality (gold recall in particular) of candidate sets has an effect on the EL results. So, how to promote the quality of candidates needs more attention. (ii) In order to utilize the topical coherence among the referred entities, many graph and sequence models are proposed for collective ED. However, graph-based models treat all candidate entities equally which may introduce much noise information. On the contrary, sequence models can only observe previous referred entities, ignoring the relevance between the current mention and its subsequent entities. To address the first problem, we propose a multi-strategy based CG method to generate high recall candidate sets. For the second problem, we design a Sequential Graph Attention Network (SeqGAT) which combines the advantages of graph and sequence methods. In our model, mentions are dealt with in a sequence manner. Given the current mention, SeqGAT dynamically encodes both its previous referred entities and subsequent ones, and assign different importance to these entities. In this way, it not only makes full use of the topical consistency, but also reduce noise interference. We conduct experiments on different types of datasets and compare our method with previous EL system on the open evaluation platform. The comparison results show that our model achieves significant improvements over the state-of-the-art methods.</p>
-                                <a href="https://github.com/fangzheng123/SGEL">https://github.com/fangzheng123/SGEL</a>
+                            <a href="https://dl.acm.org/doi/abs/10.1145/3366423.3380146" class="link">WWW2020: High Quality Candidate Generation and Sequential Graph Attention Network for Entity Linking</a>
+                            <p class="content">Zheng Fang, Yanan Cao, Ren Li,Zhenyu Zhang, Yanbing Liu, Shi Wang</p>
+                            <p class="content"><strong>Abstract:</strong>Entity Linking (EL) is a task for mapping mentions in text to corresponding entities in knowledge base (KB). This task usually includes candidate generation (CG) and entity disambiguation (ED) stages. Recent EL systems based on neural network models have achieved good performance, but they still face two challenges: (i) Previous studies evaluate their models without considering the differences between candidate entities. In fact, the quality (gold recall in particular) of candidate sets has an effect on the EL results. So, how to promote the quality of candidates needs more attention. (ii) In order to utilize the topical coherence among the referred entities, many graph and sequence models are proposed for collective ED. However, graph-based models treat all candidate entities equally which may introduce much noise information. On the contrary, sequence models can only observe previous referred entities, ignoring the relevance between the current mention and its subsequent entities. To address the first problem, we propose a multi-strategy based CG method to generate high recall candidate sets. For the second problem, we design a Sequential Graph Attention Network (SeqGAT) which combines the advantages of graph and sequence methods. In our model, mentions are dealt with in a sequence manner. Given the current mention, SeqGAT dynamically encodes both its previous referred entities and subsequent ones, and assign different importance to these entities. In this way, it not only makes full use of the topical consistency, but also reduce noise interference. We conduct experiments on different types of datasets and compare our method with previous EL system on the open evaluation platform. The comparison results show that our model achieves significant improvements over the state-of-the-art methods.</p>
+                            <a href="https://github.com/fangzheng123/SGEL">https://github.com/fangzheng123/SGEL</a>
                             
                         </th>
                         
                     </tr>
                     </tbody>
+                </table>
+            </div>
+            <div class="page-2">
+                <table class="table">
                     <tbody>
                         <tr>
                             <th>
                                
-                                    <a href="https://aclanthology.org/2021.emnlp-main.18/" class="link">EMNLP 2021: TEBNER: Domain Specific Named Entity Recognition with Type Expanded Boundary-aware Network</a>
-                                    <p class="content">Zheng Fang, Yanan Cao, Tai Li, Ruipeng Jia, Fang Fang, Yanmin Shang, Yuhai Lu</p>
-                                    <p class="content"><strong>Abstract:</strong>To alleviate label scarcity in Named Entity Recognition (NER) task, distantly supervised NER methods are widely applied to automatically label data and identify entities. Although the human effort is reduced, the generated incomplete and noisy annotations pose new challenges for learning effective neural models. In this paper, we propose a novel dictionary extension method which extracts new entities through the type expanded model. Moreover, we design a multi-granularity boundary-aware network which detects entity boundaries from both local and global perspectives. We conduct experiments on different types of datasets, the results show that our model outperforms previous state-of-the-art distantly supervised systems and even surpasses the supervised models.</p>
-                                    <a href="https://github.com/fangzheng123/TEBNER">https://github.com/fangzheng123/TEBNER</a>
+                                    
+                            <a href="https://dl.acm.org/doi/abs/10.1145/3308558.3313517" class="link">WWW2019: Joint Entity Linking with Deep Reinforcement Learning</a>
+                            <p class="content">Zheng Fang, Yanan Cao, Qian Li, Dongjie Zhang, Zhenyu Zhang, Yanbing Liu</p>
+                            <p class="content"><strong>Abstract:</strong>Entity linking is the task of aligning mentions to corresponding entities in a given knowledge base. Previous studies have highlighted the necessity for entity linking systems to capture the global coherence. However, there are two common weaknesses in previous global models. First, most of them calculate the pairwise scores between all candidate entities and select the most relevant group of entities as the final result. In this process, the consistency among wrong entities as well as that among right ones are involved, which may introduce noise data and increase the model complexity. Second, the cues of previously disambiguated entities, which could contribute to the disambiguation of the subsequent mentions, are usually ignored by previous models. To address these problems, we convert the global linking into a sequence decision problem and propose a reinforcement learning model which makes decisions from a global perspective. Our model makes full use of the previous referred entities and explores the long-term influence of current selection on subsequent decisions. We conduct experiments on different types of datasets, the results show that our model outperforms state-of-the-art systems and has better generalization performance.</p>
+                            <a href="https://github.com/fangzheng123/RLEL_2019">https://github.com/fangzheng123/RLEL_2019</a>
                                 
                             </th>
                         </tr>
                     </tbody>
-                    
             </table>
+        </div>
         </div>
     </div>
 </div>
 
-<nav class="navbar navbar-default text-center" >
+<footer>
+    <div class="page-icon">
+		<button class="firstPage" onclick="first_click()" style="background-color: #FFFFFF;"><img src="./Page/imgs/left-end.png"/></button>
+		<button class="beforePage" onclick="prev_click()" style="background-color: #FFFFFF;"><img src="./Page/imgs/page-left.png"/></button>
+		<button style="background-color: #FFFFFF;">第<input id="currentPage" onchange="choose_page()" type="text" value="1"/>页</button>
+		<button style="background-color: #FFFFFF;">/&nbsp;&nbsp;&nbsp;共<input id="totalPage" type="button" value="2" readonly="readonly">页</button>
+		<button class="nextPage" onclick="next_click()" style="background-color: #FFFFFF;"><img src="./Page/imgs/page-right.png"/></button>
+		<button class="lastPage" onclick="last_click()" style="background-color: #FFFFFF;"><img src="./Page/imgs/right-end.png"/></button>			
+	</div>
+    <nav class="navbar navbar-default text-center" > 
     <div class="navbar-inner navbar-text text-center col-sm-12 column">
         <p class="text-muted credit " style="padding: 0.1%;">
-                            ASCII Lab, Institute of Information Engineering, Chinese Academy of Sciences. No.19 Shucun Road, Haidian District, Beijing, China<a href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a> 100085
+            ASCII Lab, Institute of Information Engineering, Chinese Academy of Sciences. No.19 Shucun Road, Haidian District, Beijing, China<a href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a> 100085
         </p>
+       
     </div>
 </nav>
+</footer>
 </body>
 
     </body>

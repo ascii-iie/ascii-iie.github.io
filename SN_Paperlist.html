@@ -9,60 +9,82 @@
         <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
         <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+        <link rel="stylesheet" type="text/css" href="./Page/css/index.css"/>
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="./Page/js/index.js" type="text/javascript" charset="utf-8"></script>
 
       </head>
     <body>
 
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="true">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              
-              <a class="navbar-brand" href="index.html">ASCII LAB</a>
-              </div>
-              <div class="navbar-collapse collapse in" id="navbar-collapse-1" aria-expanded="true">
-                  <ul class="nav navbar-nav navbar-right">
-                    <li><a href="Home.html">主页Home</a></li>
-                    <li><a href="Team.html">团队Team</a></li>
-                    <li><a href="News.html">新闻News</a></li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-has
-          popup="true" aria-expanded="false">研究小组Group<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="NLG.html">Natural language Generation,NLG</a></li>
-                      <li><a href="NLU.html">Natural Language Understanding,NLU</a></li>
-                      <li><a href="SN.html">Social Network</a></li>
-                    </ul>
-                  </li>
-                    <li><a href="Seminar.html">讨论班Seminar</a></li>
-                </ul>
-                
-              </div>
-            </div>
-        </nav>
+      <body>
+        <div id="head">
+            <iframe MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no src="head.html" width="100%"  height="auto">
+            </iframe>
+         </div>
+  
         
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-2 col-md-offset-1 col-lg-offset-1 col-xl-offset-1" id="menulist" >
-            <a href="SN.html" class="list-group-item  list-group-item-info" id="textid">Introduction</a>
-            <a href="SN_Paperlist.html" class="list-group-item  list-group-item-info active" id="textid">Paper list </a>
-        </div>
 
-        <div class="col-sm-8 column ">
-             <ol class="breadcrumb">
-                <li class="active">Menu
-                </li>
-                <li class="active">Paper list
-                </li>
-             </ol>
+        <div class="col-sm-10 col-md-offset-1 col-lg-offset-1 col-xl-offset-1">
+            <div class="page-1">
             <table class="table">
                 <tbody>
+                <tr>
+                    <th>
+                        <a href="https://dl.acm.org/doi/pdf/10.1145/3543507.3583208" class="link">WWW2022: Explainable Hyperbolic Temporal Point Process for User-Item Interaction Sequence Generation. </a>
+                        <p class="content">Yuchen Zhou, Yanan Cao, Yongchao Liu, Yanmin Shang, Peng Zhang, Zheng Lin, Yun Yue, Baokun Wang, Xing Fu, Weiqiang Wang</p>
+                        <p class="content"><strong>Abstract:</strong>Data augmentation has been widely studied as it can be used to improve the generalizability of graph representation learning models. However, existing works focus only on the data augmentation on homogeneous graphs. Data augmentation for heterogeneous graphs remains under-explored. Considering that heterogeneous graphs contain different types of nodes and links, ignoring the type information and directly applying the data augmentation methods of homogeneous graphs to heterogeneous graphs will lead to suboptimal results. In this paper, we propose a novel Multi-Aspect Heterogeneous Graph Augmentation framework named MAHGA. Specifically, MAHGA consists of two core augmentation strategies: structure-level augmentation and metapath-level augmentation. Structure-level augmentation pays attention to network schema aspect and designs a relation-aware conditional variational auto-encoder that can generate synthetic features of neighbors to augment the nodes and the node types with scarce links. Metapath-level augmentation concentrates on metapath aspect, which constructs metapath reachable graphs for different metapaths and estimates the graphons of them. By sampling and mixing up based on the graphons, MAHGA yields intra-metapath and inter-metapath augmentation. Finally, we conduct extensive experiments on multiple benchmarks to validate the effectiveness of MAHGA. Experimental results demonstrate that our method improves the performances across a set of heterogeneous graph learning models and datasets.</p>
+                        <a href="https://github.com/painful00/MAHGA">https://github.com/painful00/MAHGA</a>
+                    </th>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>
+                        <a href="https://dl.acm.org/doi/10.1145/3570501" class="link">TOIS2022: Explainable Hyperbolic Temporal Point Process for User-Item Interaction Sequence Generation. </a>
+                        <p class="content">Yuchen Zhou, Yanan Cao, Yanmin Shang, Chuan Zhou, Shirui Pan, Zheng Lin, Qian Li</p>
+                        <p class="content"><strong>Abstract:</strong>Recommender systems which captures dynamic user interest based on time-ordered user-item interactions plays a critical role in the real-world. Although existing deep learning-based recommendation systems show good performances, these methods have two main drawbacks. Firstly, user interest is the consequence of the coaction of many factors. However, existing methods do not fully explore potential influence factors and ignore the user-item interaction formation process. The coarse-grained modeling patterns cannot accurately reflect complex user interest and leads to suboptimal recommendation results. Furthermore, these methods are implicit and largely operate in a black-box fashion. It is difficult to interpret their modeling processes and recommendation results. Secondly, recommendation datasets usually exhibit scale-free distributions and some existing recommender systems take advantage of hyperbolic space to match the data distribution. But they ignore that the operations in hyperbolic space are more complex than that in Euclidean space which further increases the difficulty of model interpretation. To tackle the above shortcomings, we propose an Explainable Hyperbolic Temporal Point Process for User-Item Interaction Sequence Generation (EHTPP). Specifically, EHTPP regards each user-item interaction as an event in hyperbolic space and employs a temporal point process framework to model the probability of event occurrence. Considering that the complexity of user interest and the interpretability of the model,EHTPP explores four potential influence factors related to user interest and uses them to explicitly guide the probability calculation in the temporal point process. In order to validate the effectiveness of EHTPP, we carry out a comprehensive evaluation of EHTPP on three datasets compared with a few competitive baselines. Experimental results demonstrate the state-of-the-art performances of EHTPP.</p>
+                        <a href="https://github.com/painful00/EHTPP">https://github.com/painful00/EHTPP</a>
+                    </th>
+                </tr>
+            </tbody>
+             <tbody>
+                <tr>
+                    <th>
+                        <a href="https://dl.acm.org/doi/10.1007/s11280-021-00987-z" class="link">WWWJ2022:API-GNN: Attribute Preserving Oriented Interactive Graph Neural Network. </a>
+                        <p class="content">Yuchen Zhou, Yanmin Shang, Yanan Cao, Qian Li, Chuan Zhou, Guandong Xu.</p>
+                        <p class="content"><strong>Abstract:</strong>Attributed graph embedding aims to learn node representation based on the graph topology and node attributes. The current mainstream GNN-based methods learn the representation of the target node by aggregating the attributes of its neighbor nodes. These methods still face two challenges: (1) In the neighborhood aggregation procedure, the attributes of each node would be propagated to its neighborhoods which may cause disturbance to the original attributes of the target node and cause over-smoothing in GNN iteration. (2) Because the representation of the target node is derived from the attributes and topology of its neighbors, the attributes and topological information of each neighbor have different effects on the representation of the target node. However, this different contribution has not been considered by the existing GNN-based methods. In this paper, we propose a novel GNN model named API-GNN (Attribute Preserving Oriented Interactive Graph Neural Network). API-GNN can not only reduce the disturbance of neighborhood aggregation to the original attribute of target node, but also explicitly model the different impacts of attribute and topology on node representation. We conduct experiments on six public real-world datasets to validate API-GNN on node classification and link prediction. Experimental results show that our model outperforms several strong baselines over various graph datasets on multiple graph analysis tasks.</p>
+                    </th>
+                </tr>
+            </tbody>
+             <tbody>
+                <tr>
+                    <th>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10027781" class="link">ICDM2022: Task-level Relations Modelling for Graph Meta-learning </a>
+                        <p class="content">Yuchen Zhou, Yanan Cao, Yanmin Shang, Chuan Zhou, Chuancheng Song, Fengzhao Shi, Qian Li</p>
+                        <p class="content"><strong>Abstract:</strong>Graph meta-learning which is used to deal with graph few-shot learning attracts more and more research interests. Existing graph meta-learning methods mainly focus on capturing node-level relations, but they ignore task-level relations which are beneficial for improving the performance of few-shot node classification. Furthermore, contrastive learning which can learn knowledge without labeled data is suitable for few-shot scenario, but existing graph few-shot learning methods have never exploited it. To tackle above problems, in this paper, we combine conventional graph meta-learning framework with graph contrastive learning and propose a novel joint model named -T––asklevel -R––elations Modelling for -G––raph M–––eta-learning (TRGM). By constructing auxiliary contrastive pretext tasks, TRGM can fully capture the inter-task relations (task correlation and task discrepancy) and promote the primary few-shot learning. Finally, we conduct extensive experiments on six benchmark datasets to validate the effectiveness and efficiency of TRGM. Experimental results show that our model outperforms several strong baselines and achieves the new state-of-the-art.</p>
+                        <a href="https://github.com/painful00/TRGM">https://github.com/painful00/TRGM</a>
+                    </th>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>
+                        <a href="https://dl.acm.org/doi/10.1145/3485447.3512195" class="link">WWW2022: H2-FDetector: A GNN-based Fraud Detector with Homophilic and Heterophilic Connections </a>
+                        <p class="content">Fengzhao Shi, Yanan Cao, Yanmin Shang, Yuchen Zhou,Chuan Zhou,Jia Wu</p>
+                        <p class="content"><strong>Abstract:</strong>In the fraud graph, fraudsters often interact with a large number of benign entities to hide themselves. So, there are not only the homophilic connections formed by the same label nodes (similar nodes), but also the heterophilic connections formed by the different label nodes (dissimilar nodes). However, the existing GNN-based fraud detection methods just enhance the homophily in fraud graph and use the low-pass filter to retain the commonality of node features among the neighbors, which inevitably ignore the difference among neighbor of heterophilic connections. To address this problem, we propose a Graph Neural Network-based Fraud Detector with Homophilic and Heterophilic Interactions (H2-FDetector for short). Firstly, we identify the homophilic and heterophilic connections with the supervision of labeled nodes. Next, we design a new information aggregation strategy to make the homophilic connections propagate similar information and the heterophilic connections propagate difference information. Finally, a prototype prior is introduced to guide the identification of fraudsters. Extensive experiments on two real public benchmark fraud detection tasks demonstrate that our method apparently outperforms state-of-the-art baselines.</p>
+                        <a href="https://github.com/shifengzhao/H2-FDetector">https://github.com/shifengzhao/H2-FDetector</a>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <div class="page-2">
+            <table class="table">
+            <tbody>
                 <tr>
                     <th>
                         <a href="https://arxiv.org/pdf/2109.11800.pdf" class="link">AAAI2022: How Does Knowledge Graph Embedding Extrapolate to Unseen Data: a Semantic Evidence View </a>
@@ -73,20 +95,49 @@
                     
                 </tr>
                 </tbody>
-               
+                <tbody>
+                    <tr>
+                        <th>
+                            <a href="https://arxiv.org/pdf/1910.14273.pdf" class="link">WWWJ2020: RLINK: Deep Reinforcement Learning for User Identity Linkage</a>
+                            <p class="content">Xiaoxue Li, Yanan Cao*, Yanmin Shang, Yangxi Li, Qian Li, Guandong Xu</p>
+                            <p class="content"><strong>Abstract:</strong>User identity linkage is a task of recognizing the identities of the same user across different social networks (SN). Previous works tackle this problem via estimating the pairwise similarity between identities from different SN, predicting the label of identity pairs or selecting the most relevant identity pair based on the similarity scores. However, most of these methods ignore the results of previously matched identities, which could contribute to the linkage in following matching steps. To address this problem, we convert user identity linkage into a sequence decision problem and propose a reinforcement learning model to optimize the linkage strategy from the global perspective. Our method makes full use of both the social network structure and the history matched identities, and explores the long-term influence of current matching on subsequent decisions. We conduct experiments on different types of datasets, the results show that our method achieves better performance than other state-of-the-art methods.</p>
+                        </th>
+                        
+                    </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <a href="https://cdn.aaai.org/ojs/5345/5345-13-8570-1-10-20200508.pdf" class="link">AAAI2020: Type-aware Anchor Link Prediction across Heterogeneous Networks based on Graph Attention Network </a>
+                                <p class="content">Xiaoxue Li, Yanan Cao*, Yanmin Shang, Yangxi Li, Yanbing Liu, Jianlong Tan</p>
+                                <p class="content"><strong>Abstract:</strong>Anchor Link Prediction (ALP) across heterogeneous networks plays a pivotal role in inter-network applications. The difficulty of anchor link prediction in heterogeneous networks lies in how to consider the factors affecting nodes alignment comprehensively. In recent years, predicting anchor links based on network embedding has become the main trend. For heterogeneous networks, previous anchor link prediction methods first integrate various types of nodes associated with a user node to obtain a fusion embedding vector from global perspective, and then predict anchor links based on the similarity between fusion vectors corresponding with different user nodes. However, the fusion vector ignores effects of the local type information on user nodes alignment. To address the challenge, we propose a novel type-aware anchor link prediction across heterogeneous networks (TALP), which models the effect of type information and fusion information on user nodes alignment from local and global perspective simultaneously. TALP can solve the network embedding and type-aware alignment under a unified optimization framework based on a two-layer graph attention architecture. Through extensive experiments on real heterogeneous network datasets, we demonstrate that TALP significantly outperforms the state-of-the-art methods.</p>
+                            </th>
+                            
+                        </tr>
+                        </tbody>
             </table>
+        </div>
         </div>
     </div>
 </div>
-<div id="footer" class="container-fluid ">      
-  <nav class="navbar navbar-default text-center navbar-fixed-bottom" >
-      <div class="navbar-inner navbar-text text-center col-sm-12 column">
-          <p class="text-muted credit " style="padding: 0.1%;">
-              ASCII Lab, Institute of Information Engineering, Chinese Academy of Sciences. No.19 Shucun Road, Haidian District, Beijing, China<a href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a> 100085
-          </p>
-      </div>
-  </nav>
-  </div>   
+<footer>
+    <div class="page-icon">
+		<button class="firstPage" onclick="first_click()" style="background-color: #FFFFFF;"><img src="./Page/imgs/left-end.png"/></button>
+		<button class="beforePage" onclick="prev_click()" style="background-color: #FFFFFF;"><img src="./Page/imgs/page-left.png"/></button>
+		<button style="background-color: #FFFFFF;">第<input id="currentPage" onchange="choose_page()" type="text" value="1"/>页</button>
+		<button style="background-color: #FFFFFF;">/&nbsp;&nbsp;&nbsp;共<input id="totalPage" type="button" value="2" readonly="readonly">页</button>
+		<button class="nextPage" onclick="next_click()" style="background-color: #FFFFFF;"><img src="./Page/imgs/page-right.png"/></button>
+		<button class="lastPage" onclick="last_click()" style="background-color: #FFFFFF;"><img src="./Page/imgs/right-end.png"/></button>			
+	</div>
+    <nav class="navbar navbar-default text-center" > 
+    <div class="navbar-inner navbar-text text-center col-sm-12 column">
+        <p class="text-muted credit " style="padding: 0.1%;">
+            ASCII Lab, Institute of Information Engineering, Chinese Academy of Sciences. No.19 Shucun Road, Haidian District, Beijing, China<a href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a> 100085
+        </p>
+       
+    </div>
+</nav>
+</footer>
 
     </body>
 </html>

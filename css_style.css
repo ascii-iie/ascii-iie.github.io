@@ -1,55 +1,18 @@
-.navbar-inverse 
-{
-    background-color: #9b59b6;
-    border-color: #8e44ad;
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
     
-}
-.navbar-inverse .navbar-header
+    }
+
+footer
 {
-    margin-left: 5%;
-    
+    margin-top: auto;
 }
-.navbar-inverse .navbar-header>a
+.navbar-default
 {
-    font-size: x-large;
-}
-.navbar-inverse .navbar-brand 
-{
-    color: #ecf0f1;
-}
-.navbar-inverse .navbar-brand:hover,
-.navbar-inverse .navbar-brand:focus 
-{
-    color: #ecdbff;
-}
-.navbar-inverse .navbar-text 
-{
-    color: #ecf0f1;
-}
-.navbar-inverse .navbar-nav > li 
-{
-    font-size: large;   
-}
-.navbar-inverse .navbar-nav > li > a 
-{
-    color: #ecf0f1;
-}
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus 
-{
-    color: #ecdbff;
-}
-.navbar-inverse .navbar-nav > li > .dropdown-menu {
-    background-color: #9b59b6;
-}
-.navbar-inverse .navbar-nav > li > .dropdown-menu > li > a {
-    color: #ecf0f1;
-}
-.navbar-inverse .navbar-nav > li > .dropdown-menu > li > a:hover,
-.navbar-inverse .navbar-nav > li > .dropdown-menu > li > a:focus 
-{
-    color: #ecdbff;
-    background-color: #8e44ad;
+    background-color:transparent;
+    border-color:transparent;
 }
 @media (max-width: 767px)
 {
@@ -60,14 +23,14 @@
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus 
     {
-        color: #ecdbff;
+        color: #818083;
     }
     .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,
     .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,
     .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus
      {
-        color: #ecdbff;
-        background-color: #8e44ad;
+        color: #818083;
+        background-color: #090909;
     }
     #menulist
     {
@@ -89,10 +52,7 @@
 {
     margin-top: 2%;
 }
-body 
-{ 
-    padding-top: 4%; 
-}
+
 .link
 {
     font-size: large;
@@ -103,7 +63,7 @@ body
     font-weight: lighter;
 }
 
-html, body
+html
 {
     height: 100%;
 }
