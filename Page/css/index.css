@@ -1,0 +1,56 @@
+
+.page-block {
+	width: 1100px;
+	background: #ffffff;
+	margin: auto auto;
+}
+.page-block h1 {
+	text-align: center;
+}
+.page-icon{
+	width: 1200px;
+	margin: 35px auto 0;
+	font-size:medium;
+	text-align:center;
+}
+.page-icon button {
+	border: none;
+	padding:4px 10px 5px;
+	font-size:medium;
+}
+.page-icon button:nth-child(3) {
+	cursor: default;
+}
+.page-icon button:nth-child(4) {
+	cursor: default;
+}
+.page-icon button img {
+	width: 15px;
+	height: 15px;
+}
+#totalPage {
+	cursor: default;
+	border: none;
+	background: #ffffff;
+	padding:4px 10px 5px;
+	font-size:medium;
+}
+#currentPage {
+	cursor: pointer;
+	border: none;
+	padding:4px 10px 5px;
+	font-size:medium;
+	background: #ffffff;
+	cursor: auto;
+	text-align: center;
+	width: 40px;
+}
+.page-1{
+	display: block;
+}
+.page-2{
+	display: none;
+}
+.page-3{
+	display: none;
+}
