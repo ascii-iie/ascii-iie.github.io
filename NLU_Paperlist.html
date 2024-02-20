@@ -30,6 +30,38 @@
         <div class="col-sm-10 col-md-offset-1 col-lg-offset-1 col-xl-offset-1">
             <div class="page-1">
             <table class="table">
+                <tbody>
+                    <tr>
+                        <th>
+                            <a href="https://github.com/Lilice-r/DEIE" class="link">COLING2024: DEIE: Benchmarking Document-level Event Information Extraction with a Large-scale Chinese News Dataset</a>
+                            <p class="content">Yubing Ren, Yanan Cao, Hao Li, Yingjie Li, Zixuan Ma, Fang Fang, Ping Guo and Wei Ma</p>
+                            <p class="content"><strong>Abstract:</strong>A text corpus centered on events is foundational to research concerning the detection, representation, reasoning, and harnessing of online events. The majority of current event-based datasets mainly target sentence-level tasks, thus to advance event-related research spanning from sentence to document level, this paper introduces DEIE, a unified large-scale document-level event information extraction dataset with over 56,000+ events and 242,000+ arguments. Three key features stand out: large-scale manual annotation (20,000 documents), comprehensive unified annotation (encompassing event trigger/argument, summary, and relation at once), and emergency events annotation (covering 19 emergency types). Notably, our experiments reveal that current event-related models struggle with DEIE, signaling a pressing need for more advanced event-related research in the future.</p>
+                            <a href="https://github.com/Lilice-r/DEIE">https://github.com/Lilice-r/DEIE</a>
+                        </th>
+                        
+                    </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <a href="" class="link">ICASSP2024: Sorting, Reasoning, and Extraction: an Easy-to-Hard Reasoning Framework for Document-level Event Argument Extraction</a>
+                                <p class="content">Hao Li, Yanan Cao, Yubing Ren, Fang Fang, Lanxue Zhang, Yingjie Li, Shi Wang</p>
+                                <p class="content"><strong>Abstract:</strong>Document-level event argument extraction is a crucial task to help understand event information. Existing methods mostly ignore the different extraction difficulties of arguments, and the lack of task planning significantly affects the extraction and reasoning abilities of the model. In this paper, we innovatively analyze the difficulty of arguments and propose a novel framework for reasoning from easy to hard, aiming to use the information of simple arguments to help the extraction of difficult arguments in a human-like way. Specifically, our framework consists of three core modules: sorting, reasoning, and extraction. The sorting module first sorts the argument roles according to the current context and plans the reasoning path from easy to hard. Then, the reasoning module performs information reasoning based on the reasoning path to help capture the information of difficult arguments. Finally, the extraction module utilizes the reasoning information to complete argument extraction. Experimental results on the RAMS and WikiEvents datasets show the great advantages of our proposed approach. In particular, we obtain new state-of-the-art (SOTA) performance in multiple scenarios.</p>
+                                <a href="https://github.com/hlee-top/event_extract">https://github.com/hlee-top/event_extract</a>
+                            </th>
+                            
+                        </tr>
+                        </tbody>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <a href="https://aclanthology.org/2023.findings-emnlp.421/" class="link">EMNLP2023: Intra-Event and Inter-Event Dependency-Aware Graph Network for Event Argument Extraction.</a>
+                                <p class="content">Hao Li, Yanan Cao, Yubing Ren, Fang Fang, Lanxue Zhang, Yingjie Li, Shi Wang</p>
+                                <p class="content"><strong>Abstract:</strong>Event argument extraction is critical to various natural language processing tasks for providing structured information. Existing works usually extract the event arguments one by one, and mostly neglect to build dependency information among event argument roles, especially from the perspective of event structure. Such an approach hinders the model from learning the interactions between different roles. In this paper, we raise our research question: How to adequately model dependencies between different roles for better performance? To this end, we propose an intra-event and inter-event dependency-aware graph network, which uses the event structure as the fundamental unit to construct dependencies between roles. Specifically, we first utilize the dense intra-event graph to construct role dependencies within events, and then construct dependencies between events by retrieving similar events of the current event through the retrieval module. To further optimize dependency information and event representation, we propose a dependency interaction module and two auxiliary tasks to improve the extraction ability of the model in different scenarios. Experimental results on the ACE05, RAMS, and WikiEvents datasets show the great advantages of our proposed approach.</p>
+                            </th>
+                            
+                        </tr>
+                        </tbody>
                     <tbody>
                         <tr>
                             <th>
@@ -52,45 +84,46 @@
                                 
                             </tr>
                             </tbody>
-                            <tbody>
-                                <tr>
-                                    <th>
-                                        <a href="https://aclanthology.org/2022.coling-1.221.pdf" class="link">COLING2022: CLIO: Role-interactive Multi-event Head Attention Network for Document-level Event Extraction</a>
-                                        <p class="content">Yubing Ren, Yanan Cao, Fang Fang, Ping Guo, Zheng Lin, Wei Ma, Yi Liu.</p>
-                                        <p class="content"><strong>Abstract:</strong>Transforming the large amounts of unstructured text on the Internet into structured event knowledge is a critical, yet unsolved goal of NLP, especially when addressing document-level text. Existing methods struggle in Document-level Event Extraction (DEE) due to its two intrinsic challenges: (a) Nested arguments, which means one argument is the sub-string of another one. (b) Multiple events, which indicates we should identify multiple events and assemble the arguments for them. In this paper, we propose a role-interactive multi-event head attention network (CLIO) to solve these two challenges jointly. The key idea is to map different events to multiple subspaces (i.e. multi-event head). In each event subspace, we draw the semantic representation of each role closer to its corresponding arguments, then we determine whether the current event exists. To further optimize event representation, we propose an event representation enhancing strategy to regularize pre-trained embedding space to be more isotropic. Our experiments on two widely used DEE datasets show that CLIO achieves consistent improvements over previous methods.</p>
-                                    	<a href="https://github.com/Lilice-r/CLIO">https://github.com/Lilice-r/CLIO</a>
-				    </th>
-                                    
-                                </tr>
-                                </tbody>
-                <tbody>
-                <tr>
-                    <th>
-                        <a href="https://aclanthology.org/2021.emnlp-main.18/" class="link">EMNLP2021: TEBNER: Domain Specific Named Entity Recognition with Type Expanded Boundary-aware Network</a>
-                        <p class="content">Zheng Fang, Yanan Cao, Tai Li, Ruipeng Jia, Fang Fang, Yanmin Shang, Yuhai Lu</p>
-                        <p class="content"><strong>Abstract:</strong>To alleviate label scarcity in Named Entity Recognition (NER) task, distantly supervised NER methods are widely applied to automatically label data and identify entities. Although the human effort is reduced, the generated incomplete and noisy annotations pose new challenges for learning effective neural models. In this paper, we propose a novel dictionary extension method which extracts new entities through the type expanded model. Moreover, we design a multi-granularity boundary-aware network which detects entity boundaries from both local and global perspectives. We conduct experiments on different types of datasets, the results show that our model outperforms previous state-of-the-art distantly supervised systems and even surpasses the supervised models.</p>
-                        <a href="https://github.com/fangzheng123/TEBNER">https://github.com/fangzheng123/TEBNER</a>
-                    </th>
-                    
-                </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <th>
-                            
-                            <a href="https://dl.acm.org/doi/abs/10.1145/3366423.3380146" class="link">WWW2020: High Quality Candidate Generation and Sequential Graph Attention Network for Entity Linking</a>
-                            <p class="content">Zheng Fang, Yanan Cao, Ren Li,Zhenyu Zhang, Yanbing Liu, Shi Wang</p>
-                            <p class="content"><strong>Abstract:</strong>Entity Linking (EL) is a task for mapping mentions in text to corresponding entities in knowledge base (KB). This task usually includes candidate generation (CG) and entity disambiguation (ED) stages. Recent EL systems based on neural network models have achieved good performance, but they still face two challenges: (i) Previous studies evaluate their models without considering the differences between candidate entities. In fact, the quality (gold recall in particular) of candidate sets has an effect on the EL results. So, how to promote the quality of candidates needs more attention. (ii) In order to utilize the topical coherence among the referred entities, many graph and sequence models are proposed for collective ED. However, graph-based models treat all candidate entities equally which may introduce much noise information. On the contrary, sequence models can only observe previous referred entities, ignoring the relevance between the current mention and its subsequent entities. To address the first problem, we propose a multi-strategy based CG method to generate high recall candidate sets. For the second problem, we design a Sequential Graph Attention Network (SeqGAT) which combines the advantages of graph and sequence methods. In our model, mentions are dealt with in a sequence manner. Given the current mention, SeqGAT dynamically encodes both its previous referred entities and subsequent ones, and assign different importance to these entities. In this way, it not only makes full use of the topical consistency, but also reduce noise interference. We conduct experiments on different types of datasets and compare our method with previous EL system on the open evaluation platform. The comparison results show that our model achieves significant improvements over the state-of-the-art methods.</p>
-                            <a href="https://github.com/fangzheng123/SGEL">https://github.com/fangzheng123/SGEL</a>
-                            
-                        </th>
-                        
-                    </tr>
-                    </tbody>
-                </table>
+              
             </div>
             <div class="page-2">
                 <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>
+                                <a href="https://aclanthology.org/2022.coling-1.221.pdf" class="link">COLING2022: CLIO: Role-interactive Multi-event Head Attention Network for Document-level Event Extraction</a>
+                                <p class="content">Yubing Ren, Yanan Cao, Fang Fang, Ping Guo, Zheng Lin, Wei Ma, Yi Liu.</p>
+                                <p class="content"><strong>Abstract:</strong>Transforming the large amounts of unstructured text on the Internet into structured event knowledge is a critical, yet unsolved goal of NLP, especially when addressing document-level text. Existing methods struggle in Document-level Event Extraction (DEE) due to its two intrinsic challenges: (a) Nested arguments, which means one argument is the sub-string of another one. (b) Multiple events, which indicates we should identify multiple events and assemble the arguments for them. In this paper, we propose a role-interactive multi-event head attention network (CLIO) to solve these two challenges jointly. The key idea is to map different events to multiple subspaces (i.e. multi-event head). In each event subspace, we draw the semantic representation of each role closer to its corresponding arguments, then we determine whether the current event exists. To further optimize event representation, we propose an event representation enhancing strategy to regularize pre-trained embedding space to be more isotropic. Our experiments on two widely used DEE datasets show that CLIO achieves consistent improvements over previous methods.</p>
+                                <a href="https://github.com/Lilice-r/CLIO">https://github.com/Lilice-r/CLIO</a>
+            </th>
+                            
+                        </tr>
+                        </tbody>
+        <tbody>
+        <tr>
+            <th>
+                <a href="https://aclanthology.org/2021.emnlp-main.18/" class="link">EMNLP2021: TEBNER: Domain Specific Named Entity Recognition with Type Expanded Boundary-aware Network</a>
+                <p class="content">Zheng Fang, Yanan Cao, Tai Li, Ruipeng Jia, Fang Fang, Yanmin Shang, Yuhai Lu</p>
+                <p class="content"><strong>Abstract:</strong>To alleviate label scarcity in Named Entity Recognition (NER) task, distantly supervised NER methods are widely applied to automatically label data and identify entities. Although the human effort is reduced, the generated incomplete and noisy annotations pose new challenges for learning effective neural models. In this paper, we propose a novel dictionary extension method which extracts new entities through the type expanded model. Moreover, we design a multi-granularity boundary-aware network which detects entity boundaries from both local and global perspectives. We conduct experiments on different types of datasets, the results show that our model outperforms previous state-of-the-art distantly supervised systems and even surpasses the supervised models.</p>
+                <a href="https://github.com/fangzheng123/TEBNER">https://github.com/fangzheng123/TEBNER</a>
+            </th>
+            
+        </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <th>
+                    
+                    <a href="https://dl.acm.org/doi/abs/10.1145/3366423.3380146" class="link">WWW2020: High Quality Candidate Generation and Sequential Graph Attention Network for Entity Linking</a>
+                    <p class="content">Zheng Fang, Yanan Cao, Ren Li,Zhenyu Zhang, Yanbing Liu, Shi Wang</p>
+                    <p class="content"><strong>Abstract:</strong>Entity Linking (EL) is a task for mapping mentions in text to corresponding entities in knowledge base (KB). This task usually includes candidate generation (CG) and entity disambiguation (ED) stages. Recent EL systems based on neural network models have achieved good performance, but they still face two challenges: (i) Previous studies evaluate their models without considering the differences between candidate entities. In fact, the quality (gold recall in particular) of candidate sets has an effect on the EL results. So, how to promote the quality of candidates needs more attention. (ii) In order to utilize the topical coherence among the referred entities, many graph and sequence models are proposed for collective ED. However, graph-based models treat all candidate entities equally which may introduce much noise information. On the contrary, sequence models can only observe previous referred entities, ignoring the relevance between the current mention and its subsequent entities. To address the first problem, we propose a multi-strategy based CG method to generate high recall candidate sets. For the second problem, we design a Sequential Graph Attention Network (SeqGAT) which combines the advantages of graph and sequence methods. In our model, mentions are dealt with in a sequence manner. Given the current mention, SeqGAT dynamically encodes both its previous referred entities and subsequent ones, and assign different importance to these entities. In this way, it not only makes full use of the topical consistency, but also reduce noise interference. We conduct experiments on different types of datasets and compare our method with previous EL system on the open evaluation platform. The comparison results show that our model achieves significant improvements over the state-of-the-art methods.</p>
+                    <a href="https://github.com/fangzheng123/SGEL">https://github.com/fangzheng123/SGEL</a>
+                    
+                </th>
+                
+            </tr>
+            </tbody>
+        </table>
                     <tbody>
                         <tr>
                             <th>
