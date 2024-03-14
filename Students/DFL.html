@@ -17,7 +17,7 @@
           const parser = new DOMParser();
           const otherDoc = parser.parseFromString(html, "text/html");
 
-          const otherUL = otherDoc.getElementById("ii");
+          const otherUL = otherDoc.getElementById("soutceTarget");
           const targetList = document.getElementById("targetList");
 
           const liElements = otherUL.getElementsByTagName("li");
