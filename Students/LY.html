@@ -9,7 +9,45 @@
         <link rel="stylesheet" href="../css_style.css">
         <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
         <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      fetch("../Team.html")
+        .then(response => response.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const otherDoc = parser.parseFromString(html, "text/html");
 
+          const otherUL = otherDoc.getElementById("sourceList");
+          const targetList = document.getElementById("targetList");
+
+          const liElements = otherUL.getElementsByTagName("li");
+          const searchString = "Yu Liu";
+
+          let hasMatch = false; // 标记是否有匹配的li元素
+
+          for (let i = 0; i < liElements.length; i++) {
+            const li = liElements[i];
+            if (li.textContent.includes(searchString)) {
+              hasMatch = true;
+              const newLI = document.createElement("li");
+              newLI.innerHTML = li.innerHTML;
+              newLI.classList.add("list-group-item"); 
+	      newLI.classList.add("list_ins");// 添加保持样式的类名 // 添加自定义类名
+              targetList.appendChild(newLI);
+            }
+          }
+
+          if (!hasMatch) {
+            const newLI = document.createElement("li");
+            newLI.textContent = "暂无";
+	    newLI.classList.add("list-group-item"); 
+	    newLI.classList.add("list_ins");// 添加保持样式的类名 // 添加自定义类名
+            targetList.appendChild(newLI);
+          }
+        })
+        .catch(error => console.log(error));
+	 });
+  </script>
 
       </head>
 <body>
@@ -50,11 +88,9 @@
                     <p class="introduction">刘瑜，2022级博士研究生。</p>
                     <p class="introduction">Yu Liu, Ph.D. Student of the grade 2022.</p>
 					<br>
-					<p style="font-size: large;"><strong>Representative Works</strong></p>
-                  <ul class="list-group list-group-flush">
-                      <li class="list-group-item list_ins">Generative Models for Complex Logical Reasoning over Knowledge Graphs (WSDM 2023; CCF-B)</li>                      
-
-                    </ul>
+			<p style="font-size: large;"><strong>Representative Works:</strong></p>
+                  <ul class="list-group list-group-flush" id="targetList">
+					</ul>
                     <br>
 
             </div>
