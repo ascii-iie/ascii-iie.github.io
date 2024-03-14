@@ -31,7 +31,8 @@
               hasMatch = true;
               const newLI = document.createElement("li");
               newLI.innerHTML = li.innerHTML;
-              newLI.classList.add("preserve-style"); // 添加自定义类名
+              newLI.classList.add("list-group-item"); 
+	      newLI.classList.add("list_ins");// 添加保持样式的类名 // 添加自定义类名
               targetList.appendChild(newLI);
             }
           }
@@ -39,11 +40,12 @@
           if (!hasMatch) {
             const newLI = document.createElement("li");
             newLI.textContent = "暂无";
+	    newLI.classList.add("list-group-item"); 
+	    newLI.classList.add("list_ins");// 添加保持样式的类名 // 添加自定义类名
             targetList.appendChild(newLI);
           }
         })
         .catch(error => console.log(error));
-    });
   </script>
 
       </head>
