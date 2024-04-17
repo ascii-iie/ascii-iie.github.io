@@ -1,0 +1,17 @@
+Watermark for LLM
+录制文件：https://meeting.tencent.com/v2/cloud-record/share?id=6374a7c3-1ae2-4e49-8a45-c95cea7568ca&from=3&is-single=false&record_type=2
+
+Human Preference Alignment for LLM
+录制文件：https://meeting.tencent.com/v2/cloud-record/share?id=f696f65c-b723-484f-ae2e-a19ea639bfe4&from=3&is-single=false&record_type=2
+
+因果推断与大模型
+录制文件：https://meeting.tencent.com/v2/cloud-record/share?id=ca860d39-69d8-455f-aacc-d88b84805ed1&from=3&is-single=false&record_type=2
+
+知识编辑
+录制文件：https://meeting.tencent.com/v2/cloud-record/share?id=b15887e8-d9fe-447c-9b53-97d7fdafd595&from=3&is-single=false&record_type=2
+
+检索增强的LLM
+录制文件：https://meeting.tencent.com/v2/cloud-record/share?id=68eeb91d-3650-49c0-ac12-93b571422d10&from=3&is-single=false&record_type=2
+
+LLM的Prompt越狱攻击
+录制文件：https://meeting.tencent.com/v2/cloud-record/share?id=e134aef1-a2f2-4555-b12d-4478d4c99c83&from=3&is-single=false&record_type=2

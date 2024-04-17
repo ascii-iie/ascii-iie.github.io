@@ -1,0 +1,8 @@
+LLM压缩
+录制文件：https://meeting.tencent.com/v2/cloud-record/share?id=7dd869f1-7b29-4092-b955-d4fd25fa44b1&from=3&is-single=false&record_type=2
+
+AIGC
+录制文件：https://meeting.tencent.com/v2/cloud-record/share?id=c3db2d65-671c-4edc-88c9-373490e7242b&from=3&is-single=false&record_type=2
+
+Privacy Attacks in LLM
+录制文件：https://meeting.tencent.com/v2/cloud-record/share?id=fbd7942d-fbc0-4a97-ac00-c17b1f5ecb3a&from=3
