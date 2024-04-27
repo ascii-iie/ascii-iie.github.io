@@ -1,4 +1,4 @@
-LLM Agent
+Social Agents
 录制文件：https://meeting.tencent.com/v2/cloud-record/share?id=060ef118-4692-4949-9b32-ca0121648208&from=3
 
 LLM压缩
