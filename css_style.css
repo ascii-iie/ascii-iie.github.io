@@ -135,6 +135,7 @@ html
     animation: scroll 20s linear infinite;
     font-size: 20px; /* Adjust font size as needed */
     padding-left: 100%; /* Ensure it starts off screen */
+    font-family: 'Times New Roman', Times, serif;
 }
 @keyframes scroll {
     0% {
