@@ -1,3 +1,6 @@
+大模型不确定性度量
+录制文件：https://meeting.tencent.com/v2/cloud-record/share?id=6825125a-719f-4517-aa70-778b9adc7ba3&from=3&is-single=false&record_type=2
+
 Social Agents
 录制文件：https://meeting.tencent.com/v2/cloud-record/share?id=060ef118-4692-4949-9b32-ca0121648208&from=3
 
