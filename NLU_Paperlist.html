@@ -30,11 +30,32 @@
         <div class="col-sm-10 col-md-offset-1 col-lg-offset-1 col-xl-offset-1">
             <div class="page-1">
             <table class="table">
-                
                 <tbody>
                     <tr>
                         <th>
-                            <a href="https://github.com/Lilice-r/DEIE" class="link">COLING2024: DEIE: Benchmarking Document-level Event Information Extraction with a Large-scale Chinese News Dataset</a>
+                            <a href="" class="link">ACL2024: DEIE: Subtle Signatures, Strong Shields: Advancing Robust and Imperceptible Watermarking in Large Language Models</a>
+                            <p class="content">Yubing Ren, Ping Guo, Yanan Cao, Wei Ma</p>
+                            <p class="content"><strong>Abstract:</strong>The widespread adoption of Large Language Models (LLMs) has led to an increase in AI-generated text on the Internet, presenting a crucial challenge to differentiate AI-created content from human-written text. This challenge is critical to prevent issues of authenticity, trust, and potential copyright violations. Current research focuses on watermarking LLM-generated text, but traditional techniques struggle to balance robustness with text quality. We introduce a novel watermarking approach, Robust and Imperceptible Watermarking (RIW) for LLMs, which leverages token prior probabilities to improve detectability and maintain watermark imperceptibility. RIW methodically embeds watermarks by partitioning selected tokens into two distinct groups based on their prior probabilities and employing tailored strategies for each group. In the detection stage, the RIW method employs the ‘voted z-test’ to provide a statistically robust framework to identify the presence of a watermark accurately. The effectiveness of RIW is evaluated across three key dimensions: success rate, text quality, and robustness against removal attacks. Our experimental results on various LLMs, including GPT2-XL, OPT-1.3B, and LLaMA2-7B, indicate that RIW surpasses existing models, and also exhibits increased robustness against various attacks and good imperceptibility, thus promoting the responsible use of LLMs.</p>
+                            <a href="https://github.com/Lilice-r/RIW">https://github.com/Lilice-r/RIW</a>
+                        </th>
+                        
+                    </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <a href="" class="link">NAACL2024: TISE: A Tripartite In-context Selection Method for Event Argument Extraction</a>
+                                <p class="content">Yanhe Fu, Yanan Cao∗, Qingyue Wang,and Yi Liu</p>
+                                <p class="content"><strong>Abstract:</strong>In-context learning enhances the reasoning capabilities of LLMs by providing several examples. A direct yet effective approach to obtain in-context example is to select the top k examples based on their semantic similarity to the test input. However, when applied to event argument extraction (EAE), this approach exhibits two shortcomings: 1) It may select almost identical examples, thus failing to provide additional event information, and 2) It overlooks event attributes, leading to the selected examples being unrelated to the test event type. In this paper, we introduce three necessary requirements when selecting an in-context example for EAE task: semantic similarity, example diversity and event correlation. And we further propose TISE, which scores examples from these three perspectives and integrates them using Determinantal Point Processes to directly select a set of examples as context. Experimental results on the ACE05 dataset demonstrate the effectiveness of TISE and the necessity of three requirements. Furthermore, we surprisingly observe that TISE can achieve superior performance with fewer examples and can even exceed some supervised methods.</p>
+                            </th>
+                            
+                        </tr>
+                        </tbody>
+                   
+                <tbody>
+                    <tr>
+                        <th>
+                            <a href="" class="link">COLING2024: DEIE: Benchmarking Document-level Event Information Extraction with a Large-scale Chinese News Dataset</a>
                             <p class="content">Yubing Ren, Yanan Cao, Hao Li, Yingjie Li, Zixuan Ma, Fang Fang, Ping Guo and Wei Ma</p>
                             <p class="content"><strong>Abstract:</strong>A text corpus centered on events is foundational to research concerning the detection, representation, reasoning, and harnessing of online events. The majority of current event-based datasets mainly target sentence-level tasks, thus to advance event-related research spanning from sentence to document level, this paper introduces DEIE, a unified large-scale document-level event information extraction dataset with over 56,000+ events and 242,000+ arguments. Three key features stand out: large-scale manual annotation (20,000 documents), comprehensive unified annotation (encompassing event trigger/argument, summary, and relation at once), and emergency events annotation (covering 19 emergency types). Notably, our experiments reveal that current event-related models struggle with DEIE, signaling a pressing need for more advanced event-related research in the future.</p>
                             <a href="https://github.com/Lilice-r/DEIE">https://github.com/Lilice-r/DEIE</a>
@@ -63,32 +84,33 @@
                             
                         </tr>
                         </tbody>
-                        <tbody>
-                            <tr>
-                                <th>
-                                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-44696-2_8" class="link">NLPCC 2023: A Multi-granularity Similarity Enhanced Model for Implicit Event Argument Extraction.</a>
-                                    <p class="content">Yanhe Fu, Yi Liu, Yanan Cao, Yubing Ren, Qingyue Wang, Fang Fang, Cong Cao </p>
-                                    <p class="content"><strong>Abstract:</strong>Implicit Event Argument Extraction (Implicit EAE) aims to extract the document event arguments given the event type. Influenced by the document length, the arguments scattered in different sentences can potentially lead to two challenges during extraction: long-range dependency and distracting context. Existing works rely on the contextual capabilities of pre-trained models and semantic features but lack a straightforward solution for these two challenges and may introduce noise. In this paper, we propose a Multi-granularity Similarity Enhanced Model to solve these issues. Specifically, we first construct a heterogeneous graph to incorporate global information, then design a supplementary task to tackle the above challenges. For long-range dependency, span-level enhancement can directly close the semantic distance between trigger and arguments across sentences; for distracting context, sentence-level enhancement makes the model concentrate more on effective content. Experimental results on RAMS and WikiEvents demonstrate that our proposed model can obtain state-of-the-art performance in Implicit EAE.</p>
-                                </th>
-                                
-                            </tr>
-                            </tbody>   
-                    <tbody>
-                        <tr>
-                            <th>
-                                <a href="https://arxiv.org/abs/2305.17371" class="link">ACL2023: Towards Better Entity Linking with Multi-View enhanced Distillation</a>
-                                <p class="content">Yi Liu, Yuan Tian, Jianxun Lian, Xinlong Wang, Yanan Cao, Fang Fang, Wen Zhang, Haizhen Huang, Denvy Deng, Qi Zhang</p>
-                                <p class="content"><strong>Abstract:</strong>Dense retrieval is widely used for entity linking to retrieve entities from large-scale knowledge bases. Mainstream techniques are based on a dual-encoder framework, which encodes mentions and entities independently and calculates their relevances via rough interaction metrics, resulting in difficulty in explicitly modeling multiple mention-relevant parts within entities to match divergent mentions. Aiming at learning entity representations that can match divergent mentions, this paper proposes a Multi-View Enhanced Distillation (MVD) framework, which can effectively transfer knowledge of multiple fine-grained and mention-relevant parts within entities from cross-encoders to dual-encoders. Each entity is split into multiple views to avoid irrelevant information being over-squashed into the mention-relevant view. We further design cross-alignment and self-alignment mechanisms for this framework to facilitate fine-grained knowledge distillation from the teacher model to the student model. Meanwhile, we reserve a global-view that embeds the entity as a whole to prevent dispersal of uniform information. Experiments show our method achieves state-of-the-art performance on several entity linking benchmarks.</p>
-                                <a href="https://github.com/Noen61/MVD">https://github.com/Noen61/MVD</a>
-                            </th>
-                            
-                        </tr>
-                        </tbody>
+                       
                        
             </table>
             </div>
             <div class="page-2">
                 <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>
+                                <a href="https://link.springer.com/chapter/10.1007/978-3-031-44696-2_8" class="link">NLPCC 2023: A Multi-granularity Similarity Enhanced Model for Implicit Event Argument Extraction.</a>
+                                <p class="content">Yanhe Fu, Yi Liu, Yanan Cao, Yubing Ren, Qingyue Wang, Fang Fang, Cong Cao </p>
+                                <p class="content"><strong>Abstract:</strong>Implicit Event Argument Extraction (Implicit EAE) aims to extract the document event arguments given the event type. Influenced by the document length, the arguments scattered in different sentences can potentially lead to two challenges during extraction: long-range dependency and distracting context. Existing works rely on the contextual capabilities of pre-trained models and semantic features but lack a straightforward solution for these two challenges and may introduce noise. In this paper, we propose a Multi-granularity Similarity Enhanced Model to solve these issues. Specifically, we first construct a heterogeneous graph to incorporate global information, then design a supplementary task to tackle the above challenges. For long-range dependency, span-level enhancement can directly close the semantic distance between trigger and arguments across sentences; for distracting context, sentence-level enhancement makes the model concentrate more on effective content. Experimental results on RAMS and WikiEvents demonstrate that our proposed model can obtain state-of-the-art performance in Implicit EAE.</p>
+                            </th>
+                            
+                        </tr>
+                        </tbody>   
+                <tbody>
+                    <tr>
+                        <th>
+                            <a href="https://arxiv.org/abs/2305.17371" class="link">ACL2023: Towards Better Entity Linking with Multi-View enhanced Distillation</a>
+                            <p class="content">Yi Liu, Yuan Tian, Jianxun Lian, Xinlong Wang, Yanan Cao, Fang Fang, Wen Zhang, Haizhen Huang, Denvy Deng, Qi Zhang</p>
+                            <p class="content"><strong>Abstract:</strong>Dense retrieval is widely used for entity linking to retrieve entities from large-scale knowledge bases. Mainstream techniques are based on a dual-encoder framework, which encodes mentions and entities independently and calculates their relevances via rough interaction metrics, resulting in difficulty in explicitly modeling multiple mention-relevant parts within entities to match divergent mentions. Aiming at learning entity representations that can match divergent mentions, this paper proposes a Multi-View Enhanced Distillation (MVD) framework, which can effectively transfer knowledge of multiple fine-grained and mention-relevant parts within entities from cross-encoders to dual-encoders. Each entity is split into multiple views to avoid irrelevant information being over-squashed into the mention-relevant view. We further design cross-alignment and self-alignment mechanisms for this framework to facilitate fine-grained knowledge distillation from the teacher model to the student model. Meanwhile, we reserve a global-view that embeds the entity as a whole to prevent dispersal of uniform information. Experiments show our method achieves state-of-the-art performance on several entity linking benchmarks.</p>
+                            <a href="https://github.com/Noen61/MVD">https://github.com/Noen61/MVD</a>
+                        </th>
+                        
+                    </tr>
+                    </tbody>
                     <tbody>
                         <tr>
                             <th>
@@ -122,36 +144,41 @@
             
         </tr>
         </tbody>
-        <tbody>
-            <tr>
-                <th>
-                    
-                    <a href="https://dl.acm.org/doi/abs/10.1145/3366423.3380146" class="link">WWW2020: High Quality Candidate Generation and Sequential Graph Attention Network for Entity Linking</a>
-                    <p class="content">Zheng Fang, Yanan Cao, Ren Li,Zhenyu Zhang, Yanbing Liu, Shi Wang</p>
-                    <p class="content"><strong>Abstract:</strong>Entity Linking (EL) is a task for mapping mentions in text to corresponding entities in knowledge base (KB). This task usually includes candidate generation (CG) and entity disambiguation (ED) stages. Recent EL systems based on neural network models have achieved good performance, but they still face two challenges: (i) Previous studies evaluate their models without considering the differences between candidate entities. In fact, the quality (gold recall in particular) of candidate sets has an effect on the EL results. So, how to promote the quality of candidates needs more attention. (ii) In order to utilize the topical coherence among the referred entities, many graph and sequence models are proposed for collective ED. However, graph-based models treat all candidate entities equally which may introduce much noise information. On the contrary, sequence models can only observe previous referred entities, ignoring the relevance between the current mention and its subsequent entities. To address the first problem, we propose a multi-strategy based CG method to generate high recall candidate sets. For the second problem, we design a Sequential Graph Attention Network (SeqGAT) which combines the advantages of graph and sequence methods. In our model, mentions are dealt with in a sequence manner. Given the current mention, SeqGAT dynamically encodes both its previous referred entities and subsequent ones, and assign different importance to these entities. In this way, it not only makes full use of the topical consistency, but also reduce noise interference. We conduct experiments on different types of datasets and compare our method with previous EL system on the open evaluation platform. The comparison results show that our model achieves significant improvements over the state-of-the-art methods.</p>
-                    <a href="https://github.com/fangzheng123/SGEL">https://github.com/fangzheng123/SGEL</a>
-                    
-                </th>
-                
-            </tr>
-            </tbody>
-                    <tbody>
-                        <tr>
-                            <th>
-                               
-                                    
-                            <a href="https://dl.acm.org/doi/abs/10.1145/3308558.3313517" class="link">WWW2019: Joint Entity Linking with Deep Reinforcement Learning</a>
-                            <p class="content">Zheng Fang, Yanan Cao, Qian Li, Dongjie Zhang, Zhenyu Zhang, Yanbing Liu</p>
-                            <p class="content"><strong>Abstract:</strong>Entity linking is the task of aligning mentions to corresponding entities in a given knowledge base. Previous studies have highlighted the necessity for entity linking systems to capture the global coherence. However, there are two common weaknesses in previous global models. First, most of them calculate the pairwise scores between all candidate entities and select the most relevant group of entities as the final result. In this process, the consistency among wrong entities as well as that among right ones are involved, which may introduce noise data and increase the model complexity. Second, the cues of previously disambiguated entities, which could contribute to the disambiguation of the subsequent mentions, are usually ignored by previous models. To address these problems, we convert the global linking into a sequence decision problem and propose a reinforcement learning model which makes decisions from a global perspective. Our model makes full use of the previous referred entities and explores the long-term influence of current selection on subsequent decisions. We conduct experiments on different types of datasets, the results show that our model outperforms state-of-the-art systems and has better generalization performance.</p>
-                            <a href="https://github.com/fangzheng123/RLEL_2019">https://github.com/fangzheng123/RLEL_2019</a>
-                                
-                            </th>
-                        </tr>
-                    </tbody>
+        
             </table>
         </div>
-        </div>
+        
+        <div class="page-3">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>
+                            <a href="https://dl.acm.org/doi/abs/10.1145/3366423.3380146" class="link">WWW2020: High Quality Candidate Generation and Sequential Graph Attention Network for Entity Linking</a>
+                            <p class="content">Zheng Fang, Yanan Cao, Ren Li,Zhenyu Zhang, Yanbing Liu, Shi Wang</p>
+                            <p class="content"><strong>Abstract:</strong>Entity Linking (EL) is a task for mapping mentions in text to corresponding entities in knowledge base (KB). This task usually includes candidate generation (CG) and entity disambiguation (ED) stages. Recent EL systems based on neural network models have achieved good performance, but they still face two challenges: (i) Previous studies evaluate their models without considering the differences between candidate entities. In fact, the quality (gold recall in particular) of candidate sets has an effect on the EL results. So, how to promote the quality of candidates needs more attention. (ii) In order to utilize the topical coherence among the referred entities, many graph and sequence models are proposed for collective ED. However, graph-based models treat all candidate entities equally which may introduce much noise information. On the contrary, sequence models can only observe previous referred entities, ignoring the relevance between the current mention and its subsequent entities. To address the first problem, we propose a multi-strategy based CG method to generate high recall candidate sets. For the second problem, we design a Sequential Graph Attention Network (SeqGAT) which combines the advantages of graph and sequence methods. In our model, mentions are dealt with in a sequence manner. Given the current mention, SeqGAT dynamically encodes both its previous referred entities and subsequent ones, and assign different importance to these entities. In this way, it not only makes full use of the topical consistency, but also reduce noise interference. We conduct experiments on different types of datasets and compare our method with previous EL system on the open evaluation platform. The comparison results show that our model achieves significant improvements over the state-of-the-art methods.</p>
+                            <a href="https://github.com/fangzheng123/SGEL">https://github.com/fangzheng123/SGEL</a>
+
+                        </th>
+                        
+                    </tr>
+                    </tbody>   
+            <tbody>
+                <tr>
+                    <th>
+                        <a href="https://dl.acm.org/doi/abs/10.1145/3308558.3313517" class="link">WWW2019: Joint Entity Linking with Deep Reinforcement Learning</a>
+                        <p class="content">Zheng Fang, Yanan Cao, Qian Li, Dongjie Zhang, Zhenyu Zhang, Yanbing Liu</p>
+                        <p class="content"><strong>Abstract:</strong>Entity linking is the task of aligning mentions to corresponding entities in a given knowledge base. Previous studies have highlighted the necessity for entity linking systems to capture the global coherence. However, there are two common weaknesses in previous global models. First, most of them calculate the pairwise scores between all candidate entities and select the most relevant group of entities as the final result. In this process, the consistency among wrong entities as well as that among right ones are involved, which may introduce noise data and increase the model complexity. Second, the cues of previously disambiguated entities, which could contribute to the disambiguation of the subsequent mentions, are usually ignored by previous models. To address these problems, we convert the global linking into a sequence decision problem and propose a reinforcement learning model which makes decisions from a global perspective. Our model makes full use of the previous referred entities and explores the long-term influence of current selection on subsequent decisions. We conduct experiments on different types of datasets, the results show that our model outperforms state-of-the-art systems and has better generalization performance.</p>
+                        <a href="https://github.com/fangzheng123/RLEL_2019">https://github.com/fangzheng123/RLEL_2019</a>
+                    </th>
+                    
+                </tr>
+                </tbody>
+               
+    
+        </table>
     </div>
+    </div>
+</div>
 </div>
 
 <footer>
@@ -159,7 +186,7 @@
 		<button class="firstPage" onclick="first_click()" style="background-color: #FFFFFF;"><img src="./Page/imgs/left-end.png"/></button>
 		<button class="beforePage" onclick="prev_click()" style="background-color: #FFFFFF;"><img src="./Page/imgs/page-left.png"/></button>
 		<button style="background-color: #FFFFFF;">第<input id="currentPage" onchange="choose_page()" type="text" value="1"/>页</button>
-		<button style="background-color: #FFFFFF;">/&nbsp;&nbsp;&nbsp;共<input id="totalPage" type="button" value="2" readonly="readonly">页</button>
+		<button style="background-color: #FFFFFF;">/&nbsp;&nbsp;&nbsp;共<input id="totalPage" type="button" value="3" readonly="readonly">页</button>
 		<button class="nextPage" onclick="next_click()" style="background-color: #FFFFFF;"><img src="./Page/imgs/page-right.png"/></button>
 		<button class="lastPage" onclick="last_click()" style="background-color: #FFFFFF;"><img src="./Page/imgs/right-end.png"/></button>			
 	</div>
