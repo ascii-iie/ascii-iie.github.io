@@ -1,3 +1,7 @@
-大模型安全主题调研
+大模型偏见与公平性
 日期: 2024-08-02
 录制文件：https://meeting.tencent.com/v2/cloud-record/share?id=4dd371e1-21fc-49db-9b1c-b7eace45c984&from=3&record_type=2
+
+大模型攻击与防御
+日期：2024-08-20 13:49:34
+录制文件：https://meeting.tencent.com/v2/cloud-record/share?id=31637b24-3d0d-489a-8191-a74e2b2662a4&from=3&is-single=false&record_type=2
