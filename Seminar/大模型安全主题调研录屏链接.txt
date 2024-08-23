@@ -5,3 +5,7 @@
 大模型攻击与防御
 日期：2024-08-20 13:49:34
 录制文件：https://meeting.tencent.com/v2/cloud-record/share?id=31637b24-3d0d-489a-8191-a74e2b2662a4&from=3&is-single=false&record_type=2
+
+大模型水印与机生文本检测
+日期: 2024-08-23 13:26:57
+录制文件：https://meeting.tencent.com/v2/cloud-record/share?id=486e4510-12e9-472c-8202-365e836fc661&from=3&record_type=2
