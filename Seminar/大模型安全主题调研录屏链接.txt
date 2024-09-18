@@ -13,3 +13,11 @@
 大模型与用户建模 | 可信用户偏好建模 | 大模型的用户隐私问题
 日期: 2024-08-30 15:28:57
 录制文件：https://meeting.tencent.com/v2/cloud-record/share?id=0171221a-41d3-45cb-8947-b72c2c83592c&from=3&record_type=2
+
+大模型幻觉 | 大模型价值对齐
+日期: 2024-09-06 13:59:22
+录制文件：https://meeting.tencent.com/v2/cloud-record/share?id=1227b0aa-f00a-4e11-b8e4-cd7362c297ff&from=3&record_type=2
+
+图与大模型 | 图基础模型
+日期: 2024-09-14 13:38:28
+录制文件：https://meeting.tencent.com/crm/2jp1pG9l0b
