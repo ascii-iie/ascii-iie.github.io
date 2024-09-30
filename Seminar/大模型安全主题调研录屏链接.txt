@@ -21,3 +21,11 @@
 图与大模型 | 图基础模型
 日期: 2024-09-14 13:38:28
 录制文件：https://meeting.tencent.com/crm/2jp1pG9l0b
+
+图基础模型应用
+日期: 2024-09-20 13:53:32
+录制文件：https://meeting.tencent.com/crm/KeamvgvK30
+
+大模型知识与能力评估 | 大模型安全评估
+日期: 2024-09-29 12:55:24
+录制文件：https://meeting.tencent.com/crm/lRk8m8BK2f
