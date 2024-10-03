@@ -1,173 +1,356 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>NLG_Paperlist</title>
-        <link rel="icon" type="image/x-icon" href="img/ASCII_1.ico"/>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css_style.css">
-        <link rel="stylesheet" type="text/css" href="./Page/css/index.css"/>
-        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="./Page/js/index.js" type="text/javascript" charset="utf-8"></script>
-   
 
-      </head>
-      
-    <body>
+<head>
+    <title>NLG Paper List</title>
+    <link rel="icon" type="image/x-icon" href="/img/ASCII_1.ico" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.net/bootstrap/5.3.2/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.net/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css_style.css">
+</head>
 
-    <div id="head">
-            <iframe MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no src="head.html" width="100%"  height="auto">
-            </iframe>
-             </div>
-      
-    <div class="container-fluid">
-        <div class="row">
+<body>
+
+    <div id="navbar"></div> <!-- 用于插入导航栏的容器 -->
+
+    <div class="container-fluid" style="margin-top: 100px;">
+
+        <button type="button" id="back-to-top" class="btn btn-outline-danger" onclick="scrollToTop()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-bar-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M3.646 11.854a.5.5 0 0 0 .708 0L8 8.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708M2.4 5.2c0 .22.18.4.4.4h10.4a.4.4 0 0 0 0-.8H2.8a.4.4 0 0 0-.4.4" />
+            </svg>
+        </button>
+
+
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/index.html">Index</a></li>
+                        <li class="breadcrumb-item">Group (Paper List)</li>
+                        <li class="breadcrumb-item active" aria-current="page">Natural Language Generation (NLG)</li>
+                    </ol>
+                </nav>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row" style="align-items: center; justify-content: center;">
             <div class="col-sm-10 col-md-offset-1 col-lg-offset-1 col-xl-offset-1">
-            
-            <div class="page-1">
-            <table class="table">
-                <tbody>
-                    <tr>
-                        <th>
-                            <a href="https://arxiv.org/abs/2306.01657" class="link">ACL2023:DiffusEmp: A Diffusion Model-Based Framework with Multi-Grained Control for Empathetic Response Generation.</a>
-                            <p class="content">Guanqun Bi, Lei Shen, Yanan Cao, Meng Chen, Yuqiang Xie, Zheng Lin, Xiaodong He </p>
-                            <p class="content"><strong>Abstract:</strong>Empathy is a crucial factor in open-domain conversations, which naturally shows one's caring and understanding to others. Though several methods have been proposed to generate empathetic responses, existing works often lead to monotonous empathy that refers to generic and safe expressions. In this paper, we propose to use explicit control to guide the empathy expression and design a framework DiffusEmp based on conditional diffusion language model to unify the utilization of dialogue context and attribute-oriented control signals. Specifically, communication mechanism, intent, and semantic frame are imported as multi-grained signals that control the empathy realization from coarse to fine levels. We then design a specific masking strategy to reflect the relationship between multi-grained signals and response tokens, and integrate it into the diffusion model to influence the generative process. Experimental results on a benchmark dataset EmpatheticDialogue show that our framework outperforms competitive baselines in terms of controllability, informativeness, and diversity without the loss of context-relatedness.</p>
-                            <a href="https://github.com/surika/DiffusEmp">https://github.com/surika/DiffusEmp</a>
-                        </th>
-                        
-                    </tr>
-                    </tbody>
+                <table class="table table-striped">
                     <tbody>
                         <tr>
                             <th>
-                                <a href="https://arxiv.org/abs/2306.00434" class="link">ACL2023:Divide, Conquer, and Combine: Mixture of Semantic-Independent Experts for Zero-Shot Dialogue State Tracking.</a>
-                                <p class="content">Qingyue Wang, Liang Ding, Yanan Cao, Yibing Zhan, Zheng Lin, Shi Wang, Dacheng Tao, Li Guo </p>
-                                <p class="content"><strong>Abstract:</strong>Zero-shot transfer learning for Dialogue State Tracking (DST) helps to handle a variety of task-oriented dialogue domains without the cost of collecting in-domain data. Existing works mainly study common data- or model-level augmentation methods to enhance the generalization but fail to effectively decouple the semantics of samples, limiting the zero-shot performance of DST. In this paper, we present a simple and effective "divide, conquer and combine" solution, which explicitly disentangles the semantics of seen data, and leverages the performance and robustness with the mixture-of-experts mechanism. Specifically, we divide the seen data into semantically independent subsets and train corresponding experts, the newly unseen samples are mapped and inferred with mixture-of-experts with our designed ensemble inference. Extensive experiments on MultiWOZ2.1 upon the T5-Adapter show our schema significantly and consistently improves the zero-shot performance, achieving the SOTA on settings without external knowledge, with only 10M trainable parameters1.</p>
-                                <a href="https://github.com/qingyue2014/MoE4DST">https://github.com/qingyue2014/MoE4DST</a>
+                                <a href="https://arxiv.org/abs/2306.01657" class="link">ACL2023:DiffusEmp: A
+                                    Diffusion Model-Based Framework with Multi-Grained Control for Empathetic
+                                    Response Generation.</a>
+                                <p class="content">Guanqun Bi, Lei Shen, Yanan Cao, Meng Chen, Yuqiang Xie, Zheng
+                                    Lin, Xiaodong He </p>
+                                <p class="content"><strong>Abstract:</strong>Empathy is a crucial factor in
+                                    open-domain conversations, which naturally shows one's caring and understanding
+                                    to others. Though several methods have been proposed to generate empathetic
+                                    responses, existing works often lead to monotonous empathy that refers to
+                                    generic and safe expressions. In this paper, we propose to use explicit control
+                                    to guide the empathy expression and design a framework DiffusEmp based on
+                                    conditional diffusion language model to unify the utilization of dialogue
+                                    context and attribute-oriented control signals. Specifically, communication
+                                    mechanism, intent, and semantic frame are imported as multi-grained signals that
+                                    control the empathy realization from coarse to fine levels. We then design a
+                                    specific masking strategy to reflect the relationship between multi-grained
+                                    signals and response tokens, and integrate it into the diffusion model to
+                                    influence the generative process. Experimental results on a benchmark dataset
+                                    EmpatheticDialogue show that our framework outperforms competitive baselines in
+                                    terms of controllability, informativeness, and diversity without the loss of
+                                    context-relatedness.</p>
+                                <a href="https://github.com/surika/DiffusEmp">https://github.com/surika/DiffusEmp</a>
                             </th>
-                            
                         </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <th>
-                                    <a href="https://arxiv.org/abs/2204.13512" class="link">ACL2022:Neural Label Search for Zero-Shot Multi-Lingual Extractive Summarization</a>
-                                    <p class="content">Ruipeng Jia, Xingxing Zhang, Yanan Cao*, Shi Wang, Zheng Lin, Furu Wei </p>
-                                    <p class="content"><strong>Abstract:</strong>In zero-shot multilingual extractive text summarization, a model is typically trained on English summarization dataset and then applied on summarization datasets of other languages. Given English gold summaries and documents, sentence-level labels for extractive summarization are usually generated using heuristics. However, these monolingual labels created on English datasets may not be optimal on datasets of other languages, for that there is the syntactic or semantic discrepancy between different languages. In this way, it is possible to translate the English dataset to other languages and obtain different sets of labels again using heuristics. To fully leverage the information of these different sets of labels, we propose NLSSum (Neural Label Search for Summarization), which jointly learns hierarchical weights for these different sets of labels together with our summarization model. We conduct multilingual zero-shot summarization experiments on MLSUM and WikiLingua datasets, and we achieve state-of-the-art results using both human and automatic evaluations across these two datasets.</p>
-                                    <a href="https://github.com/jiaruipeng1994/Extractive_Summarization">https://github.com/jiaruipeng1994/Extractive_Summarization</a>
-                                </th>
-                                
-                            </tr>
-                            </tbody>
-                <tbody>
-                <tr>
-                    <th>
-                        <a href="https://aclanthology.org/2022.coling-1.42.pdf" class="link">COLING2022:Slot Dependency Modeling for Zero-shot Cross-domain Dialogue State Tracking</a>
-                        <p class="content">Qingyue Wang, Yanan Cao, Piji Li and Li Guo</p>
-                        <p class="content"><strong>Abstract:</strong>Zero-shot learning for Dialogue State Tracking (DST) focuses on generalizing to an unseen domain without the expense of collecting in domain data. However, previous zero-shot DST methods ignore the slot dependencies in a multidomain dialogue, resulting in sub-optimal performances when adapting to unseen domains. In this paper, we utilize slot prompts combination, slot values demonstration, and slot constraint object to model the slot-slot dependencies, slot-value dependency and slot-context dependency respectively. Specifically, each slot prompt consists of a slot-specific prompt and a slot-shared prompt to capture the shared knowledge across different domains. Experimental results show the effectiveness of our proposed method over existing state-of-art generation methods under zero-shot/few-shot settings.</p>
-                    </th>
-                    
-                </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <th>
-                            <a href="https://ieeexplore.ieee.org/document/9533938" class="link">IJCNN2021:Incorporating Specific Knowledge into End-to-End Task-oriented Dialogue Systems</a>
-                            <p class="content">Qingyue Wang, Yanan Cao, Junyan Jiang, Yafang Wang and Li Guo</p>
-                            <p class="content"><strong>Abstract:</strong>External knowledge is vital to many natural language processing tasks. However, current end-to-end dialogue systems often struggle to interface knowledge bases(KBs) with response smoothly and effectively. In this paper, we convert the raw knowledge into relation knowledge and integrated knowledge and then incorporate them into end-to-end task-oriented dialogue systems. The relation knowledge extracted from knowledge triples is combined with dialogue history, aiming to enhance semantic inputs and support better language understanding. Integrated knowledge involves entities and relations by graph attention, assisting the model in generating informative responses. The experimental results on three public dialogue datasets show that our model improves over the previous state-of-the-art models in sentence fluency and informativeness.</p>
-                        </th>
-                        
-                    </tr>
+
+                        <tr>
+                            <th>
+                                <a href="https://arxiv.org/abs/2306.00434" class="link">ACL2023:Divide, Conquer, and
+                                    Combine: Mixture of Semantic-Independent Experts for Zero-Shot Dialogue State
+                                    Tracking.</a>
+                                <p class="content">Qingyue Wang, Liang Ding, Yanan Cao, Yibing Zhan, Zheng Lin, Shi
+                                    Wang, Dacheng Tao, Li Guo </p>
+                                <p class="content"><strong>Abstract:</strong>Zero-shot transfer learning for
+                                    Dialogue State Tracking (DST) helps to handle a variety of task-oriented
+                                    dialogue domains without the cost of collecting in-domain data. Existing works
+                                    mainly study common data- or model-level augmentation methods to enhance the
+                                    generalization but fail to effectively decouple the semantics of samples,
+                                    limiting the zero-shot performance of DST. In this paper, we present a simple
+                                    and effective "divide, conquer and combine" solution, which explicitly
+                                    disentangles the semantics of seen data, and leverages the performance and
+                                    robustness with the mixture-of-experts mechanism. Specifically, we divide the
+                                    seen data into semantically independent subsets and train corresponding experts,
+                                    the newly unseen samples are mapped and inferred with mixture-of-experts with
+                                    our designed ensemble inference. Extensive experiments on MultiWOZ2.1 upon the
+                                    T5-Adapter show our schema significantly and consistently improves the zero-shot
+                                    performance, achieving the SOTA on settings without external knowledge, with
+                                    only 10M trainable parameters1.</p>
+                                <a
+                                    href="https://github.com/qingyue2014/MoE4DST">https://github.com/qingyue2014/MoE4DST</a>
+                            </th>
+
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <a href="https://arxiv.org/abs/2204.13512" class="link">ACL2022:Neural Label Search
+                                    for Zero-Shot Multi-Lingual Extractive Summarization</a>
+                                <p class="content">Ruipeng Jia, Xingxing Zhang, Yanan Cao*, Shi Wang, Zheng Lin,
+                                    Furu Wei </p>
+                                <p class="content"><strong>Abstract:</strong>In zero-shot multilingual extractive
+                                    text summarization, a model is typically trained on English summarization
+                                    dataset and then applied on summarization datasets of other languages. Given
+                                    English gold summaries and documents, sentence-level labels for extractive
+                                    summarization are usually generated using heuristics. However, these monolingual
+                                    labels created on English datasets may not be optimal on datasets of other
+                                    languages, for that there is the syntactic or semantic discrepancy between
+                                    different languages. In this way, it is possible to translate the English
+                                    dataset to other languages and obtain different sets of labels again using
+                                    heuristics. To fully leverage the information of these different sets of labels,
+                                    we propose NLSSum (Neural Label Search for Summarization), which jointly learns
+                                    hierarchical weights for these different sets of labels together with our
+                                    summarization model. We conduct multilingual zero-shot summarization experiments
+                                    on MLSUM and WikiLingua datasets, and we achieve state-of-the-art results using
+                                    both human and automatic evaluations across these two datasets.</p>
+                                <a
+                                    href="https://github.com/jiaruipeng1994/Extractive_Summarization">https://github.com/jiaruipeng1994/Extractive_Summarization</a>
+                            </th>
+
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <a href="https://aclanthology.org/2022.coling-1.42.pdf" class="link">COLING2022:Slot
+                                    Dependency Modeling for Zero-shot Cross-domain Dialogue State Tracking</a>
+                                <p class="content">Qingyue Wang, Yanan Cao, Piji Li and Li Guo</p>
+                                <p class="content"><strong>Abstract:</strong>Zero-shot learning for Dialogue State
+                                    Tracking (DST) focuses on generalizing to an unseen domain without the expense
+                                    of collecting in domain data. However, previous zero-shot DST methods ignore the
+                                    slot dependencies in a multidomain dialogue, resulting in sub-optimal
+                                    performances when adapting to unseen domains. In this paper, we utilize slot
+                                    prompts combination, slot values demonstration, and slot constraint object to
+                                    model the slot-slot dependencies, slot-value dependency and slot-context
+                                    dependency respectively. Specifically, each slot prompt consists of a
+                                    slot-specific prompt and a slot-shared prompt to capture the shared knowledge
+                                    across different domains. Experimental results show the effectiveness of our
+                                    proposed method over existing state-of-art generation methods under
+                                    zero-shot/few-shot settings.</p>
+                            </th>
+
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <a href="https://ieeexplore.ieee.org/document/9533938"
+                                    class="link">IJCNN2021:Incorporating Specific Knowledge into End-to-End
+                                    Task-oriented Dialogue Systems</a>
+                                <p class="content">Qingyue Wang, Yanan Cao, Junyan Jiang, Yafang Wang and Li Guo</p>
+                                <p class="content"><strong>Abstract:</strong>External knowledge is vital to many
+                                    natural language processing tasks. However, current end-to-end dialogue systems
+                                    often struggle to interface knowledge bases(KBs) with response smoothly and
+                                    effectively. In this paper, we convert the raw knowledge into relation knowledge
+                                    and integrated knowledge and then incorporate them into end-to-end task-oriented
+                                    dialogue systems. The relation knowledge extracted from knowledge triples is
+                                    combined with dialogue history, aiming to enhance semantic inputs and support
+                                    better language understanding. Integrated knowledge involves entities and
+                                    relations by graph attention, assisting the model in generating informative
+                                    responses. The experimental results on three public dialogue datasets show that
+                                    our model improves over the previous state-of-the-art models in sentence fluency
+                                    and informativeness.</p>
+                            </th>
+
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <a href="https://ojs.aaai.org/index.php/AAAI/article/view/17552"
+                                    class="link">AAAI2021:Flexible Non-Autoregressive Extractive Summarization with
+                                    Threshold: How to Extract a Non-Fixed Number of Summary Sentences</a>
+                                <p class="content">Ruipeng Jia, Yanan Cao, Haichao Shi,Fang Fang, Pengfei Yin,Shi
+                                    Wang </p>
+                                <p class="content"><strong>Abstract:</strong>Sentence-level extractive summarization
+                                    is a fundamental yet challenging task, and recent powerful approaches prefer to
+                                    pick sentences sorted by the predicted probabilities until the length limit is
+                                    reached, a.k.a. ``Top-K Strategy''. This length limit is fixed based on the
+                                    validation set, resulting in the lack of flexibility. In this work, we propose a
+                                    more flexible and accurate non-autoregressive method for single document
+                                    extractive summarization, extracting a non-fixed number of summary sentences
+                                    without the sorting step. We call our approach ThresSum as it picks sentences
+                                    simultaneously and individually from the source document when the predicted
+                                    probabilities exceed a threshold. During training, the model enhances sentence
+                                    representation through iterative refinement and the intermediate latent
+                                    variables receive some weak supervision with soft labels, which are generated
+                                    progressively by adjusting the temperature with a knowledge distillation
+                                    algorithm. Specifically, the temperature is initialized with high value and
+                                    drops along with the iteration until a temperature of 1. Experimental results on
+                                    CNN/DM and NYT datasets have demonstrated the effectiveness of ThresSum, which
+                                    significantly outperforms BERTSUMEXT with a substantial improvement of 0.74
+                                    ROUGE-1 score on CNN/DM. Our source code will be available on Github.</p>
+                                <a
+                                    href="https://github.com/jiaruipeng1994/Extractive_Summarization">https://github.com/jiaruipeng1994/Extractive_Summarization</a>
+                            </th>
+
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <a href="https://dl.acm.org/doi/10.1145/3340531.3412078"
+                                    class="link">CIKM2020:DistilSum:Distilling the Knowledge for Extractive
+                                    Summarization</a>
+                                <p class="content">Ruipeng Jia, Yanan Cao, Haichao Shi,Fang Fang, Yanbing
+                                    Liu,Jianlong Tan </p>
+                                <p class="content"><strong>Abstract:</strong>A popular choice for extractive
+                                    summarization is to conceptualize it as sentence-level classification,
+                                    supervised by binary labels. While the common metric ROUGE prefers to measure
+                                    the text similarity, instead of the performance of classifier. For example,
+                                    BERTSUMEXT, the best extractive classifier so far, only achieves a precision of
+                                    32.9% at the top 3 extracted sentences (P@3) on CNN/DM dataset. It is obvious
+                                    that current approaches cannot model the complex relationship of sentences
+                                    exactly with 0/1 targets. In this paper, we introduce DistilSum, which contains
+                                    teacher mechanism and student model. Teacher mechanism produces high entropy
+                                    soft targets at a high temperature. Our student model is trained with the same
+                                    temperature to match these informative soft targets and tested with temperature
+                                    of 1 to distill for ground-truth labels. Compared with large version of
+                                    BERTSUMEXT, our experimental result on CNN/DM achieves a substantial improvement
+                                    of 0.99 ROUGE-L score (text similarity) and 3.95 P@3 score (performance of
+                                    classifier). Our source code will be available on Github.</p>
+                                <a
+                                    href="https://github.com/jiaruipeng1994/Extractive_Summarization">https://github.com/jiaruipeng1994/Extractive_Summarization</a>
+                            </th>
+
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <a href="https://aclanthology.org/2020.emnlp-main.295/" class="link">EMNLP2020:Neural
+                                    Extractive Summarization with Hierarchical
+                                    Attentive Heterogeneous Graph Network</a>
+                                <p class="content">Ruipeng Jia, Yanan Cao, Hengzhu Tang, Fang Fang, Cong Cao, Shi
+                                    Wang</p>
+                                <p class="content"><strong>Abstract:</strong>Sentence-level extractive text
+                                    summarization is substantially a node classification task of network mining,
+                                    adhering to the informative components and concise representations. There are
+                                    lots of redundant phrases between extracted sentences, but it is difficult to
+                                    model them exactly by the general supervised methods. Previous sentence
+                                    encoders, especially BERT, specialize in modeling the relationship between
+                                    source sentences. While, they have no ability to consider the overlaps of the
+                                    target selected summary, and there are inherent dependencies among target labels
+                                    of sentences. In this paper, we propose HAHSum (as shorthand for Hierarchical
+                                    Attentive Heterogeneous Graph for Text Summarization), which well models
+                                    different levels of information, including words and sentences, and spotlights
+                                    redundancy dependencies between sentences. Our approach iteratively refines the
+                                    sentence representations with redundancy-aware graph and delivers the label
+                                    dependencies by message passing. Experiments on large scale benchmark corpus
+                                    (CNN/DM, NYT, and NEWSROOM) demonstrate that HAHSum yields ground-breaking
+                                    performance and outperforms previous extractive summarizers.</p>
+                                <a
+                                    href="https://github.com/jiaruipeng1994/Extractive_Summarization">https://github.com/jiaruipeng1994/Extractive_Summarization</a>
+
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <a href="https://aclanthology.org/2021.acl-long.31/?ref=https://githubhelp.com"
+                                    class="link">ACL2021:Deep Differential Amplifier for Extractive
+                                    Summarization</a>
+                                <p class="content">Ruipeng Jia, Yanan Cao, Fang Fang, Yuchen Zhou, Zheng Fang,
+                                    Yanbing Liu, Shi Wang</p>
+                                <p class="content"><strong>Abstract:</strong>For sentence-level extractive
+                                    summarization, there is a disproportionate ratio of selected and unselected
+                                    sentences, leading to flatting the summary features when maximizing the
+                                    accuracy. The imbalanced classification of summarization is inherent, which
+                                    can’t be addressed by common algorithms easily. In this paper, we conceptualize
+                                    the single-document extractive summarization as a rebalance problem and present
+                                    a deep differential amplifier framework. Specifically, we first calculate and
+                                    amplify the semantic difference between each sentence and all other sentences,
+                                    and then apply the residual unit as the second item of the differential
+                                    amplifier to deepen the architecture. Finally, to compensate for the imbalance,
+                                    the corresponding objective loss of minority class is boosted by a weighted
+                                    cross-entropy. In contrast to previous approaches, this model pays more
+                                    attention to the pivotal information of one sentence, instead of all the
+                                    informative context modeling by recurrent or Transformer architecture. We
+                                    demonstrate experimentally on two benchmark datasets that our summarizer
+                                    performs competitively against state-of-the-art methods. Our source code will be
+                                    available on Github.</p>
+                                <a
+                                    href="https://github.com/jiaruipeng1994/Extractive_Summarization">https://github.com/jiaruipeng1994/Extractive_Summarization</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <a href="https://link.springer.com/content/pdf/10.1007/978-3-319-99365-2_44.pdf"
+                                    class="link">KSEM2018:A Sequence Transformation Model for Chinese Named Entity
+                                    Recognition</a>
+                                <p class="content">Qingyue Wang, Yanjing Song, Hao Liu, Yanan Cao and Li Guo</p>
+                                <p class="content"><strong>Abstract:</strong>Chinese Named Entity Recognition (NER),
+                                    as one of basic natural language processing tasks, is still a tough problem due
+                                    to Chinese polysemy and complexity. In recent years, most of previous works
+                                    regard NER as a sequence tagging task, including statistical models and deep
+                                    learning methods. In this paper, we innovatively consider NER as a sequence
+                                    transformation task in which the unlabeled sequences (source texts) are
+                                    converted to labeled sequences (NER labels). In order to model this sequence
+                                    transformation task, we design a sequence-to-sequence neural network, which
+                                    combines a Conditional Random Fields (CRF) layer to efficiently use sentence
+                                    level tag information and the attention mechanism to capture the most important
+                                    semantic information of the encoded sequence. In experiments, we evaluate
+                                    different models both on a standard corpus consisting of news data and an
+                                    unnormalized one consisting of short messages. Experimental results showed that
+                                    our model outperforms the state-of-the-art methods on recognizing short
+                                    interdependence entity.</p>
+                            </th>
+                        </tr>
                     </tbody>
                 </table>
             </div>
-                    <div class="page-2">
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <th>
-                                        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/17552" class="link">AAAI2021:Flexible Non-Autoregressive Extractive Summarization with Threshold: How to Extract a Non-Fixed Number of Summary Sentences</a>
-                                        <p class="content">Ruipeng Jia, Yanan Cao, Haichao Shi,Fang Fang, Pengfei Yin,Shi Wang </p>
-                                        <p class="content"><strong>Abstract:</strong>Sentence-level extractive summarization is a fundamental yet challenging task, and recent powerful approaches prefer to pick sentences sorted by the predicted probabilities until the length limit is reached, a.k.a. ``Top-K Strategy''. This length limit is fixed based on the validation set, resulting in the lack of flexibility. In this work, we propose a more flexible and accurate non-autoregressive method for single document extractive summarization, extracting a non-fixed number of summary sentences without the sorting step. We call our approach ThresSum as it picks sentences simultaneously and individually from the source document when the predicted probabilities exceed a threshold. During training, the model enhances sentence representation through iterative refinement and the intermediate latent variables receive some weak supervision with soft labels, which are generated progressively by adjusting the temperature with a knowledge distillation algorithm. Specifically, the temperature is initialized with high value and drops along with the iteration until a temperature of 1. Experimental results on CNN/DM and NYT datasets have demonstrated the effectiveness of ThresSum, which significantly outperforms BERTSUMEXT with a substantial improvement of 0.74 ROUGE-1 score on CNN/DM. Our source code will be available on Github.</p>
-                                        <a href="https://github.com/jiaruipeng1994/Extractive_Summarization">https://github.com/jiaruipeng1994/Extractive_Summarization</a>
-                                    </th>
-                                    
-                                </tr>
-                                </tbody>
-                                <tbody>
-                                    <tr>
-                                        <th>
-                                            <a href="https://dl.acm.org/doi/10.1145/3340531.3412078" class="link">CIKM2020:DistilSum:Distilling the Knowledge for Extractive Summarization</a>
-                                            <p class="content">Ruipeng Jia, Yanan Cao, Haichao Shi,Fang Fang, Yanbing Liu,Jianlong Tan </p>
-                                            <p class="content"><strong>Abstract:</strong>A popular choice for extractive summarization is to conceptualize it as sentence-level classification, supervised by binary labels. While the common metric ROUGE prefers to measure the text similarity, instead of the performance of classifier. For example, BERTSUMEXT, the best extractive classifier so far, only achieves a precision of 32.9% at the top 3 extracted sentences (P@3) on CNN/DM dataset. It is obvious that current approaches cannot model the complex relationship of sentences exactly with 0/1 targets. In this paper, we introduce DistilSum, which contains teacher mechanism and student model. Teacher mechanism produces high entropy soft targets at a high temperature. Our student model is trained with the same temperature to match these informative soft targets and tested with temperature of 1 to distill for ground-truth labels. Compared with large version of BERTSUMEXT, our experimental result on CNN/DM achieves a substantial improvement of 0.99 ROUGE-L score (text similarity) and 3.95 P@3 score (performance of classifier). Our source code will be available on Github.</p>
-                                            <a href="https://github.com/jiaruipeng1994/Extractive_Summarization">https://github.com/jiaruipeng1994/Extractive_Summarization</a>
-                                        </th>
-                                        
-                                    </tr>
-                                    </tbody>
-                    <tbody>
-                        <tr>
-                            <th>
-                                <a href="https://aclanthology.org/2020.emnlp-main.295/"class="link">EMNLP2020:Neural Extractive Summarization with Hierarchical Attentive Heterogeneous Graph Network</a>
-                                <p class="content">Ruipeng Jia, Yanan Cao, Hengzhu Tang, Fang Fang, Cong Cao, Shi Wang</p>
-                                <p class="content"><strong>Abstract:</strong>Sentence-level extractive text summarization is substantially a node classification task of network mining, adhering to the informative components and concise representations. There are lots of redundant phrases between extracted sentences, but it is difficult to model them exactly by the general supervised methods. Previous sentence encoders, especially BERT, specialize in modeling the relationship between source sentences. While, they have no ability to consider the overlaps of the target selected summary, and there are inherent dependencies among target labels of sentences. In this paper, we propose HAHSum (as shorthand for Hierarchical Attentive Heterogeneous Graph for Text Summarization), which well models different levels of information, including words and sentences, and spotlights redundancy dependencies between sentences. Our approach iteratively refines the sentence representations with redundancy-aware graph and delivers the label dependencies by message passing. Experiments on large scale benchmark corpus (CNN/DM, NYT, and NEWSROOM) demonstrate that HAHSum yields ground-breaking performance and outperforms previous extractive summarizers.</p>
-                                <a href="https://github.com/jiaruipeng1994/Extractive_Summarization">https://github.com/jiaruipeng1994/Extractive_Summarization</a>
-
-                            </th>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                       <tr>
-                            <th>
-                            <a href="https://aclanthology.org/2021.acl-long.31/?ref=https://githubhelp.com"class="link">ACL2021:Deep Differential Amplifier for Extractive Summarization</a>
-                            <p class="content">Ruipeng Jia, Yanan Cao, Fang Fang, Yuchen Zhou, Zheng Fang, Yanbing Liu, Shi Wang</p>
-                            <p class="content"><strong>Abstract:</strong>For sentence-level extractive summarization, there is a disproportionate ratio of selected and unselected sentences, leading to flatting the summary features when maximizing the accuracy. The imbalanced classification of summarization is inherent, which can’t be addressed by common algorithms easily. In this paper, we conceptualize the single-document extractive summarization as a rebalance problem and present a deep differential amplifier framework. Specifically, we first calculate and amplify the semantic difference between each sentence and all other sentences, and then apply the residual unit as the second item of the differential amplifier to deepen the architecture. Finally, to compensate for the imbalance, the corresponding objective loss of minority class is boosted by a weighted cross-entropy. In contrast to previous approaches, this model pays more attention to the pivotal information of one sentence, instead of all the informative context modeling by recurrent or Transformer architecture. We demonstrate experimentally on two benchmark datasets that our summarizer performs competitively against state-of-the-art methods. Our source code will be available on Github.</p>
-                            <a href="https://github.com/jiaruipeng1994/Extractive_Summarization">https://github.com/jiaruipeng1994/Extractive_Summarization</a>
-                            </th>
-                        </tr>
-                     </tbody>
-                     <tbody>
-                        <tr>
-                             <th>
-                             <a href="https://link.springer.com/content/pdf/10.1007/978-3-319-99365-2_44.pdf"class="link">KSEM2018:A Sequence Transformation Model for Chinese Named Entity Recognition</a>
-                             <p class="content">Qingyue Wang, Yanjing Song, Hao Liu, Yanan Cao and Li Guo</p>
-                             <p class="content"><strong>Abstract:</strong>Chinese Named Entity Recognition (NER), as one of basic natural language processing tasks, is still a tough problem due to Chinese polysemy and complexity. In recent years, most of previous works regard NER as a sequence tagging task, including statistical models and deep learning methods. In this paper, we innovatively consider NER as a sequence transformation task in which the unlabeled sequences (source texts) are converted to labeled sequences (NER labels). In order to model this sequence transformation task, we design a sequence-to-sequence neural network, which combines a Conditional Random Fields (CRF) layer to efficiently use sentence level tag information and the attention mechanism to capture the most important semantic information of the encoded sequence. In experiments, we evaluate different models both on a standard corpus consisting of news data and an unnormalized one consisting of short messages. Experimental results showed that our model outperforms the state-of-the-art methods on recognizing short interdependence entity.</p>
-                             </th>
-                         </tr>
-                      </tbody>
-            </table>
-        </div>
-
-        <div class="page-2">
-        <table class="table">
-        </table>
-    </div>
         </div>
     </div>
-</div>
 
-	
-<footer>
-    <div class="page-icon">
-		<button class="firstPage" onclick="first_click()" style="background-color: #FFFFFF;"><img src="./Page/imgs/left-end.png"/></button>
-		<button class="beforePage" onclick="prev_click()" style="background-color: #FFFFFF;"><img src="./Page/imgs/page-left.png"/></button>
-		<button style="background-color: #FFFFFF;">第<input id="currentPage" onchange="choose_page()" type="text" value="1"/>页</button>
-		<button style="background-color: #FFFFFF;">/&nbsp;&nbsp;&nbsp;共<input id="totalPage" type="button" value="2" readonly="readonly">页</button>
-		<button class="nextPage" onclick="next_click()" style="background-color: #FFFFFF;"><img src="./Page/imgs/page-right.png"/></button>
-		<button class="lastPage" onclick="last_click()" style="background-color: #FFFFFF;"><img src="./Page/imgs/right-end.png"/></button>			
-	</div>
-    <nav class="navbar navbar-default text-center" > 
-    <div class="navbar-inner navbar-text text-center col-sm-12 column">
-        <p class="text-muted credit " style="padding: 0.1%;">
-            ASCII Lab, Institute of Information Engineering, Chinese Academy of Sciences. No.19 Shucun Road, Haidian District, Beijing, China<a href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a> 100085
-        </p>
-       
+
+    <div class="footer">
+        <p>ASCII Lab, Institute of Information Engineering, Chinese Academy of
+            Sciences. No.19 Shucun Road,
+            Haidian District, Beijing, China<a
+                href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a>
+            100085</p>
     </div>
-</nav>
-</footer>
+
+    <script>
+        window.onscroll = function () {
+            const backToTopButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // 滚动到页面顶部
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth" // 平滑滚动
+            });
+        }
+    </script>
+
+    <script>
+        // 使用 fetch 动态加载 head.html
+        fetch('/head.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
 </body>
 
 </html>

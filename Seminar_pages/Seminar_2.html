@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Seminar</title>
+	<link rel="icon" type="image/x-icon" href="../img/ASCII_1.ico" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.staticfile.net/bootstrap/5.3.2/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.net/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css_style.css" />
+	<link rel="stylesheet" type="text/css" href="./Seminar_pages.css" />
+</head>
+
+
+<body>
+	<div id="navbar"></div> <!-- 用于插入导航栏的容器 -->
+
+	<div class="container-fluid" style="margin-top: 100px;">
+
+		<nav class="sidenav-left d-flex flex-column p-3">
+			<div class="list-group" id="volumelist">
+				<a href="#" class="list-group-item list-group-item-action list-header" style="background: #f6f6f6;">
+					<h5 style="text-align: center;">专辑</h5>
+				</a>
+				<a href="#2024年3-4月：大模型的安全问题-2" class="list-group-item list-group-item-action">
+					<span class="badge text-bg-primary">2024年3-4月</span><br>大模型的安全问题-2</a>
+				<a href="#2023年12月：大模型相关技术进展" class="list-group-item list-group-item-action">
+					<span class="badge text-bg-primary">2023年12月</span><br>大模型相关技术进展</a>
+				<a href="#2023年11月：图与LLM" class="list-group-item list-group-item-action">
+					<span class="badge text-bg-primary">2023年11月</span><br>图与LLM</a>
+				<a href="#2023年9月：大模型的安全问题" class="list-group-item list-group-item-action">
+					<span class="badge text-bg-primary">2023年9月</span><br>大模型的安全问题</a>
+			</div>
+		</nav>
+
+		<nav class="sidenav-right d-flex flex-column p-3">
+			<!-- 控制所有卡片折叠/展开的按钮 -->
+			<button type="button" id="back-to-top" class="btn btn-outline-danger" onclick="scrollToTop()">
+				回到顶部
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+					class="bi bi-chevron-bar-up" viewBox="0 0 16 16">
+					<path fill-rule="evenodd"
+						d="M3.646 11.854a.5.5 0 0 0 .708 0L8 8.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708M2.4 5.2c0 .22.18.4.4.4h10.4a.4.4 0 0 0 0-.8H2.8a.4.4 0 0 0-.4.4" />
+				</svg>
+			</button>
+			<br>
+			<button type="button" class="btn btn-outline-primary toggle-all-btn" onclick="toggleAllCards(this)">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+					class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+					<path
+						d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+				</svg>
+				展开 | 折叠
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+					class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+					<path
+						d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+				</svg>
+			</button>
+			<br>
+			<nav aria-label="Page navigation">
+				<ul class="pagination">
+					<li class="page-item">
+						<a class="page-link" href="./Seminar_1.html" aria-label="Previous">
+							<span aria-hidden="true">&laquo;</span>
+						</a>
+					</li>
+					<li class="page-item"><a class="page-link" href="./Seminar_1.html">1</a></li>
+					<li class="page-item active"><a class="page-link" href="./Seminar_2.html">2</a></li>
+					<li class="page-item"><a class="page-link" href="./Seminar_3.html">3</a></li>
+					<li class="page-item">
+						<a class="page-link" href="./Seminar_3.html" aria-label="Next">
+							<span aria-hidden="true">&raquo;</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</nav>
+
+		<div class="main">
+
+			<div class="row justify-content-center">
+                <div class="col-12">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/index.html">Index</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Seminar</li>
+                        </ol>
+                    </nav>
+                    <hr>
+                </div>
+            </div>
+
+			<div class="period-title">
+				<h2 id="2024年3-4月：大模型的安全问题-2"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+						fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16">
+						<path
+							d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+					</svg>&nbsp;2024年3-4月：大模型的安全问题-2</h2>
+			</div>
+			<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 g-4">
+				<!-- 在小屏幕下每行显示1列，在中等屏幕下每行显示3列，在大屏幕下每行显示4列 -->
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第95期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2024-05-17</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">大模型不确定性度量</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;王青悦</h6>
+							<hr>
+							<p class="card-text" id="card-text-95">
+								当今的大语言模型（LLMs）尽管在实际应用中取得不俗的表现，但很难保证其输出的可靠性。如果盲目轻信采用模型生成的答案，很可能会误导用户。因此，评估模型生成回复的不确定性程度，让用户明白在多大程度上可以采用模型的答案，有助于降低风险，使模型做出更好的决策。本次讨论班将围绕着不确定性度量展开，介绍不确定性的基本概念和几种在LLM上常用的度量方法，以及他们的应用。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-95', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/240517-大模型不确定性度量-王青悦.pptx" class="card-link">演示文稿</a>
+							<a href="https://meeting.tencent.com/v2/cloud-record/share?id=6825125a-719f-4517-aa70-778b9adc7ba3&from=3&is-single=false&record_type=2"
+								class="card-link">录屏链接</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第94期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2024-04-26</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">LLM-based Agent</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;毕冠群</h6>
+							<hr>
+							<p class="card-text" id="card-text-94">
+								随着LLM的发展，LLM-based
+								Agent成为了重要研究方向，它涉及到的是能够自主地感知环境、做出决策并与环境互动的智能实体。Agents的核心在于它们的自主性、反应性、社会性和能动性，它们不仅能够对环境变化做出反应，还能够主动地追求目标和意图。 本期讨论班将分享agents的基础知识和相关工作。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-94', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/240426-LLM Agent-毕冠群.pdf" class="card-link">演示文稿</a>
+							<a href="https://meeting.tencent.com/v2/cloud-record/share?id=060ef118-4692-4949-9b32-ca0121648208&from=3"
+								class="card-link">录屏链接</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第93期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2024-04-12</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">LLM压缩</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;张岚雪</h6>
+							<hr>
+							<p class="card-text" id="card-text-93">
+								近年来，大模型展现出了强大的生成能力，但与此同时，大模型超高的运行成本。OpenAI也曾因需求量太大，一度停售ChatGPT
+								Plus服务。小模型则在运行成本和某些应用场景上拥有独到的优势，如何在保留大模型能力的情况下将其压缩成小模型是一个值得讨论的问题。本次讨论班将从剪枝、量化和蒸馏三个方面，介绍大模型的压缩工作。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-93', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/240412-LLM压缩-张岚雪.pdf" class="card-link">演示文稿</a>
+							<a href="https://meeting.tencent.com/v2/cloud-record/share?id=7dd869f1-7b29-4092-b955-d4fd25fa44b1&from=3&is-single=false&record_type=2"
+								class="card-link">录屏链接</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第92期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2024-04-02</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">AIGC机生文本检测</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;朱孝伟</h6>
+							<hr>
+							<p class="card-text" id="card-text-92">
+								随着大模型的快速发展，LLM的文本生成能力已经达到和人类写作相媲美的水平。与此同时，LLM的应用也已渗入到各个领域，改变了新闻报道、故事写作和学术研究等不同领域的生产力。同时LLM的滥用也可能造成有害影响，可能导致错误知识或虚假信息的传播，也可能导致垃圾邮件的制作或欺诈行为的发生等等。<br>但LLM强大的生成能力使得个人很难区分AI生成文本与人类撰写文本，因此近年来出现许多AI文本检测相关研究，此前被人熟知的检测方法有OpenAI检测器、DetectGPT、文本水印等。本次讨论班将从AI文本检测现状出发，介绍相关方法的原理，并针对其现有问题与最新研究展开讨论。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-92', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/240402-AIGC-朱孝伟.pptx" class="card-link">演示文稿</a>
+							<a href="https://meeting.tencent.com/v2/cloud-record/share?id=c3db2d65-671c-4edc-88c9-373490e7242b&from=3&is-single=false&record_type=2"
+								class="card-link">录屏链接</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第91期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2024-03-22</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Privacy Attacks in LLM</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;王一丹</h6>
+							<hr>
+							<p class="card-text" id="card-text-91">
+								随着预训练大语言模型的发展，其已经被广泛应用于各类场景，极大地提升了人们的工作效率，但同时公众对于大模型泄漏隐私的担忧也从未停止。为了更好地保护隐私并提高人们的隐私意识，我们需要了解大模型面临哪些隐私泄漏的风险，因此本次讨论班将聚焦于大语言模型隐私攻击相关的工作，包括Membership
+								Inference Attack、Data Extraction Attack以及Attribute Inference Attack，欢迎大家讨论交流。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-91', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/240322-Privacy Attacks in LLM-王一丹.pdf" class="card-link">演示文稿</a>
+							<a href="https://meeting.tencent.com/v2/cloud-record/share?id=fbd7942d-fbc0-4a97-ac00-c17b1f5ecb3a&from=3"
+								class="card-link">录屏链接</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<br>
+			<hr><br><br>
+
+			<div class="period-title"></div>
+			<h2 id="2023年12月：大模型相关技术进展"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+					fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16">
+					<path
+						d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+				</svg>&nbsp;2023年12月：大模型相关技术进展</h2>
+
+			<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 g-4">
+				<!-- 在小屏幕下每行显示1列，在中等屏幕下每行显示3列，在大屏幕下每行显示4列 -->
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第90期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2024-01-12</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">LLM的Prompt越狱攻击</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;胡博翔</h6>
+							<hr>
+							<p class="card-text" id="card-text-90">
+								工业界和学术界都极其关注LLM可能输出的有害内容，即使大模型在诸多对齐算法下实现了与人类价值观的初步对齐，仍有诸多方案能够绕过当前的对齐策略和防御方式。而通过Prompt让LLM实现越狱就是其中一种，Prompt越狱攻击不仅十分方便，而且具有较强的可解释性，那么如何快速有效的生成能够越狱的Prompt就成了重中之重。本次讨论班将对Prompt形式的越狱攻击进行简单介绍，并通过介绍现在前沿的攻击方式，共同探讨Prompt越狱攻击的近期发展和相关研究工作，欢迎大家关注。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-90', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/240112-LLM的Prompt越狱攻击-胡博翔.pdf" class="card-link">演示文稿</a>
+							<a href="https://meeting.tencent.com/v2/cloud-record/share?id=e134aef1-a2f2-4555-b12d-4478d4c99c83&from=3&is-single=false&record_type=2"
+								class="card-link">录屏链接</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第89期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2024-01-05</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">检索增强的LLM</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;傅延赫</h6>
+							<hr>
+							<p class="card-text" id="card-text-89">
+								针对大规模语言模型（LLM）表现出的内在幻觉、长尾问题、时效性短等缺点，检索增强技术在学术界和工业界都获得了前所未有的关注。其解决方法非常简单但极其有效：首先为LLM构建一个独立的外挂文档库，然后基于用户输入检索回相关文档，传递给LLM辅助生成。近期，研究人员将检索增强的流程拆分为不同模块，并根据传统检索方法的不足设计了不同模块以保证增强效果。本次讨论班聚焦检索增强技术在LLM上的应用，介绍了近期发展和相关研究工作，欢迎大家交流探讨。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-89', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/240105-检索增强的LLM-傅延赫.pdf" class="card-link">演示文稿</a>
+							<a href="https://meeting.tencent.com/v2/cloud-record/share?id=68eeb91d-3650-49c0-ac12-93b571422d10&from=3&is-single=false&record_type=2"
+								class="card-link">录屏链接</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第88期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-12-29</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">知识编辑</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;李豪</h6>
+							<hr>
+							<p class="card-text" id="card-text-88">
+								大语言模型因其具有丰富的知识和推理能力，得到了广泛应用。然而，知识具有时效性，重新预训练语言模型的成本巨大，如何将新知识高效地引入大语言模型成为一个迫切的需求。最近知识编辑引起了越来越多的关注，其目的是精确地修改大语言模型去更新特定知识，并不会对其他无关知识产生负面影响。本次讨论班主要介绍知识编辑的相关工作，欢迎大家交流探讨。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-88', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/231229-知识编辑-李豪.pdf" class="card-link">演示文稿</a>
+							<a href="https://meeting.tencent.com/v2/cloud-record/share?id=b15887e8-d9fe-447c-9b53-97d7fdafd595&from=3&is-single=false&record_type=2"
+								class="card-link">录屏链接</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第87期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-12-22</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">因果推断与大语言模型</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;李英杰</h6>
+							<hr>
+							<p class="card-text" id="card-text-87">
+								近年来，因果推断领域的研究工作日益发展，因果推断更关注因果关系而非相关性，研究方向包括因果发现、因果效应估计、反事实推断等领域；大语言模型以其丰富的知识和自然语言理解分析能力在因果推断领域表现出了极大潜力，可以辅助进行反事实数据增强、因果图生成和分析等。本次讨论班主要对因果推断领域的基础知识作简要讲解，并介绍Large
+								Language Model与因果推断相关的几篇研究工作，欢迎大家交流探讨。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-87', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/231222-因果推断与大模型-李英杰.pdf" class="card-link">演示文稿</a>
+							<a href="https://meeting.tencent.com/v2/cloud-record/share?id=ca860d39-69d8-455f-aacc-d88b84805ed1&from=3&is-single=false&record_type=2"
+								class="card-link">录屏链接</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第86期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-12-15</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">训练对齐人类偏好的大模型</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;刘益</h6>
+							<hr>
+							<p class="card-text" id="card-text-86">
+								尽管大模型能通过大规模预训练获得广泛的世界知识和部分的逻辑推理能力，但由于其训练的完全无监督性质，实现对其行为的精确控制是困难的，这可能导致生成不准确、误导甚至有害的文本。因此，采用对齐技术（Alignment）来确保模型表现出与人类价值观一致的行为变得至关重要，即生成数据的有用、真实和无害性。OpenAI提出的人类偏好对齐技术可以很好地解决这个问题：通过收集人类对大模型生成内容的反馈和偏好，然后基于偏好学习（Preference
+								Learning）的范式对大模型进行优化，从而引导其与人类价值观对齐。本次讨论班旨在分享人类偏好对齐的主流算法和最新进展，欢迎讨论交流。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-86', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/231215-Human Preference Alignment for LLM-刘益.pdf"
+								class="card-link">演示文稿</a>
+							<a href="https://meeting.tencent.com/v2/cloud-record/share?id=f696f65c-b723-484f-ae2e-a19ea639bfe4&from=3&is-single=false&record_type=2"
+								class="card-link">录屏链接</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第85期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-12-08</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">大模型水印</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;任昱冰</h6>
+							<hr>
+							<p class="card-text" id="card-text-85">
+								随着大模型显现出越来越强的生成能力和应用潜力，人们对于大模型技术对于人类社会秩序和安全的威胁的担心也越来越强。尽管各家公司都在强调在训练过程中对于大模型 “harmless”
+								的保障，但是人们仍然希望看到以一种更加显式的方法来保证文本来源可追踪。大模型水印技术能够非常好的解决这个问题：通过将隐藏的模式加入大模型的生成文本之后，可以以极高的准确率和极低的假阳率来检测文本是否来自
+								AI，因此也得到了各界广泛的关注和讨论。本次讨论班旨在分享大模型水印最新成果和进展， 欢迎讨论交流。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-85', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/231208-Watermark for LLM-任昱冰.pdf" class="card-link">演示文稿</a>
+							<a href="https://meeting.tencent.com/v2/cloud-record/share?id=6374a7c3-1ae2-4e49-8a45-c95cea7568ca&from=3&is-single=false&record_type=2"
+								class="card-link">录屏链接</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<br>
+			<hr><br><br>
+
+
+			<div class="period-title">
+				<h2 id="2023年11月：图与LLM"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+						fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16">
+						<path
+							d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+					</svg>&nbsp;2023年11月：图与LLM</h2>
+			</div>
+			<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 g-4">
+				<!-- 在小屏幕下每行显示1列，在中等屏幕下每行显示3列，在大屏幕下每行显示4列 -->
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第84期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-11-17</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">LLMs with Graph</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;吴咏萱</h6>
+							<hr>
+							<p class="card-text" id="card-text-84">
+								大型语言模型（LLMs）在回答问题、代码生成等各种应用中展示了无与伦比的能力。同时图结构数据作为一种固有的数据类型，在现实场景中无处不在。将LLMs的能力与图结构数据相结合一直是一个备受关注的话题。本次讨论班将这样的结合分为两个主要类别。第一类利用LLMs进行图学习，LLMs不仅可以增强现有的图算法，还可以辅助各种图任务。第二类是利用图提升LLMs的能力，使用图的固有结构来增强LLMs的推理能力或帮助LLMs进行协作，从而使它们能够处理多方面的任务。通过利用图结构，可以显著提升LLMs在复杂问题解决中的效能。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-84', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/231117-LLMs with Graph-吴咏萱.pptx" class="card-link">演示文稿</a>
+							<a href="https://meeting.tencent.com/v2/cloud-record/share?id=e77e975e-fab1-459e-a1a5-195f9ad13529&from=3&is-single=false&record_type=2"
+								class="card-link">录屏链接</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第83期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-11-10</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Natural Language is All a Graph Needs</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;宋传承</h6>
+							<hr>
+							<p class="card-text" id="card-text-83">
+								LLM已逐渐取代CNN和RNN统一了CV和NLP领域，然而将图学习问题纳入生成语言建模框架的工作仍然非常有限。随着LLM的重要性不断增长，探索LLM是否也可以取代GNN作为图的基础模型变得至关重要。本次讨论班讨论一篇研究基于指令微调的图语言模型的文章，通过系统设计基于自然语言指令的高度可扩展的prompt，并使用自然语言描述图的几何结构和节点特征，以便指令微调LLM来执行学习以及以生成方式对图进行推理，揭示了生成式LLM作为图机器学习基础模型的可能性。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-83', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/231110-Natural Language is All a Graph Needs-宋传承.pdf"
+								class="card-link">演示文稿</a>
+							<a href="https://meeting.tencent.com/v2/cloud-record/share?id=70ad3aba-0168-480a-a437-2a54def607e4&from=3&is-single=false&record_type=2"
+								class="card-link">录屏链接</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第82期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-11-03</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">提示学习在图神经网络中的探索</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;刘瑜</h6>
+							<hr>
+							<p class="card-text" id="card-text-82">
+								目前，“预训练、提示、微调”已经成为自然语言处理领域的标准范式。现阶段大模型基本统一了自然语言处理领域的多个不同任务。然而，由于图学习领域的独特挑战，图上各种任务的统一模型仍有待探索。首先，来自不同领域的图数据具有不同的结构和属性。其次，图上的任务多样化，包括节点级、边级和图级的分类和回归任务。最后，基于上下文的图提示学习模式尚不明确。本次讨论班旨在介绍图神经网络在“预训练、提示、微调”范式下的最新成果和进展，希望对大家的工作有所启发。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-82', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/231103-GraphPrompt-刘瑜.pdf" class="card-link">演示文稿</a>
+							<!-- <a href=""
+								class="card-link">录屏链接</a> -->
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第81期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-10-27</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">图神经网络与微分方程</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;石逢钊</h6>
+							<hr>
+							<p class="card-text" id="card-text-81">
+								传统网络中网络的层次结构可以被拆解成为一个微分方程的离散化，从而利用微分方程的很多理论来设计网络，本文以微分方程在传统机器学习任务中的设计方法为基础，介绍了将该思想扩展到图上的相关方法，期望对之后的研究有所帮助。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-81', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="" class="card-link">演示文稿</a>
+							<!-- <a href=""
+								class="card-link">录屏链接</a> -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<br>
+			<hr><br><br>
+
+
+			<div class="period-title">
+				<h2 id="2023年9月：大模型的安全问题"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+						fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16">
+						<path
+							d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+					</svg>&nbsp;2023年9月：大模型的安全问题</h2>
+			</div>
+			<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 g-4">
+				<!-- 在小屏幕下每行显示1列，在中等屏幕下每行显示3列，在大屏幕下每行显示4列 -->
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第80期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-10-13</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Trustworthiness and Domain Specialization of LLMs</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;朱孝伟</h6>
+							<hr>
+							<p class="card-text" id="card-text-80">
+								针对大模型LLMs的可信问题，其抗滥用性与遵守社会规范性也成为LLMs可信度考量的两大维度。并且在大模型利用严格的对齐方式具备更好可信度趋近成熟的同时，针对很多领域的特定任务与问题，直接使用预训练的通用LLMs会遇见许多难题。语言风格与业务模式的巨大差异、知识实时更新的严苛要求等等使得通用
+								LLMs 无法成为一个一体适应所有情况的解决方案。因此“将 LLMs 专业化到不同领域”
+								成为了应用领域的强大需求和必然趋势。本次讨论班将针对大模型可信的两大维度和领域专业化技术介绍分享相关知识。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-80', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="" class="card-link">演示文稿</a>
+							<!-- <a href="" class="card-link" data-bs-container="body" data-bs-title="提取码" data-bs-content="" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right">
+								录屏链接
+							</a> -->
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第79期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-09-21</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">自然语言处理中的后门攻击</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;王一丹</h6>
+							<hr>
+							<p class="card-text" id="card-text-79">
+								随着预训练大语言模型（LLMs）的发展，其在几乎所有的自然语言处理任务上都有广泛的应用并取得了良好的效果。但与此同时，LLMs本身存在的安全性问题也受到越来越多的关注。由于缺乏透明度，LLMs容易受到后门攻击的威胁。在后门未被激发时，被植入后门的模型具有和正常模型类似的表现；而当通过触发器激活后门时，模型的输出则会变为攻击者预先指定的输出以达到恶意的目的。本期讨论班将围绕自然语言处理中的后门攻击介绍其背景原理、不同范式下的相关工作以及未来研究方向。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-79', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/230921-自然语言处理中的后门攻击-王一丹.pdf" class="card-link">演示文稿</a>
+							<a href="https://pan.baidu.com/s/18wHUDHjJf0gk0O1FDB25_Q?pwd=79wv" class="card-link"
+								data-bs-container="body" data-bs-title="提取码" data-bs-content="79wv"
+								data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right">
+								录屏链接
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第78期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-09-15</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">可信LLM</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;王青悦</h6>
+							<hr>
+							<p class="card-text" id="card-text-78">
+								模型对齐——即使模型行为与人类意图保持一致，已经成为发展LLM(large language
+								model)的关键一环。以最近发布的GPT4为例，OpenAI曾花费6个月的时间来实现其对齐，可见对齐的重要意义。通过对齐技术，LLM变得更加可靠、安全，收获人类的信任，也解锁了更多能力。然而，尽管对齐是LLM流行背后的核心技术，但评估这些模型中的对齐程度和设计适当的对齐任务仍然是一个悬而未决的挑战，没有明确和原则性的指导。本期讨论班将关注细粒度的对齐需求，帮助理解对齐的同时，提供对齐数据的收集方案。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-78', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/230915-王青悦-可信LLM.pdf" class="card-link">演示文稿</a>
+							<a href="https://pan.baidu.com/s/1awE0xAGjanLuvhuyn5Dymw?pwd=xmg3" class="card-link"
+								data-bs-container="body" data-bs-title="提取码" data-bs-content="xmg3"
+								data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right">
+								录屏链接
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第77期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-09-01</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">大模型安全性：达摩克利斯之剑悬于何处？</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;毕冠群</h6>
+							<hr>
+							<p class="card-text" id="card-text-77">
+								随着生成式大模型如ChatGPT等引领的热潮不断升温，人工智能领域对通用人工智能（AGI）的追求也愈发明确。然而，在这些先进模型成为科技界的明星产品之际，其固有的数据和安全隐患不容忽视。这种强大的模型技术，在推动人类社会各领域重大变革的同时，也伴随着诸如数据泄漏、虚假信息传播等不容忽视的安全和隐私风险。正如达摩克利斯之剑悬挂在头顶，即使充满吸引力和潜力，也总伴随着隐患和不确定性。<br>本次讨论班中将探讨生成式大模型中存在的安全问题，对这些风险进行全面梳理和总结。同时也将讨论目前采取的主要应对措施和策略，以期为通用人工智能的持续和安全发展提供前瞻性的、实用的见解。希望通过集思广益，我们能共同为这一技术革新的持续、安全、和道德发展出谋划策。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-77', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/230901-AI Safety The Sword of Damocles-毕冠群.pdf"
+								class="card-link">演示文稿</a>
+							<!-- <a href="" class="card-link" data-bs-container="body" data-bs-title="提取码" data-bs-content="" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right">
+								录屏链接
+							</a> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<footer>
+			<br>
+			<hr><br><br>
+			<nav aria-label="Page navigation">
+				<ul class="pagination justify-content-center">
+					<li class="page-item">
+						<a class="page-link" href="./Seminar_1.html" aria-label="Previous">
+							<span aria-hidden="true">&laquo;</span>
+						</a>
+					</li>
+					<li class="page-item"><a class="page-link" href="./Seminar_1.html">1</a></li>
+					<li class="page-item active"><a class="page-link" href="./Seminar_2.html">2</a></li>
+					<li class="page-item"><a class="page-link" href="./Seminar_3.html">3</a></li>
+					<li class="page-item">
+						<a class="page-link" href="./Seminar_3.html" aria-label="Next">
+							<span aria-hidden="true">&raquo;</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+	</div>
+	<div class="footer">
+		<p>ASCII Lab, Institute of Information Engineering, Chinese Academy of
+			Sciences. No.19 Shucun Road,
+			Haidian District, Beijing, China<a
+				href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a>
+			100085</p>
+	</div>
+
+
+	<script>
+		const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+		const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+		function toggleText(id, btn) {
+			const textElement = document.getElementById(id);
+			const svgIcon = btn.querySelector('svg path'); // 获取SVG路径
+
+			if (textElement.classList.contains('expanded')) {
+				// 折叠状态，显示向下箭头
+				textElement.classList.remove('expanded');
+				svgIcon.setAttribute('d', 'M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'); // 向下箭头路径
+			} else {
+				// 展开状态，显示向上箭头
+				textElement.classList.add('expanded');
+				svgIcon.setAttribute('d', 'M7.247 4.86l4.796 5.48c.566.645.106 1.658-.753 1.658H3.204a1 1 0 0 1-.753-1.659l4.796-5.48a1 1 0 0 1 1.506 0z'); // 向上箭头路径
+			}
+		}
+		// 控制所有卡片折叠/展开
+		// 控制所有卡片的展开/折叠，确保按钮状态也正确
+		function toggleAllCards(btn) {
+			const allCardTexts = document.querySelectorAll('.card-text'); // 获取所有卡片的 card-text
+			const allToggleButtons = document.querySelectorAll('.toggle-btn'); // 获取所有控制每个卡片的按钮
+			let isExpanded = false;
+
+			// 判断当前是否有任意一个卡片已经展开
+			allCardTexts.forEach(text => {
+				if (text.classList.contains('expanded')) {
+					isExpanded = true;
+				}
+			});
+
+			// 如果有展开的卡片，则全部折叠；否则全部展开
+			allCardTexts.forEach(text => {
+				if (isExpanded) {
+					text.classList.remove('expanded');
+				} else {
+					text.classList.add('expanded');
+				}
+			});
+
+			// 更新每个按钮的图标
+			allToggleButtons.forEach((button, index) => {
+				if (isExpanded) {
+					button.innerHTML = `
+				<svg xmlns="http://www.w3.org/2000/svg" class="bi bi-caret-down-fill svg-icon" viewBox="0 0 16 16">
+					<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+				</svg>
+			`;
+				} else {
+					button.innerHTML = `
+				<svg xmlns="http://www.w3.org/2000/svg" class="bi bi-caret-up-fill svg-icon" viewBox="0 0 16 16">
+					<path d="M7.247 4.86l4.796 5.48c.566.645.106 1.658-.753 1.658H3.204a1 1 0 0 1-.753-1.659l4.796-5.48a1 1 0 0 1 1.506 0z"/>
+				</svg>
+			`;
+				}
+			});
+		}
+		window.onscroll = function () {
+			const backToTopButton = document.getElementById("back-to-top");
+			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+				backToTopButton.style.display = "block";
+			} else {
+				backToTopButton.style.display = "none";
+			}
+		};
+
+		// 滚动到页面顶部
+		function scrollToTop() {
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth" // 平滑滚动
+			});
+		}
+	</script>
+
+	<script>
+		// 使用 fetch 动态加载 head.html
+		fetch('/head.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('navbar').innerHTML = data;
+			})
+			.catch(error => console.error('Error loading navbar:', error));
+	</script>
+
+</body>
+
+</html>

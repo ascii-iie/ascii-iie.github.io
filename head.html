@@ -1,103 +1,85 @@
+<style>
+    .navbar {
+        font-family: 'Times New Roman', Times, serif;
+        background:#e3e0de;
+        /* background: linear-gradient(45deg, #0c476c 30%, #3e81aa 60%, #e3e0de 60%, #e3e0de 71%, #f68229 71%, #f9ad72 87%); */
+    }
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css_style.css">
-  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    .navbar::after {
+        content: '';
+        /* 伪元素内容为空 */
+        position: absolute;
+        bottom: 0;
+        /* 定位在导航栏的底部 */
+        left: 0;
+        width: 100%;
+        /* 宽度为导航栏的整个宽度 */
+        height: 6px;
+        /* 颜色条的高度 */
+        background: linear-gradient(45deg, #0c476c 35%, #3e81aa 68.7%,#ffffff 68.7%, #ffffff 69%, #e3e0de 69%, #e3e0de 76.7%,#ffffff 76.7%, #ffffff 77%, #f68229 77%, #f9ad72 90%);
+        /* 颜色条的颜色 */
+    }
 
-  <style>
-    .navbar-inverse 
-{
-    background-color: #696767;
-    border-color: #696767
-}
-.navbar-inverse .navbar-header
-{
-    margin-left: 5%;
-    height: 80px;
-}
-.navbar-inverse .navbar-header> a
-{
-    font-size: xx-large;
-    font-family: 'Times New Roman', Times, serif;
-    margin-top: 15px;
-}
-.navbar-inverse .navbar-brand 
-{
-    color: #ecf0f1;
-}
-.navbar-inverse .navbar-brand:hover,
-.navbar-inverse .navbar-brand:focus 
-{
-    color: #818083;
-}
-.navbar-inverse .navbar-text 
-{
-    color: #ecf0f1;
-}
-.navbar-inverse .navbar-nav > li 
-{
-    font-size: x-large;   
-    font-family: 'Times New Roman', Times, serif;
-    margin-top: 15px;
-}
-.navbar-inverse .navbar-nav > li > a 
-{
-    color: #ecf0f1;
-}
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus 
-{
-    color:#818083;
-}
-.navbar-inverse .navbar-nav > li > .dropdown-menu {
-    background-color: #090909;
-}
-.navbar-inverse .navbar-nav > li > .dropdown-menu > li > a {
-    color: #ecf0f1;
-}
-.navbar-inverse .navbar-nav > li > .dropdown-menu > li > a:hover,
-.navbar-inverse .navbar-nav > li > .dropdown-menu > li > a:focus 
-{
-    color: #090909;
-    background-color: #747272;
-    
-}
-  </style>
-</head>
+    .nav-link {
+        color: #000000;
+        font-size: x-large;
+    }
 
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="true">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              
-              <a class="navbar-brand" href="ASCII.html" target="headframe">ASCII LAB</a>
-              </div>
-              <div class="navbar-collapse collapse in" id="navbar-collapse-1" aria-expanded="true">
-                  <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html"target="headframe">Home</a></li>
-                    <li><a href="Team.html"target="headframe">Team</a></li>
-                    <li><a href="News.html"target="headframe">News</a></li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-has
-          popup="true" aria-expanded="false"target="headframe">Group<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="NLG_Paperlist.html"target="headframe">Natural Language Generation,NLG</a></li>
-                      <li><a href="NLU_Paperlist.html"target="headframe">Natural Language Understanding,NLU</a></li>
-                      <li><a href="SN_Paperlist.html"target="headframe">Social Network Analysis,SNA</a></li>
+    .navbar-brand.h1 {
+        font-size: xx-large;
+        color: #000000;
+    }
+
+    /* 鼠标悬停时的文字颜色 */
+    .nav-link:hover {
+        color: #588dff;
+    }
+
+    #navbarLogo {
+        height: 45px;
+        width: auto;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+    }
+</style>
+<nav class="navbar fixed-top navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">
+            <img src="/img/ASCII_1.jpg" id="navbarLogo" alt="Logo">
+        </a>
+        <span class="navbar-brand mb-0 h1">ASCII Lab</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/ASCII.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Team.html">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/News.html">News</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Group
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="/NLG_Paperlist.html">Natural Language Generation, NLG</a>
+                        </li>
+                        <li><a class="dropdown-item" href="/NLU_Paperlist.html">Natural Language Understanding, NLU</a>
+                        </li>
+                        <li><a class="dropdown-item" href="/SN_Paperlist.html">Social Network Analysis, SNA</a></li>
                     </ul>
-                  </li>
-                    <li><a href="Seminar_new/Seminar_3.html"target="headframe">Seminar</a></li>
-                </ul>
-              </div>
-            </div>
-        </nav>
-
-
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Seminar_pages/Seminar_3.html">Seminar</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

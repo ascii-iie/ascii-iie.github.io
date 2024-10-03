@@ -1,148 +1,437 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Team</title>
-	<link rel="icon" type="image/x-icon" href="img/ASCII_1.ico"/>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
-        <link rel="stylesheet" href="css_style.css"> 
-        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
-      </head>
+
+<head>
+    <title>Team</title>
+    <link rel="icon" type="image/x-icon" href="/img/ASCII_1.ico" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.net/bootstrap/5.3.2/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.net/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css_style.css">
+</head>
 
 
-  <body>
-    <div id="head">
-        <iframe MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no src="head.html" width="100%"  height="auto">
-        </iframe>
-     </div>
-     <div class="scroll-container">
-        <div class="scroll-text"><a href="./News/20240516.html" style="color: inherit; text-decoration: none;">ASCII LAB发布CCKS 2024评测任务，奖金40000元！</LABel></a></div>
-    </div>
-        
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-2 col-md-offset-1 col-lg-offset-1 col-xl-offset-1" id="menulist" >
-                    <a href="Team.html" class="list-group-item list-group-item-info active" id="textid">Team Leader</a>
-                    <a href="Teacher.html" class="list-group-item list-group-item-info" id="textid">Teacher</a>
-                    <a href="Student.html" class="list-group-item list-group-item-info" id="textid">Student </a>
+<body>
+    <div id="navbar"></div> <!-- 用于插入导航栏的容器 -->
+
+    <div class="container-fluid" style="margin-top: 100px;">
+
+        <button type="button" id="back-to-top" class="btn btn-outline-danger" onclick="scrollToTop()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-bar-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M3.646 11.854a.5.5 0 0 0 .708 0L8 8.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708M2.4 5.2c0 .22.18.4.4.4h10.4a.4.4 0 0 0 0-.8H2.8a.4.4 0 0 0-.4.4" />
+            </svg>
+        </button>
+
+        <div class="main">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/index.html">Index</a></li>
+                            <li class="breadcrumb-item"><a href="/Team.html">Team</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Leader</li>
+                        </ol>
+                    </nav>
+                    <hr>
                 </div>
+            </div>
 
-                <div class="col-sm-8 column ">
-                    <ol class="breadcrumb">
-                        <li class="active">Menu
-                        </li>
-                        <li class="active">Team Leader
-                        </li>
-                    </ol>
+            <div class="row justify-content-center">
+                <div class="list-group col-sm-2 " id="menulist">
+                    <a href="Team.html" class="list-group-item active list-group-item-action list-group-item-action-custom shadow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                      </svg>&nbsp;&nbsp;Leader</a>
+                    <a href="Teacher.html" class="list-group-item list-group-item-action list-group-item-action-custom shadow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                      </svg>&nbsp;&nbsp;Teacher</a>
+                    <a href="Student.html" class="list-group-item list-group-item-action list-group-item-action-custom shadow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                      </svg>&nbsp;&nbsp;Student</a>
+                </div>
+                <div class="col-sm-8">
+                    <div class="row" style="align-items: center;">
+                        <div class="col-md-6 text-center">
+                            <img src="img/CYN.png" class="img-responsive img_person" alt="Cinque Terre" width="150"
+                                height="200">
+                        </div>
 
-
-                     <div class="col-sm-6 column ">
-                    <img src="img/CYN.png" class="img-responsive img_person" alt="Cinque Terre" width="150" height="200">
+                        <div class="col-md-4">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item list-group-item-info-custom"><strong>Name</strong>: 曹亚男 Yanan Cao</li>
+                                <li class="list-group-item list-group-item-info-custom"><strong>Title</strong>: Research Fellow</li>
+                                <li class="list-group-item list-group-item-info-custom"><strong>Education</strong>: Ph.D.</li>
+                                <li class="list-group-item list-group-item-info-custom"><strong>Research Direction</strong>: NLP, SNA, ML</li>
+                                <li class="list-group-item list-group-item-info-custom"><strong>Email</strong>: caoyanan&#64;iie.ac.cn </li>
+                            </ul>
+                        </div>
                     </div>
-                <div class="name_person">
-                                <P><strong>Name</strong>: 曹亚男 Yanan Cao</P>
-                                <P><strong>Title</strong>: Research Fellow</P>
-                                <P><strong>Education</strong>: Ph.D.</P>
-                                <P><strong>Research Direction</strong>: NLP,SNA,ML</P>
-                                <P><strong>Email</strong>: caoyanan&#64;iie.ac.cn </P>
-                </div>
 
-                <div  class="col-sm-12 column">
-                <p style="font-size: large;"><strong>Introduction:</strong></p>
-				<p class="introduction">曹亚男，中国科学院信息工程研究所第四研究室副主任，研究员，中国科学院大学岗位教授，博士生导师，国家重点研发计划青年科学家项目负责人。研究方向为信息内容安全，包括文本内容安全、社会媒体分析等，致力于采用自然语言处理、图神经网络等技术解决网络空间文本、关系等信息内容安全问题。入选2016年度中国科学院信息工程研究所青年之星、2018年度中国科学院青年创新促进会、2021年度国科大优秀岗位教师、2022年度中科院优秀导师；获2017年度百度之星第一名、2020年度PAKDD唯一最佳论文奖、2022年度CCL新闻脉络分析评测第一名；获2022年度中国电子学会科技进步二等奖。迄今在WWW、AAAI、ICDM、CIKM等CCF-A/B类会议和期刊上发表50余篇学术论文，连续多年任ACL、COLING领域委员，AAAI、IJCAI高级程序委员会委员，是TKDE、TOIS等国际期刊的审稿人。先后主持包括国家重点研发计划项目、国家自然科学基金、国防预先研究、国家信息安全专项在内的20余项国家级和省部级科研项目，具有丰富的科研经验和项目经验。在国科大主讲《自然语言处理》、《自然语言处理实战》、《深度学习与自然语言处理》等课程，深受学生喜爱和好评。</p>
-                <p class="introduction">Prof. Yanan Cao, Deputy Director of the Fourth Faculty, is a research fellow of Institute of Information Engineering, Chinese Academy of Sciences(IIE, CAS) and a Ph.D. program supervisor of University of Chinese Academy of Sciences(UCAS). She had received her bachelor's degree from the School of Computer Science and Technology of Shandong University in 2006 and her Ph.D. from the Institute of Computing Technology of the Chinese Academy of Sciences in 2012. Her research directions include natural language processing(NLP), social network analysis(SNA) and machine learning(ML). Her specific research fields include knowledge map construction and reasoning, text generation, graph neural network and so on. She was selected as the youth star of Institute of Information Engineering, Chinese Academy of Sciences in 2016 and selected into the Youth Innovation Promotion Association(CAS) in 2018. She won the first place in the Astar in 2017, won the third place in the OAG-WHOISWHO competition in 2019 and won the best paper award of PAKDD in 2020. So far, she has published many academic papers in international top conferences and journals including WWW, AAAI, ICDM and CIKM, and has published more than 60 EI and SCI search papers. She has been a member of ACL, AAAI, EMNLP, CIKM program committee and IJCAI senior program committee for many years. She is a  peer reviewer of academic journals at home and abroad such as TKDE, TIS, FCS, Journal of Computer Science and Technology, Journal of Chinese Information Processing, and serves as a review expert of National Natural Science foundation of China and Beijing Municipal Natural Science Foundation. She has presided over and participated in a number of projects supported by National Natural Science Foundation of China, National Key Research and Development Project of China, Strategic Priority Research Program of the Chinese Academy of Sciences, and has rich scientific research experience and project experience. She offered postgraduate courses "Deep Learning and Natural Language Processing" and "Intelligent Question Answering Frontier Technology" at the University of Chinese Academy of Sciences , which were well received and praised by students.</p>
-				<br>
-                <p style="font-size: large;"><strong>Social Service:</strong></p>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item list_ins">1.ACL 2022 AC、AAAI 2022 SPC、KDD 2022 PC</li>
-                    <li class="list-group-item list_ins">2.Program committee member of ACL, IJCAI, EMNLP, WWW, SIGIR and other international conferences for many years</li>
-                    <li class="list-group-item list_ins">3.Member of CCF YOCSEF and Youth Working Committee of China Chinese Information Society (CIPS)</li>
-                    <li class="list-group-item list_ins">4.Review expert of National Natural Science foundation of China and  Beijing Municipal Natural Science Foundation.</li>
-                  </ul>
-                  <br>
-                  <p style="font-size: large;"><strong>Awards and Honors:</strong></p>
-                  <ul class="list-group list-group-flush">
-                      <li class="list-group-item list_ins">1.Special contribution award of National Engineering Laboratory for Information Content Security Technology,2013</li>
-                      <li class="list-group-item list_ins">2.Outstanding communist party member of the Institute of Information Engineering, Chinese Academy of Sciences,2015</li>
-                      <li class="list-group-item list_ins">3.Youth star of Institute of Information Engineering, Chinese Academy of Sciences,2016</li>
-                      <li class="list-group-item list_ins">4.1st place in Astar,2017</li>
-                      <li class="list-group-item list_ins">5.Outstanding staff of the Institute of Information Engineering, Chinese Academy of Sciences,2017</li>
-                      <li class="list-group-item list_ins">6.Member of Youth Innovation Promotion Association of Chinese Academy of Sciences,2018</li>
-                      <li class="list-group-item list_ins">7.3rd place in the OAG-WHOISWHO,2019</li>
-                      <li class="list-group-item list_ins">8.Best paper award of PAKDD,2020</li>
-                      <li class="list-group-item list_ins">9.Excellent staff at the office level of the Institute of Information Engineering, Chinese Academy of Sciences,2021</li>
-                    </ul>
-                    <br>
-                  <p style="font-size: large;"><strong>Representative Works:</strong></p>
-                  <ul class="list-group list-group-flush" id="sourceList">
-			  <li class="list-group-item list_ins">(ICML-2024) Xixun Lin, Wenxiao Zhang, Fengzhao Shi, Chuan Zhou, Lixin Zou, Xiangyu Zhao, Dawei Yin, Shirui Pan, Yanan Cao. Graph Neural Stochastic Diffusion for Estimating Uncertainty in Node Classification.(CCF-A)&emsp;<a href="https://openreview.net/pdf?id=xJUhgvM2u8" style="color:black">[pdf]</a><a href="" style="color:black">[code]</a></li>
-                      <li class="list-group-item list_ins">(ACL-2024) Yubing Ren, Ping Guo, Yanan Cao, Wei Ma. Subtle Signatures, Strong Shields: Advancing Robust and Imperceptible Watermarking in Large Language Models.(CCF-A)&emsp;<a href="" style="color:black">[pdf]</a><a href="https://github.com/Lilice-r/RIW" style="color:black">[code]</a></li>
-		              <li class="list-group-item list_ins">(NAACL-2024) Yanhe Fu, Yanan Cao∗, Qingyue Wang,and Yi Liu. TISE: A Tripartite In-context Selection Method for Event Argument Extraction.(CCF-B)&emsp;<a href="" style="color:black">[pdf]</a><a href="" style="color:black">[code]</a></li>
-		              <li class="list-group-item list_ins">(WSDM-2024) Yu Liu, Yanan Cao, Shi Wang, Qingyue Wang, Guanqun Bi. Generative Models for Complex Logical Reasoning over Knowledge Graphs.  (CCF-B)&emsp;<a href="https://dl.acm.org/doi/pdf/10.1145/3616855.3635804" style="color:black">[pdf]</a><a href="https://github.com/liuyudiy/DiffCLR" style="color:black">[code]</a></li>
-		              <li class="list-group-item list_ins">(COLING-2024) Yubing Ren, Yanan Cao, Hao Li, Yingjie Li, Zixuan Ma, Fang Fang, Ping Guo and Wei Ma. DEIE: Benchmarking Document-level Event Information Extraction with a Large-scale Chinese News Dataset.  (CCF-B)&emsp;<a href="https://github.com/Lilice-r/DEIE" style="color:black">[pdf]</a><a href="https://github.com/Lilice-r/DEIE" style="color:black">[code]</a></li>
-		              <li class="list-group-item list_ins">(ICASSP-2024) Hao Li, Yanan Cao, Yubing Ren, Fang Fang, Lanxue Zhang, Yingjie Li, Shi Wang. Sorting, Reasoning, and Extraction: an Easy-to-Hard Reasoning Framework for Document-level Event Argument Extraction.  (CCF-B)&emsp;<a href="" style="color:black">[pdf]</a><a href="https://github.com/hlee-top/event_extract" style="color:black">[code]</a></li>
-                      <li class="list-group-item list_ins">(EMNLP-2023) Hao Li, Yanan Cao, Yubing Ren, Fang Fang, Lanxue Zhang, Yingjie Li, Shi Wang. Intra-Event and Inter-Event Dependency-Aware Graph Network for Event Argument Extraction.  (CCF-B)&emsp;<a href="https://aclanthology.org/2023.findings-emnlp.421/" style="color:black">[pdf]</a></li>
-		              <li class="list-group-item list_ins">(NLPCC-2023) Yanhe Fu, Yi Liu, Yanan Cao, Yubing Ren, Qingyue Wang, Fang Fang, Cong Cao. A Multi-granularity Similarity Enhanced Model for Implicit Event Argument Extraction.  (CCF-C)&emsp;<a href="https://link.springer.com/chapter/10.1007/978-3-031-44696-2_8" style="color:black">[pdf]</a><a herf="github.com/LazyFyh/NLPCC23">[code]</a></li>
-                      <li class="list-group-item list_ins">(ACL-2023) Yi Liu, Yuan Tian, Jianxun Lian, Xinlong Wang, Yanan Cao, Fang Fang, Wen Zhang, Haizhen Huang, Denvy Deng, Qi Zhang. Towards Better Entity Linking with Multi-View enhanced Distillation.  (CCF-A)&emsp;<a href="https://arxiv.org/abs/2305.17371" style="color:black">[pdf]</a><a href="https://github.com/Noen61/MVD" style="color:black">[code]</a></li>
-                      <li class="list-group-item list_ins">(ACL-2023) Yubing Ren, Yanan Cao, Ping Guo, Fang Fang, Wei Ma, Zheng Lin. Retrieve-and-Sample: Document-level Event Argument Extraction via Hybrid Retrieval Augmentation. (CCF-A)&emsp;<a href="https://aclanthology.org/2023.acl-long.17.pdf" style="color:black">[pdf]</a></li>
-                      <li class="list-group-item list_ins">(ACL-2023) Guanqun Bi, Lei Shen, Yanan Cao, Meng Chen, Yuqiang Xie, Zheng Lin, Xiaodong He. DiffusEmp: A Diffusion Model-Based Framework with Multi-Grained Control for Empathetic Response Generation.  (CCF-A)&emsp;<a href="https://arxiv.org/abs/2306.01657" style="color:black">[pdf]</a><a href="https://github.com/surika/DiffusEmp" style="color:black">[code]</a></li>
-                      <li class="list-group-item list_ins">(ACL-2023) Qingyue Wang, Liang Ding, Yanan Cao, Yibing Zhan, Zheng Lin, Shi Wang, Dacheng Tao, Li Guo. Divide, Conquer, and Combine: Mixture of Semantic-Independent Experts for Zero-Shot Dialogue State Tracking. (CCF-A)&emsp;<a href="https://arxiv.org/abs/2306.00434" style="color:black">[pdf]</a><a href="https://github.com/qingyue2014/MoE4DST" style="color:black">[code]</a></li>
-                      <li class="list-group-item list_ins">(WWW-2023) Yuchen Zhou, Yanan Cao, Yongchao Liu, Yanmin Shang, Peng Zhang, Zheng Lin, Yun Yue, Baokun Wang, Xing Fu, Weiqiang Wang. Multi-Aspect Heterogeneous Graph Augmentation.(CCF-A)&emsp;<a href="https://dl.acm.org/doi/pdf/10.1145/3543507.3583208" style="color:black">[pdf]</a><a href="https://github.com/painful00/MAHGA" style="color:black">[code]</a></li>
-                      <li class="list-group-item list_ins">(TOIS-2022) Yuchen Zhou, Yanan Cao, Yanmin Shang, Chuan Zhou, Shirui Pan, Zheng Lin, Qian Li. Explainable Hyperbolic Temporal Point Process for User-Item Interaction Sequence Generation. (CCF-A)&emsp;<a href="https://dl.acm.org/doi/10.1145/3570501" style="color:black">[pdf]</a><a href="https://github.com/painful00/EHTPP" style="color:black">[code]</a></li>
-                      <li class="list-group-item list_ins">(ACL-2022) Ruipeng Jia, Xingxing Zhang, Yanan Cao*, Shi Wang, Zheng Lin, Furu Wei. Neural Label Search for Zero-Shot Multi-Lingual Extractive Summarization. (CCF-A)&emsp;<a href="https://arxiv.org/abs/2204.13512" style="color:black">[pdf]</a><a href="https://github.com/jiaruipeng1994/Extractive_Summarization" style="color:black">[code]</a></li>
-                      <li class="list-group-item list_ins">(WWW-2022) Fengzhao Shi, Yanan Cao, Yanmin Shang*, Yuchen Zhou, Chuan Zhou, Jia Wu. H2-FDetector: A GNN-based Fraud Detector with Homophilic and Heterophilic Connections. (CCF-A)&emsp;<a href="https://dl.acm.org/doi/10.1145/3485447.3512195" style="color:black">[pdf]</a><a href="https://github.com/shifengzhao/H2-FDetector" style="color:black">[code]</a></li>
-                      <li class="list-group-item list_ins">(AAAI-2022) Ren Li, Yanan Cao, Qiannan Zhu, Guanqun Bi, Fang Fang*, Yi Liu, Qian Li. How Does Knowledge Graph Embedding Extrapolate to Unseen Data: a Semantic Evidence View. (CCF-A)&emsp;<a href="https://arxiv.org/pdf/2109.11800.pdf" style="color:black">[pdf]</a><a href="https://github.com/renli1024/SE-GNN" style="color:black">[code]</a></li>
-                      <li class="list-group-item list_ins">(ICDM-2022) Yuchen Zhou, Yanan Cao, Yanmin Shang, Chuan Zhou, Chuancheng Song, Fengzhao Shi, Qian Li. Task-level Relations Modelling for Graph Meta-learning.(CCF-B)&emsp; <a href="https://ieeexplore.ieee.org/abstract/document/10027781" style="color:black">[pdf]</a><a href="https://github.com/painful00/TRGM" style="color:black">[code]</a></li>
-                      <li class="list-group-item list_ins">(WWWJ-2022) Yuchen Zhou, Yanmin Shang, Yanan Cao, Qian Li, Chuan Zhou, Guandong Xu. API-GNN: Attribute Preserving Oriented Interactive Graph Neural Network. (CCF-B)&emsp;<a href="https://dl.acm.org/doi/10.1007/s11280-021-00987-z" style="color:black">[pdf]</a></li>
-                      <li class="list-group-item list_ins">(COLING-2022) Yubing Ren, Yanan Cao, Fang Fang, Ping Guo, Zheng Lin, Wei Ma, Yi Liu. CLIO: Role-interactive Multi-event Head Attention Network for Document-level Event Extraction. (CCF-B)&emsp;<a href="https://aclanthology.org/2022.coling-1.221.pdf" style="color:black">[pdf]</a></li>
-                      <li class="list-group-item list_ins">(COLING-2022)Qingyue Wang, Yanan Cao, Piji Li and Li Guo. Slot Dependency Modeling for Zero-shot Cross-domain Dialogue State Tracking. (CCF-B)&emsp;<a href="https://aclanthology.org/2022.coling-1.42.pdf" style="color:black">[pdf]</a></li>
-		              <li class="list-group-item list_ins">(IJCNN-2021)Qingyue Wang, Yanan Cao, Junyan Jiang, Yafang Wang and Li Guo. Incorporating Specific Knowledge into End-to-End Task-oriented Dialogue Systems. (CCF-C)&emsp;<a href="https://ieeexplore.ieee.org/document/9533938" style="color:black">[pdf]</a></li>
-		              <li class="list-group-item list_ins">(AAAI-2021) Ruipeng Jia, Yanan Cao*, Haichao Shi, Fang Fang, Pengfei Yin, Shi Wang. Flexible Non-Autoregressive Extractive Summarization with Threshold: How to Extract a Non-Fixed Number of Summary Sentences?  (CCF-A)&emsp;<a href="https://ojs.aaai.org/index.php/AAAI/article/view/17552" style="color:black">[pdf]</a><a href="https://github.com/jiaruipeng1994/Extractive_Summarization" style="color:black">[code]</a></li>
-                      <li class="list-group-item list_ins">(ACL-2021) Ruipeng Jia, Yanan Cao*, Fang Fang, Yuchen Zhou, Zheng Fang, Yanbing Liu, Shi Wang. Deep Differential Amplifier for Extractive Summarization.(CCF-A)&emsp;<a href="https://aclanthology.org/2021.acl-long.31/?ref=https://githubhelp.com" style="color:black">[pdf]</a><a href="https://github.com/jiaruipeng1994/Extractive_Summarization" style="color:black">[code]</a></li> 
-                      <li class="list-group-item list_ins">(ICASSP-2021) Hengzhu Tang, Yanan Cao*, Zhenyu Zhang, Ruipeng Jia, Fang Fang, Shi Wang. Multi-Granularity Hetegrogeneous Graph For Document-level Relation Extraction. (CCF-B)</li>
-                      <li class="list-group-item list_ins">(WWWJ-2020) Xiaoxue Li, Yanan Cao*, Yanmin Shang, Yangxi Li, Qian Li, Guandong Xu. RLINK: Deep Reinforcement Learning for User Identity Linkage. (CCF-B)&emsp;<a href="https://arxiv.org/pdf/1910.14273.pdf" style="color:black">[pdf]</a></li>
-                      <li class="list-group-item list_ins">(EMNLP-2020) Ruipeng Jia, Yanan Cao*, Hengzhu Tang, Fang Fang, Cong Cao, Shi Wang: Neural Extractive Summarization with Hierarchical Attentive Heterogeneous Graph Network. (CCF-B)&emsp;<a href="https://aclanthology.org/2020.emnlp-main.295/" Style="color:black">[pdf]</a><a href="https://github.com/jiaruipeng1994/Extractive_Summarization" style="color:black">[code]</a></li>
-                      <li class="list-group-item list_ins">(CIKM-2020)  Ruipeng Jia, Yanan Cao*, Haichao Shi, Fang Fang, Yanbing Liu, Jianlong Tan. DistilSum: Distilling the Knowledge for Extractive Summarization. (CCF-B)&emsp;<a href="ttps://dl.acm.org/doi/10.1145/3340531.3412078" Style="color:black">[pdf]</a><a href="https://github.com/jiaruipeng1994/Extractive_Summarization" style="color:black">[code]</a></li>
-                      <li class="list-group-item list_ins">(WWW-2020) Zheng Fang, Yanan Cao*, Ren Li, Zhenyu Zhang, Yanbing Liu, Shi Wang. High quality Candidate Generation and Sequential Graph Attention Network for Entity  Linking. (CCF-A)&emsp;<a href="https://dl.acm.org/doi/abs/10.1145/3366423.3380146" Style="color:black">[pdf]</a><a href="https://github.com/fangzheng123/SGEL" style="color:black">[code]</a></li>
-                      <li class="list-group-item list_ins">(AAAI-2020) Xiaoxue Li, Yanan Cao*, Yanmin Shang, Yangxi Li, Yanbing Liu, Jianlong Tan. Type-aware Anchor Link Prediction across Heterogeneous Networks based on Graph Attention Network.(CCF-A)&emsp;<a href="https://cdn.aaai.org/ojs/5345/5345-13-8570-1-10-20200508.pdf" Style="color:black">[pdf]</a></li>
-                      <li class="list-group-item list_ins">(WWW-2019) Zheng Fang, Yanan Cao*, Qian Li, Dongjie Zhang, Zhenyu Zhang, Yanbing Liu. Joint Entity Linking with Deep Reinforcement Learning. (CCF-A)&emsp;<a href="https://github.com/fangzheng123/RLEL_2019" style="color:black">[code]</a></li>
-                      <li class="list-group-item list_ins">(ICME-2019) Yanmin Shang, Zhezhou Kang, Yanan Cao*, Yanbing Liu, Jianlong Tan. PAAE: A Unified Framework for Predicting Anchor Links with Adversarial Embedding. (CCF-B)</li>
-                      <li class="list-group-item list_ins">(PAKDD-2020) Hengzhu Tang, Yanan Cao, Zhenyu Zhang, Jiangxia Cao, Fang Fang, Shi Wang, Pengfei Yin. HIN: Hierarchical Inference Network for Document-Level Relation Extraction. (CCF-C,Best Paper Award)</li>
-                      <li class="list-group-item list_ins">(KSEM-2018)Qingyue Wang, Yanjing Song, Hao Liu, Yanan Cao and Li Guo. A Sequence Transformation Model for Chinese Named Entity Recognition. (CCF-C)&emsp;<a href="https://link.springer.com/content/pdf/10.1007/978-3-319-99365-2_44.pdf" style="color:black">[pdf]</a></li>
-		  </ul>
-                    <br>
-                  <p style="font-size: large;"><strong>Undertaking Research Projects:</strong></p>
-                  <ul class="list-group list-group-flush">
-                      <li class="list-group-item list_ins">1.2021.06~2022.12, pre-research project "Character Analysis Technology", project leader</li>
-                      <li class="list-group-item list_ins">2.2018.07~2021.06, the sub-project of the National Key R&D Program "Precise Expert Recommendation and Recommendation Basis Visual Presentation Technology", sub-project leader</li>
-                      <li class="list-group-item list_ins">3.2018.07~2021.06, the sub-project of the National Key R&D Program "Reliable Traceability of Scientific Research Behavior Data and Privacy Protection Technology", the executive director of the sub-project</li>
-                      <li class="list-group-item list_ins">4.2016.12~2019.11, National Key R&D Program sub-project "Virtual User Profile and Association Analysis Technology Research", sub-project leader</li>
-                      <li class="list-group-item list_ins">5.2015.01~2018.12, National Natural Science Foundation of China Youth Fund Project "Causal Knowledge Discovery, Verification and Inference Research for Event Prediction", project leader</li>
-                      <li class="list-group-item list_ins">6.2014.01~2017.12, National Natural Science Foundation of China General Project "Research on the Next Generation Big Data Stream Classification System", the backbone of the project</li>
-                      <li class="list-group-item list_ins">7.2013.05~2014.04, the forward-looking project of the Institute of Information Engineering, Chinese Academy of Sciences "Research on the Key Technologies of Network Information Source Discovery and Information Dissemination", the backbone of the project                    </li>
-                      <li class="list-group-item list_ins">8.2012.01~2016.12, Strategic Pilot Project of Chinese Academy of Sciences: Social Situation Awareness and Handling,the backbone of the project                   </li>
-                      <li class="list-group-item list_ins">9.Undertake and participate in more than 10 horizontal projects of national departments</li>
+                    <br><br>
 
-                    </ul> 
-            </div>
-                
+                    <div class="col-sm-12 column">
+                        <p style="font-size: large;"><strong>Introduction</strong></p>
+                        <p class="introduction">
+                            曹亚男，中国科学院信息工程研究所第四研究室副主任，研究员，中国科学院大学岗位教授，博士生导师，国家重点研发计划青年科学家项目负责人。研究方向为信息内容安全，包括文本内容安全、社会媒体分析等，致力于采用自然语言处理、图神经网络等技术解决网络空间文本、关系等信息内容安全问题。入选2016年度中国科学院信息工程研究所青年之星、2018年度中国科学院青年创新促进会、2021年度国科大优秀岗位教师、2022年度中科院优秀导师；获2017年度百度之星第一名、2020年度PAKDD唯一最佳论文奖、2022年度CCL新闻脉络分析评测第一名；获2022年度中国电子学会科技进步二等奖。迄今在WWW、AAAI、ICDM、CIKM等CCF-A/B类会议和期刊上发表50余篇学术论文，连续多年任ACL、COLING领域委员，AAAI、IJCAI高级程序委员会委员，是TKDE、TOIS等国际期刊的审稿人。先后主持包括国家重点研发计划项目、国家自然科学基金、国防预先研究、国家信息安全专项在内的20余项国家级和省部级科研项目，具有丰富的科研经验和项目经验。在国科大主讲《自然语言处理》、《自然语言处理实战》、《深度学习与自然语言处理》等课程，深受学生喜爱和好评。
+                        </p>
+                        <p class="introduction">Prof. Yanan Cao, Deputy Director of the Fourth Faculty, is a research
+                            fellow
+                            of Institute of Information Engineering, Chinese Academy of Sciences(IIE, CAS) and a Ph.D.
+                            program supervisor of University of Chinese Academy of Sciences(UCAS). She had received her
+                            bachelor's degree from the School of Computer Science and Technology of Shandong University
+                            in
+                            2006 and her Ph.D. from the Institute of Computing Technology of the Chinese Academy of
+                            Sciences
+                            in 2012. Her research directions include natural language processing(NLP), social network
+                            analysis(SNA) and machine learning(ML). Her specific research fields include knowledge map
+                            construction and reasoning, text generation, graph neural network and so on. She was
+                            selected as
+                            the youth star of Institute of Information Engineering, Chinese Academy of Sciences in 2016
+                            and
+                            selected into the Youth Innovation Promotion Association(CAS) in 2018. She won the first
+                            place
+                            in the Astar in 2017, won the third place in the OAG-WHOISWHO competition in 2019 and won
+                            the
+                            best paper award of PAKDD in 2020. So far, she has published many academic papers in
+                            international top conferences and journals including WWW, AAAI, ICDM and CIKM, and has
+                            published
+                            more than 60 EI and SCI search papers. She has been a member of ACL, AAAI, EMNLP, CIKM
+                            program
+                            committee and IJCAI senior program committee for many years. She is a peer reviewer of
+                            academic
+                            journals at home and abroad such as TKDE, TIS, FCS, Journal of Computer Science and
+                            Technology,
+                            Journal of Chinese Information Processing, and serves as a review expert of National Natural
+                            Science foundation of China and Beijing Municipal Natural Science Foundation. She has
+                            presided
+                            over and participated in a number of projects supported by National Natural Science
+                            Foundation
+                            of China, National Key Research and Development Project of China, Strategic Priority
+                            Research
+                            Program of the Chinese Academy of Sciences, and has rich scientific research experience and
+                            project experience. She offered postgraduate courses "Deep Learning and Natural Language
+                            Processing" and "Intelligent Question Answering Frontier Technology" at the University of
+                            Chinese Academy of Sciences , which were well received and praised by students.</p>
+                        <br>
+                        <p style="font-size: large;"><strong>Social Service</strong></p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item list_ins">1.ACL 2022 AC、AAAI 2022 SPC、KDD 2022 PC</li>
+                            <li class="list-group-item list_ins">2.Program committee member of ACL, IJCAI, EMNLP, WWW,
+                                SIGIR
+                                and other international conferences for many years</li>
+                            <li class="list-group-item list_ins">3.Member of CCF YOCSEF and Youth Working Committee of
+                                China
+                                Chinese Information Society (CIPS)</li>
+                            <li class="list-group-item list_ins">4.Review expert of National Natural Science foundation
+                                of
+                                China and  Beijing Municipal Natural Science Foundation.</li>
+                        </ul>
+                        <br>
+                        <p style="font-size: large;"><strong>Awards and Honors</strong></p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item list_ins">1.Special contribution award of National Engineering
+                                Laboratory for Information Content Security Technology,2013</li>
+                            <li class="list-group-item list_ins">2.Outstanding communist party member of the Institute
+                                of
+                                Information Engineering, Chinese Academy of Sciences,2015</li>
+                            <li class="list-group-item list_ins">3.Youth star of Institute of Information Engineering,
+                                Chinese Academy of Sciences,2016</li>
+                            <li class="list-group-item list_ins">4.1st place in Astar,2017</li>
+                            <li class="list-group-item list_ins">5.Outstanding staff of the Institute of Information
+                                Engineering, Chinese Academy of Sciences,2017</li>
+                            <li class="list-group-item list_ins">6.Member of Youth Innovation Promotion Association of
+                                Chinese Academy of Sciences,2018</li>
+                            <li class="list-group-item list_ins">7.3rd place in the OAG-WHOISWHO,2019</li>
+                            <li class="list-group-item list_ins">8.Best paper award of PAKDD,2020</li>
+                            <li class="list-group-item list_ins">9.Excellent staff at the office level of the Institute
+                                of
+                                Information Engineering, Chinese Academy of Sciences,2021</li>
+                        </ul>
+                        <br>
+                        <p style="font-size: large;"><strong>Representative Works</strong></p>
+                        <ul class="list-group list-group-flush" id="sourceList">
+                            <li class="list-group-item list_ins">(ICML-2024) Xixun Lin, Wenxiao Zhang, Fengzhao Shi,
+                                Chuan
+                                Zhou, Lixin Zou, Xiangyu Zhao, Dawei Yin, Shirui Pan, Yanan Cao. Graph Neural Stochastic
+                                Diffusion for Estimating Uncertainty in Node Classification.(CCF-A)&emsp;<a
+                                    href="https://openreview.net/pdf?id=xJUhgvM2u8" style="color:black">[pdf]</a><a
+                                    href="" style="color:black">[code]</a></li>
+                            <li class="list-group-item list_ins">(ACL-2024) Yubing Ren, Ping Guo, Yanan Cao, Wei Ma.
+                                Subtle
+                                Signatures, Strong Shields: Advancing Robust and Imperceptible Watermarking in Large
+                                Language Models.(CCF-A)&emsp;<a href="" style="color:black">[pdf]</a><a
+                                    href="https://github.com/Lilice-r/RIW" style="color:black">[code]</a></li>
+                            <li class="list-group-item list_ins">(NAACL-2024) Yanhe Fu, Yanan Cao∗, Qingyue Wang,and Yi
+                                Liu.
+                                TISE: A Tripartite In-context Selection Method for Event Argument
+                                Extraction.(CCF-B)&emsp;<a href="" style="color:black">[pdf]</a><a href=""
+                                    style="color:black">[code]</a></li>
+                            <li class="list-group-item list_ins">(WSDM-2024) Yu Liu, Yanan Cao, Shi Wang, Qingyue Wang,
+                                Guanqun Bi. Generative Models for Complex Logical Reasoning over Knowledge Graphs.
+                                (CCF-B)&emsp;<a href="https://dl.acm.org/doi/pdf/10.1145/3616855.3635804"
+                                    style="color:black">[pdf]</a><a href="https://github.com/liuyudiy/DiffCLR"
+                                    style="color:black">[code]</a></li>
+                            <li class="list-group-item list_ins">(COLING-2024) Yubing Ren, Yanan Cao, Hao Li, Yingjie
+                                Li,
+                                Zixuan Ma, Fang Fang, Ping Guo and Wei Ma. DEIE: Benchmarking Document-level Event
+                                Information Extraction with a Large-scale Chinese News Dataset. (CCF-B)&emsp;<a
+                                    href="https://github.com/Lilice-r/DEIE" style="color:black">[pdf]</a><a
+                                    href="https://github.com/Lilice-r/DEIE" style="color:black">[code]</a></li>
+                            <li class="list-group-item list_ins">(ICASSP-2024) Hao Li, Yanan Cao, Yubing Ren, Fang Fang,
+                                Lanxue Zhang, Yingjie Li, Shi Wang. Sorting, Reasoning, and Extraction: an Easy-to-Hard
+                                Reasoning Framework for Document-level Event Argument Extraction. (CCF-B)&emsp;<a
+                                    href="" style="color:black">[pdf]</a><a
+                                    href="https://github.com/hlee-top/event_extract" style="color:black">[code]</a></li>
+                            <li class="list-group-item list_ins">(EMNLP-2023) Hao Li, Yanan Cao, Yubing Ren, Fang Fang,
+                                Lanxue Zhang, Yingjie Li, Shi Wang. Intra-Event and Inter-Event Dependency-Aware Graph
+                                Network for Event Argument Extraction. (CCF-B)&emsp;<a
+                                    href="https://aclanthology.org/2023.findings-emnlp.421/"
+                                    style="color:black">[pdf]</a>
+                            </li>
+                            <li class="list-group-item list_ins">(NLPCC-2023) Yanhe Fu, Yi Liu, Yanan Cao, Yubing Ren,
+                                Qingyue Wang, Fang Fang, Cong Cao. A Multi-granularity Similarity Enhanced Model for
+                                Implicit Event Argument Extraction. (CCF-C)&emsp;<a
+                                    href="https://link.springer.com/chapter/10.1007/978-3-031-44696-2_8"
+                                    style="color:black">[pdf]</a><a herf="github.com/LazyFyh/NLPCC23">[code]</a></li>
+                            <li class="list-group-item list_ins">(ACL-2023) Yi Liu, Yuan Tian, Jianxun Lian, Xinlong
+                                Wang,
+                                Yanan Cao, Fang Fang, Wen Zhang, Haizhen Huang, Denvy Deng, Qi Zhang. Towards Better
+                                Entity
+                                Linking with Multi-View enhanced Distillation. (CCF-A)&emsp;<a
+                                    href="https://arxiv.org/abs/2305.17371" style="color:black">[pdf]</a><a
+                                    href="https://github.com/Noen61/MVD" style="color:black">[code]</a></li>
+                            <li class="list-group-item list_ins">(ACL-2023) Yubing Ren, Yanan Cao, Ping Guo, Fang Fang,
+                                Wei
+                                Ma, Zheng Lin. Retrieve-and-Sample: Document-level Event Argument Extraction via Hybrid
+                                Retrieval Augmentation. (CCF-A)&emsp;<a
+                                    href="https://aclanthology.org/2023.acl-long.17.pdf" style="color:black">[pdf]</a>
+                            </li>
+                            <li class="list-group-item list_ins">(ACL-2023) Guanqun Bi, Lei Shen, Yanan Cao, Meng Chen,
+                                Yuqiang Xie, Zheng Lin, Xiaodong He. DiffusEmp: A Diffusion Model-Based Framework with
+                                Multi-Grained Control for Empathetic Response Generation. (CCF-A)&emsp;<a
+                                    href="https://arxiv.org/abs/2306.01657" style="color:black">[pdf]</a><a
+                                    href="https://github.com/surika/DiffusEmp" style="color:black">[code]</a></li>
+                            <li class="list-group-item list_ins">(ACL-2023) Qingyue Wang, Liang Ding, Yanan Cao, Yibing
+                                Zhan, Zheng Lin, Shi Wang, Dacheng Tao, Li Guo. Divide, Conquer, and Combine: Mixture of
+                                Semantic-Independent Experts for Zero-Shot Dialogue State Tracking. (CCF-A)&emsp;<a
+                                    href="https://arxiv.org/abs/2306.00434" style="color:black">[pdf]</a><a
+                                    href="https://github.com/qingyue2014/MoE4DST" style="color:black">[code]</a></li>
+                            <li class="list-group-item list_ins">(WWW-2023) Yuchen Zhou, Yanan Cao, Yongchao Liu, Yanmin
+                                Shang, Peng Zhang, Zheng Lin, Yun Yue, Baokun Wang, Xing Fu, Weiqiang Wang. Multi-Aspect
+                                Heterogeneous Graph Augmentation.(CCF-A)&emsp;<a
+                                    href="https://dl.acm.org/doi/pdf/10.1145/3543507.3583208"
+                                    style="color:black">[pdf]</a><a href="https://github.com/painful00/MAHGA"
+                                    style="color:black">[code]</a></li>
+                            <li class="list-group-item list_ins">(TOIS-2022) Yuchen Zhou, Yanan Cao, Yanmin Shang, Chuan
+                                Zhou, Shirui Pan, Zheng Lin, Qian Li. Explainable Hyperbolic Temporal Point Process for
+                                User-Item Interaction Sequence Generation. (CCF-A)&emsp;<a
+                                    href="https://dl.acm.org/doi/10.1145/3570501" style="color:black">[pdf]</a><a
+                                    href="https://github.com/painful00/EHTPP" style="color:black">[code]</a></li>
+                            <li class="list-group-item list_ins">(ACL-2022) Ruipeng Jia, Xingxing Zhang, Yanan Cao*, Shi
+                                Wang, Zheng Lin, Furu Wei. Neural Label Search for Zero-Shot Multi-Lingual Extractive
+                                Summarization. (CCF-A)&emsp;<a href="https://arxiv.org/abs/2204.13512"
+                                    style="color:black">[pdf]</a><a
+                                    href="https://github.com/jiaruipeng1994/Extractive_Summarization"
+                                    style="color:black">[code]</a></li>
+                            <li class="list-group-item list_ins">(WWW-2022) Fengzhao Shi, Yanan Cao, Yanmin Shang*,
+                                Yuchen
+                                Zhou, Chuan Zhou, Jia Wu. H2-FDetector: A GNN-based Fraud Detector with Homophilic and
+                                Heterophilic Connections. (CCF-A)&emsp;<a
+                                    href="https://dl.acm.org/doi/10.1145/3485447.3512195"
+                                    style="color:black">[pdf]</a><a href="https://github.com/shifengzhao/H2-FDetector"
+                                    style="color:black">[code]</a></li>
+                            <li class="list-group-item list_ins">(AAAI-2022) Ren Li, Yanan Cao, Qiannan Zhu, Guanqun Bi,
+                                Fang Fang*, Yi Liu, Qian Li. How Does Knowledge Graph Embedding Extrapolate to Unseen
+                                Data:
+                                a Semantic Evidence View. (CCF-A)&emsp;<a href="https://arxiv.org/pdf/2109.11800.pdf"
+                                    style="color:black">[pdf]</a><a href="https://github.com/renli1024/SE-GNN"
+                                    style="color:black">[code]</a></li>
+                            <li class="list-group-item list_ins">(ICDM-2022) Yuchen Zhou, Yanan Cao, Yanmin Shang, Chuan
+                                Zhou, Chuancheng Song, Fengzhao Shi, Qian Li. Task-level Relations Modelling for Graph
+                                Meta-learning.(CCF-B)&emsp; <a
+                                    href="https://ieeexplore.ieee.org/abstract/document/10027781"
+                                    style="color:black">[pdf]</a><a href="https://github.com/painful00/TRGM"
+                                    style="color:black">[code]</a></li>
+                            <li class="list-group-item list_ins">(WWWJ-2022) Yuchen Zhou, Yanmin Shang, Yanan Cao, Qian
+                                Li,
+                                Chuan Zhou, Guandong Xu. API-GNN: Attribute Preserving Oriented Interactive Graph Neural
+                                Network. (CCF-B)&emsp;<a href="https://dl.acm.org/doi/10.1007/s11280-021-00987-z"
+                                    style="color:black">[pdf]</a></li>
+                            <li class="list-group-item list_ins">(COLING-2022) Yubing Ren, Yanan Cao, Fang Fang, Ping
+                                Guo,
+                                Zheng Lin, Wei Ma, Yi Liu. CLIO: Role-interactive Multi-event Head Attention Network for
+                                Document-level Event Extraction. (CCF-B)&emsp;<a
+                                    href="https://aclanthology.org/2022.coling-1.221.pdf" style="color:black">[pdf]</a>
+                            </li>
+                            <li class="list-group-item list_ins">(COLING-2022)Qingyue Wang, Yanan Cao, Piji Li and Li
+                                Guo.
+                                Slot Dependency Modeling for Zero-shot Cross-domain Dialogue State Tracking.
+                                (CCF-B)&emsp;<a href="https://aclanthology.org/2022.coling-1.42.pdf"
+                                    style="color:black">[pdf]</a></li>
+                            <li class="list-group-item list_ins">(IJCNN-2021)Qingyue Wang, Yanan Cao, Junyan Jiang,
+                                Yafang
+                                Wang and Li Guo. Incorporating Specific Knowledge into End-to-End Task-oriented Dialogue
+                                Systems. (CCF-C)&emsp;<a href="https://ieeexplore.ieee.org/document/9533938"
+                                    style="color:black">[pdf]</a></li>
+                            <li class="list-group-item list_ins">(AAAI-2021) Ruipeng Jia, Yanan Cao*, Haichao Shi, Fang
+                                Fang, Pengfei Yin, Shi Wang. Flexible Non-Autoregressive Extractive Summarization with
+                                Threshold: How to Extract a Non-Fixed Number of Summary Sentences? (CCF-A)&emsp;<a
+                                    href="https://ojs.aaai.org/index.php/AAAI/article/view/17552"
+                                    style="color:black">[pdf]</a><a
+                                    href="https://github.com/jiaruipeng1994/Extractive_Summarization"
+                                    style="color:black">[code]</a></li>
+                            <li class="list-group-item list_ins">(ACL-2021) Ruipeng Jia, Yanan Cao*, Fang Fang, Yuchen
+                                Zhou,
+                                Zheng Fang, Yanbing Liu, Shi Wang. Deep Differential Amplifier for Extractive
+                                Summarization.(CCF-A)&emsp;<a
+                                    href="https://aclanthology.org/2021.acl-long.31/?ref=https://githubhelp.com"
+                                    style="color:black">[pdf]</a><a
+                                    href="https://github.com/jiaruipeng1994/Extractive_Summarization"
+                                    style="color:black">[code]</a></li>
+                            <li class="list-group-item list_ins">(ICASSP-2021) Hengzhu Tang, Yanan Cao*, Zhenyu Zhang,
+                                Ruipeng Jia, Fang Fang, Shi Wang. Multi-Granularity Hetegrogeneous Graph For
+                                Document-level
+                                Relation Extraction. (CCF-B)</li>
+                            <li class="list-group-item list_ins">(WWWJ-2020) Xiaoxue Li, Yanan Cao*, Yanmin Shang,
+                                Yangxi
+                                Li, Qian Li, Guandong Xu. RLINK: Deep Reinforcement Learning for User Identity Linkage.
+                                (CCF-B)&emsp;<a href="https://arxiv.org/pdf/1910.14273.pdf"
+                                    style="color:black">[pdf]</a>
+                            </li>
+                            <li class="list-group-item list_ins">(EMNLP-2020) Ruipeng Jia, Yanan Cao*, Hengzhu Tang,
+                                Fang
+                                Fang, Cong Cao, Shi Wang: Neural Extractive Summarization with Hierarchical Attentive
+                                Heterogeneous Graph Network. (CCF-B)&emsp;<a
+                                    href="https://aclanthology.org/2020.emnlp-main.295/" Style="color:black">[pdf]</a><a
+                                    href="https://github.com/jiaruipeng1994/Extractive_Summarization"
+                                    style="color:black">[code]</a></li>
+                            <li class="list-group-item list_ins">(CIKM-2020) Ruipeng Jia, Yanan Cao*, Haichao Shi, Fang
+                                Fang, Yanbing Liu, Jianlong Tan. DistilSum: Distilling the Knowledge for Extractive
+                                Summarization. (CCF-B)&emsp;<a href="ttps://dl.acm.org/doi/10.1145/3340531.3412078"
+                                    Style="color:black">[pdf]</a><a
+                                    href="https://github.com/jiaruipeng1994/Extractive_Summarization"
+                                    style="color:black">[code]</a></li>
+                            <li class="list-group-item list_ins">(WWW-2020) Zheng Fang, Yanan Cao*, Ren Li, Zhenyu
+                                Zhang,
+                                Yanbing Liu, Shi Wang. High quality Candidate Generation and Sequential Graph Attention
+                                Network for Entity Linking. (CCF-A)&emsp;<a
+                                    href="https://dl.acm.org/doi/abs/10.1145/3366423.3380146"
+                                    Style="color:black">[pdf]</a><a href="https://github.com/fangzheng123/SGEL"
+                                    style="color:black">[code]</a></li>
+                            <li class="list-group-item list_ins">(AAAI-2020) Xiaoxue Li, Yanan Cao*, Yanmin Shang,
+                                Yangxi
+                                Li, Yanbing Liu, Jianlong Tan. Type-aware Anchor Link Prediction across Heterogeneous
+                                Networks based on Graph Attention Network.(CCF-A)&emsp;<a
+                                    href="https://cdn.aaai.org/ojs/5345/5345-13-8570-1-10-20200508.pdf"
+                                    Style="color:black">[pdf]</a></li>
+                            <li class="list-group-item list_ins">(WWW-2019) Zheng Fang, Yanan Cao*, Qian Li, Dongjie
+                                Zhang,
+                                Zhenyu Zhang, Yanbing Liu. Joint Entity Linking with Deep Reinforcement Learning.
+                                (CCF-A)&emsp;<a href="https://github.com/fangzheng123/RLEL_2019"
+                                    style="color:black">[code]</a></li>
+                            <li class="list-group-item list_ins">(ICME-2019) Yanmin Shang, Zhezhou Kang, Yanan Cao*,
+                                Yanbing
+                                Liu, Jianlong Tan. PAAE: A Unified Framework for Predicting Anchor Links with
+                                Adversarial
+                                Embedding. (CCF-B)</li>
+                            <li class="list-group-item list_ins">(PAKDD-2020) Hengzhu Tang, Yanan Cao, Zhenyu Zhang,
+                                Jiangxia Cao, Fang Fang, Shi Wang, Pengfei Yin. HIN: Hierarchical Inference Network for
+                                Document-Level Relation Extraction. (CCF-C,Best Paper Award)</li>
+                            <li class="list-group-item list_ins">(KSEM-2018)Qingyue Wang, Yanjing Song, Hao Liu, Yanan
+                                Cao
+                                and Li Guo. A Sequence Transformation Model for Chinese Named Entity Recognition.
+                                (CCF-C)&emsp;<a
+                                    href="https://link.springer.com/content/pdf/10.1007/978-3-319-99365-2_44.pdf"
+                                    style="color:black">[pdf]</a></li>
+                        </ul>
+                        <br>
+                        <p style="font-size: large;"><strong>Undertaking Research Projects</strong></p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item list_ins">1.2021.06~2022.12, pre-research project "Character
+                                Analysis
+                                Technology", project leader</li>
+                            <li class="list-group-item list_ins">2.2018.07~2021.06, the sub-project of the National Key
+                                R&D
+                                Program "Precise Expert Recommendation and Recommendation Basis Visual Presentation
+                                Technology", sub-project leader</li>
+                            <li class="list-group-item list_ins">3.2018.07~2021.06, the sub-project of the National Key
+                                R&D
+                                Program "Reliable Traceability of Scientific Research Behavior Data and Privacy
+                                Protection
+                                Technology", the executive director of the sub-project</li>
+                            <li class="list-group-item list_ins">4.2016.12~2019.11, National Key R&D Program sub-project
+                                "Virtual User Profile and Association Analysis Technology Research", sub-project leader
+                            </li>
+                            <li class="list-group-item list_ins">5.2015.01~2018.12, National Natural Science Foundation
+                                of
+                                China Youth Fund Project "Causal Knowledge Discovery, Verification and Inference
+                                Research
+                                for Event Prediction", project leader</li>
+                            <li class="list-group-item list_ins">6.2014.01~2017.12, National Natural Science Foundation
+                                of
+                                China General Project "Research on the Next Generation Big Data Stream Classification
+                                System", the backbone of the project</li>
+                            <li class="list-group-item list_ins">7.2013.05~2014.04, the forward-looking project of the
+                                Institute of Information Engineering, Chinese Academy of Sciences "Research on the Key
+                                Technologies of Network Information Source Discovery and Information Dissemination", the
+                                backbone of the project </li>
+                            <li class="list-group-item list_ins">8.2012.01~2016.12, Strategic Pilot Project of Chinese
+                                Academy of Sciences: Social Situation Awareness and Handling,the backbone of the project
+                            </li>
+                            <li class="list-group-item list_ins">9.Undertake and participate in more than 10 horizontal
+                                projects of national departments</li>
+
+                        </ul>
+                    </div>
+
                 </div>
             </div>
+
         </div>
-        <div id="footer" class="container-fluid ">      
-            <nav class="navbar navbar-default text-center " >
-                <div class="navbar-inner navbar-text text-center col-sm-12 column">
-                     <p class="text-muted credit " style="padding: 0.1%;">
-                        ASCII Lab, Institute of Information Engineering, Chinese Academy of Sciences. No.19 Shucun Road, Haidian District, Beijing, China<a href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a> 100085
-                    </p>
+    </div>
 
-                </div>
-            </nav>
-            </div>   
-        
-       
-    </body>
+    <div class="footer">
+        <p>ASCII Lab, Institute of Information Engineering, Chinese Academy of
+            Sciences. No.19 Shucun Road,
+            Haidian District, Beijing, China<a
+                href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a>
+            100085</p>
+    </div>
+
+    <script>
+        window.onscroll = function () {
+            const backToTopButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // 滚动到页面顶部
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth" // 平滑滚动
+            });
+        }
+    </script>
+
+    <script>
+        // 使用 fetch 动态加载 head.html
+        fetch('/head.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+</body>
+
 </html>

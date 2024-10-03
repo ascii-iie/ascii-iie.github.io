@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>毕冠群 Guanqun Bi</title>
+        <link rel="icon" type="image/x-icon" href="img/ASCII_1.ico"/>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="../css_style.css">
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+            fetch("../Team.html")
+              .then(response => response.text())
+              .then(html => {
+                const parser = new DOMParser();
+                const otherDoc = parser.parseFromString(html, "text/html");
+        
+                const otherUL = otherDoc.getElementById("sourceList");
+                const targetList = document.getElementById("targetList");
+        
+                const liElements = otherUL.getElementsByTagName("li");
+                const searchString = "Guanqun Bi";
+        
+                  for (let i = 0; i < liElements.length; i++) {
+            const li = liElements[i];
+            if (li.textContent.includes(searchString)) {
+              const newLI = li.cloneNode(true); // 创建副本并保持样式
+              newLI.classList.add("list-group-item"); 
+	      newLI.classList.add("list_ins");// 添加保持样式的类名
+              targetList.appendChild(newLI);
+            }
+          }
+        })
+        .catch(error => console.log(error));
+  </script>
+
+      </head>
+<body>
+
+  <div id="head">
+    <iframe MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no src="../head.html" width="100%"  height="auto">
+    </iframe>
+ </div>
+
+        <div class="col-sm-12 column container-fluid">
+            <div class="row">
+                <div class="col-sm-2 col-md-offset-1 col-lg-offset-1 col-xl-offset-1" id="menulist" >
+                    <a href="../Team.html" class="list-group-item list-group-item-info" id="textid">Team Leader</a>
+                    <a href="../Teacher.html" class="list-group-item list-group-item-info" id="textid">Teacher</a>
+                    <a href="../Student.html" class="list-group-item list-group-item-info active" id="textid">Student </a>
+                </div>
+
+                <div class="col-sm-8 column ">
+                    <ol class="breadcrumb">
+                        <li class="active">Menu
+                        </li>
+                        <li class="active">Student
+                        </li>
+                    </ol>
+                <div class="col-sm-6 column ">
+                    <img src="../img/BGQ.jpg" class="img-responsive img_person" alt="Cinque Terre" width="150" height="200">
+                    </div>
+                <div class="name_person">
+                                <P><strong>Name</strong>: 毕冠群 Guanqun Bi</P>
+                                <P><strong>Education</strong>: Ph.D. Student</P>
+                                <P><strong>Research Direction</strong>: NLP,SNA,ML</P>
+                                <P><strong>Email</strong>: biguanqun&#64;iie.ac.cn </P>
+                </div>
+
+                <div  class="col-sm-12 column">
+                    <p style="font-size: large;"><strong>Introduction:</strong></p>
+                    <p class="introduction">毕冠群，中科院信工所在读博士研究生，师从曹亚男研究员。2019年在山东大学获得学士学位。主要从事自然语言处理，特别是对话系统和可控的文本生成任务方面的研究；也曾参与情感计算、认知科学及其在对话系统和文本生成中的应用。</p>
+                    <p class="introduction">My name is Guanqun Bi. I am currently a Ph.D Student at IIE, CAS, advised by Prof. Yanan Cao. Before that, I obtained my B.E. degree at Shandong University in Jun. 2019.</p>
+                    <p class="introduction">My research interests lie within Natural Language Processing, particularly in Dialogue System and Controllable Text Generation tasks. I am also involved in Affective Computing, Cognitive Science and its application in Dialogue System and Text Generation.</p>
+                    <br>
+                <p style="font-size: large;"><strong>Social Service</strong></p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item list_ins"> IJCAI 2022, SIGIR 2022, EMNLP 2022, ICASSP 2023, ACL 2023审稿人<br>Reviewer: IJCAI 2022, SIGIR 2022, EMNLP 2022, ICASSP 2023, ACL 2023</li>
+
+
+                  </ul>
+                  <br>
+                  <p style="font-size: large;"><strong>Awards and Honors:</strong></p>
+                  <ul class="list-group list-group-flush">
+                      <li class="list-group-item list_ins">中国科学院大学“三好学生”、“优秀团员”<br>Excellent Student of the UCAS, 2020-2021</li>
+                      <li class="list-group-item list_ins">山东大学优秀毕业生<br>Excellent Graduate, Shandong University, 2019</li>
+                      <li class="list-group-item list_ins">山东大学学术卓越奖学金<br>Academic Excellence Scholarship, Shandong University, 2015-2019</li>
+                      <li class="list-group-item list_ins">山东大学优秀学生<br>Merit Student, Shandong University, 2015-2019</li>
+                      <li class="list-group-item list_ins">第六届泰迪杯全国数据挖掘挑战赛特等奖(Top 0.03%)-"基于双重注意力的智能阅读模型"<br>6th Teddy Cup National Data Mining Challenge, Outstanding Award(Top 0.03%)</li>
+                    </ul>
+                    <br>
+                  <p style="font-size: large;"><strong>Representative Works:</strong></p>
+                  <ul class="list-group list-group-flush" id="targetList">
+					</ul>
+                    <br>
+            </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="container-fluid ">
+            <nav class="navbar navbar-default text-center " >
+                <div class="navbar-inner navbar-text text-center col-sm-12 column">
+                    <p class="text-muted credit " style="padding: 0.1%;">
+                        ASCII Lab, Institute of Information Engineering, Chinese Academy of Sciences. No.19 Shucun Road, Haidian District, Beijing, China<a href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a> 100085
+                    </p>
+
+                </div>
+            </nav>
+            </div>   
+        
+       
+    </body>
+    
+</html>

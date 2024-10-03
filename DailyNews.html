@@ -1,82 +1,258 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>News</title>
-        <link rel="icon" type="image/x-icon" href="img/ASCII_1.ico"/>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
-        <link rel="stylesheet" href="css_style.css"> 
-        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
+<head>
+    <title>News</title>
+    <link rel="icon" type="image/x-icon" href="/img/ASCII_1.ico" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.net/bootstrap/5.3.2/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.net/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css_style.css">
+</head>
 
 <body>
-    <div id="head">
-        <iframe MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no src="head.html" width="100%"  height="auto">
-        </iframe>
-     </div>
 
-        
-        
-        <div class="col-sm-12 column container-fluid">
-            <div class="row">
-                <div class="col-sm-2 col-md-offset-1 col-lg-offset-1 col-xl-offset-1" id="menulist" >
-                    <a href="News.html" class="list-group-item list-group-item-info" id="textid">Acadamic News</a>
-                    <a href="News.html" class="list-group-item list-group-item-info active" id="textid">Daily News</a>
+    <div id="navbar"></div> <!-- 用于插入导航栏的容器 -->
 
+    <div class="container-fluid" style="margin-top: 100px;">
+
+        <button type="button" id="back-to-top" class="btn btn-outline-danger" onclick="scrollToTop()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-bar-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M3.646 11.854a.5.5 0 0 0 .708 0L8 8.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708M2.4 5.2c0 .22.18.4.4.4h10.4a.4.4 0 0 0 0-.8H2.8a.4.4 0 0 0-.4.4" />
+            </svg>
+        </button>
+
+        <div class="main">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/index.html">Index</a></li>
+                            <li class="breadcrumb-item"><a href="/News.html">News</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Daily News</li>
+                        </ol>
+                    </nav>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="list-group col-sm-2 " id="menulist">
+                    <a href="News.html" class="list-group-item list-group-item-action shadow"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-newspaper" viewBox="0 0 16 16">
+                            <path
+                                d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5z" />
+                            <path
+                                d="M2 3h10v2H2zm0 3h4v3H2zm0 4h4v1H2zm0 2h4v1H2zm5-6h2v1H7zm3 0h2v1h-2zM7 8h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2z" />
+                        </svg>&nbsp;&nbsp;Acadamic News</a>
+                    <a href="DailyNews.html" class="list-group-item list-group-item-action active shadow"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-newspaper" viewBox="0 0 16 16">
+                            <path
+                                d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5z" />
+                            <path
+                                d="M2 3h10v2H2zm0 3h4v3H2zm0 4h4v1H2zm0 2h4v1H2zm5-6h2v1H7zm3 0h2v1h-2zM7 8h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2z" />
+                        </svg>&nbsp;&nbsp;Daily News</a>
                 </div>
 
-                <div class="col-sm-8 column ">
-                    <ol class="breadcrumb">
-                        <li class="active">Menu
-                        </li>
-                        <li class="active">Daily News
-                        </li>
-                    </ol>
+                <div class="col-sm-8">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-3 g-4">
 
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Daily News</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/20240821-1.jpg" class="card-img-top card-img-custom" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h5><a class="card-title custom-link" href="/News/20240821.html">
+                                        ASCII Lab 2024届毕业回顾</a></h5>
+                                    <hr>
+                                    <p class="card-text abstract">
+                                        转眼之间，距离ASCII Lab 2024届的毕业活动已经过去了将近两个月的时间。就让我们一起来回顾一下难忘时刻吧~
+                                    </p>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2024-08-21</small>
+                                </div>
+                            </div>
+                        </div>
 
-                <div  class="col-sm-12 column">
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Daily News</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/20230627-1.PNG" class="card-img-top card-img-custom" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h5><a class="card-title custom-link" href="/News/20230627.html">
+                                        ASCII Lab 2023届毕业啦！</a></h5>
+                                    <hr>
+                                    <p class="card-text abstract">
+                                        ASCII Lab 2023届周玉晨师兄、王晗炜师兄毕业啦！</p>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2023-06-27</small>
+                                </div>
+                            </div>
+                        </div>
 
-                <p style="font-size: large;"><strong>Daily News</strong></p>
-                <ul class="list-group list-group-flush">
-                    <div id='content'>
-                        <ul id="ul1">
-                            <li class="list-group-item list_ins"><a href="./News/20240821.html" style="color:black">ASCII Lab 2024届毕业回顾</a></li>
-							<li class="list-group-item list_ins"><a href="./News/20230627.html" style="color:black">ASCII Lab 2023届毕业啦！</a></li>
-							<li class="list-group-item list_ins"><a href="./News/20230526.html" style="color:black">欢迎毕业师兄回母校——信工所ASCII Lab师门聚会！</a></li>
-							<li class="list-group-item list_ins"><a href="./News/20230401.html" style="color:black">2023团建大行动·轰趴进行时！</a></li>
-                            <li class="list-group-item list_ins"><a href="./News/20230217.html" style="color:black">2023新学期开学大聚餐！</a></li>
-                            <li class="list-group-item list_ins"><a href="./News/20210910.html" style="color:black">2021教师节纪念</a></li>
-                            <li class="list-group-item list_ins"><a href="./News/20210416.html" style="color:black">2021北京野生动物园团建</a></li>
-                            
-                          
-                        </ul>
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Daily News</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/20230526.jpg" class="card-img-top card-img-custom" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h5><a class="card-title custom-link" href="/News/20230526.html">
+                                        欢迎毕业师兄回母校——信工所ASCII Lab师门聚会！</a></h5>
+                                    <hr>
+                                    <p class="card-text abstract">
+                                        欢迎已经毕业的张东杰师兄、贾瑞鹏师兄、李韧师兄回母校！</p>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2023-05-26</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Daily News</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/20230401.jpg" class="card-img-top card-img-custom" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h5><a class="card-title custom-link" href="/News/20230401.html">
+                                        2023团建大行动·轰趴进行时！</a></h5>
+                                    <hr>
+                                    <p class="card-text abstract">
+                                        春暖花开！新学期的团建活动开始啦！感谢国奖得主玉晨师兄、CCL第一名英杰和李豪以及芳姐的精心策划！</p>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2023-04-01</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Daily News</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/20230217.jpg" class="card-img-top card-img-custom" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h5><a class="card-title custom-link" href="/News/20230217.html">
+                                        2023新学期开学大聚餐！</a></h5>
+                                    <hr>
+                                    <p class="card-text abstract">
+                                        新学期开学啦！久别重逢的大家新年第一聚!</p>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2023-02-17</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Daily News</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/20210910.jpg" class="card-img-top card-img-custom" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h5><a class="card-title custom-link" href="/News/20210910.html">
+                                        2021教师节纪念</a></h5>
+                                    <hr>
+                                    <p class="card-text abstract">
+                                        祝老师们教师节快乐!</p>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2021-09-10</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Daily News</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/20210416.jpg" class="card-img-top card-img-custom" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h5><a class="card-title custom-link" href="/News/20210416.html">
+                                        2021北京野生动物园团建</a></h5>
+                                    <hr>
+                                    <p class="card-text abstract">
+                                        春暖花开，团建进行时~</p>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2021-04-16</small>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                </ul>
-
-
-
-
-
-            </div>
-                
                 </div>
             </div>
         </div>
-        <div id="footer" class="container-fluid ">
-            <nav class="navbar navbar-default text-center navbar-fixed-bottom" >
-                <div class="navbar-inner navbar-text text-center col-sm-12 column">
-                    <p class="text-muted credit " style="padding: 0.1%;">
-                        ASCII Lab, Institute of Information Engineering, Chinese Academy of Sciences. No.19 Shucun Road, Haidian District, Beijing, China<a href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a> 100085
-                    </p>
 
-                </div>
-            </nav>
-        </div>
+    </div>
 
-        
-       
-    </body>
+    <div class="footer">
+        <p>ASCII Lab, Institute of Information Engineering, Chinese Academy of
+            Sciences. No.19 Shucun Road,
+            Haidian District, Beijing, China<a
+                href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a>
+            100085</p>
+    </div>
+    <script>
+        window.onscroll = function () {
+            const backToTopButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // 滚动到页面顶部
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth" // 平滑滚动
+            });
+        }
+    </script>
+
+    <script>
+        // 使用 fetch 动态加载 head.html
+        fetch('/head.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+</body>
+
 </html>

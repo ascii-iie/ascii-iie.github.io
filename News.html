@@ -1,72 +1,313 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>News</title>
-        <link rel="icon" type="image/x-icon" href="img/ASCII_1.ico"/>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
-        <link rel="stylesheet" href="css_style.css"> 
-        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<head>
+    <title>News</title>
+    <link rel="icon" type="image/x-icon" href="/img/ASCII_1.ico" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.net/bootstrap/5.3.2/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.net/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css_style.css">
+</head>
 
 <body>
 
-    <div id="head">
-        <iframe MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no src="head.html" width="100%"  height="auto">
-        </iframe>
-     </div>
-        
-        <div class="col-sm-12 column container-fluid">
-            <div class="row">
-                <div class="col-sm-2 col-md-offset-1 col-lg-offset-1 col-xl-offset-1" id="menulist" >
-                    <a href="News.html" class="list-group-item list-group-item-info active" id="textid">Acadamic News</a>
-                    <a href="DailyNews.html" class="list-group-item list-group-item-info" id="textid">Daily News</a>
+    <div id="navbar"></div> <!-- 用于插入导航栏的容器 -->
 
+    <div class="container-fluid" style="margin-top: 100px;">
+
+        <button type="button" id="back-to-top" class="btn btn-outline-danger" onclick="scrollToTop()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-bar-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M3.646 11.854a.5.5 0 0 0 .708 0L8 8.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708M2.4 5.2c0 .22.18.4.4.4h10.4a.4.4 0 0 0 0-.8H2.8a.4.4 0 0 0-.4.4" />
+            </svg>
+        </button>
+
+        <div class="main">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/index.html">Index</a></li>
+                            <li class="breadcrumb-item"><a href="/News.html">News</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Academic News</li>
+                        </ol>
+                    </nav>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="list-group col-sm-2 " id="menulist">
+                    <a href="News.html" class="list-group-item list-group-item-action active shadow"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-newspaper" viewBox="0 0 16 16">
+                            <path
+                                d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5z" />
+                            <path
+                                d="M2 3h10v2H2zm0 3h4v3H2zm0 4h4v1H2zm0 2h4v1H2zm5-6h2v1H7zm3 0h2v1h-2zM7 8h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2z" />
+                        </svg>&nbsp;&nbsp;Acadamic News</a>
+                    <a href="DailyNews.html" class="list-group-item list-group-item-action shadow"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-newspaper" viewBox="0 0 16 16">
+                            <path
+                                d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5z" />
+                            <path
+                                d="M2 3h10v2H2zm0 3h4v3H2zm0 4h4v1H2zm0 2h4v1H2zm5-6h2v1H7zm3 0h2v1h-2zM7 8h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2z" />
+                        </svg>&nbsp;&nbsp;Daily News</a>
                 </div>
 
-                <div class="col-sm-8 column ">
-                    <ol class="breadcrumb">
-                        <li class="active">Menu
-                        </li>
-                        <li class="active">Acadamic News
-                        </li>
-                    </ol>
+                <div class="col-sm-8">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-3 g-4">
 
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Academic News</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/CCKS_2024_8.png" class="card-img-top card-img-custom" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h5><a class="card-title custom-link" href="/News/20240516.html">CCKS 2024技术评测——面向篇章级文本的突发事件关系抽取、面向篇章级文本的突发事件摘要生成 #￥40,000</a></h5>
+                                    <hr>
+                                    <p class="card-text abstract">CCKS-IJCKG 2024组织知识图谱相关评测竞赛，旨在提供测试知识图谱与语义计算技术、算法、及系统的平台和资源，促进知识图谱领域的技术发展，以及学术成果与产业需求的融合和对接。去年，CCKS 2023评测竞赛环节共设立4个主题，7项任务，涵盖金融、电商、军事、医疗等领域，吸引了2771支队伍、近1.1万人参赛，共计35支队伍获得18万奖金，在工业界和学术界形成较高影响力。</p>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2024-05-16</small>
+                                </div>
+                            </div>
+                        </div>
 
-                <div  class="col-sm-12 column">
-                <p style="font-size: large;"><strong>Acadamic News</strong></p>
-                <ul class="list-group list-group-flush">
-                            <li class="list-group-item list_ins"><a href="./News/20240516.html" style="color:black">CCKS 2024技术评测——面向篇章级文本的突发事件关系抽取、面向篇章级文本的突发事件摘要生成 #￥40,000</a></li>
-							<li class="list-group-item list_ins"><a href="./News/20231130.html" style="color:black">中国科学院青年创新促进会北京分会学术论坛“大模型安全”专题论坛成功举办</a></li>
-							<li class="list-group-item list_ins"><a href="./News/20231028.html" style="color:black">CNCC 2023 学术论坛 | 网络空间测绘技术及其应用</a></li>
-							<li class="list-group-item list_ins"><a href="./News/20230502.html" style="color:black">【Breaking News】中科院信工所ASCII LAB的4篇工作被ACL 2023主会接收</a></li>
-							<li class="list-group-item list_ins"><a href="./News/20230419.html" style="color:black">【榜样的力量】贾瑞鹏师兄荣获中国科学院院长特别奖</a></li>
-							<li class="list-group-item list_ins"><a href="./News/20230327.html" style="color:black">国家重点研发计划青年科学家项目启动会成功举办</a></li>
-                            <li class="list-group-item list_ins"><a href="./News/20230301.html" style="color:black">2023届毕业生预答辩成功举办</a></li>
-                            <li class="list-group-item list_ins"><a href="./News/20221017.html" style="color:black">【喜报】团队带头人曹亚男老师荣获2022年度中国科学院优秀导师称号</a></li>
-                            <li class="list-group-item list_ins"><a href="./News/20221210.html" style="color:black">CNCC 2022 学术论坛 | 网络空间测绘的前沿技术与挑战</a></li>
-                            <li class="list-group-item list_ins"><a href="./News/20220811.html" style="color:black">中科院青促会信工所小组成功举办首届学术沙龙</a></li>
-                </ul>
-                
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Academic News</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/20231130-1.png" class="card-img-top card-img-custom" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h5><a class="card-title custom-link" href="/News/20231130.html">中国科学院青年创新促进会北京分会学术论坛“大模型安全”专题论坛成功举办</a></h5>
+                                    <hr>
+                                    <p class="card-text abstract">11月30日，中国科学院青年创新促进会(以下简称“青促会”)北京分会学术论坛“大模型安全”专题论坛在中国科学院信息工程研究所成功举办。本次大会由青促会北京分会主办，信息工程研究所小组承办，计算技术研究所小组、自动化研究所小组协办。大会吸引来自中国科学院信息工程研究所、中国科学院计算技术研究所、中国科学院自动化研究所、中国科学院空天信息创新研究院、国家互联网应急中心、中电科网络空间安全研究院等科研机构，清华大学、中国人民大学、同济大学、浙江大学、广州大学、中国科学院大学、北京邮电大学、华北电力大学等高校，以及字节跳动、阿里巴巴、华泰证券、华为、微步等企业的知名专家及青年学者代表300余人到会参与交流，引发热烈讨论。</p>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2023-11-30</small>
+                                </div>
+                            </div>
+                        </div>
 
-            </div>
-                
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Academic News</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/20231028.png" class="card-img-top card-img-custom" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h5><a class="card-title custom-link" href="/News/20231028.html">CNCC 2023 学术论坛 | 网络空间测绘技术及其应用</a></h5>
+                                    <hr>
+                                    <p class="card-text abstract">
+                                        本届论坛由中国科学院信息工程研究所工程三部副主任刘庆云正高级工程师和中国科学院信息工程研究所信息内容分析研究室副主任曹亚男研究员主持，邀请著名专家学者、企业主管等嘉宾出席，围绕“网络空间测绘技术及其应用”主题进行演讲，旨在研讨网络空间测绘的前沿技术与多领域应用，以推动网络空间测绘领域的技术交流与合作。
+                                    </p>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2023-10-28</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Academic News</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/acl-logo.png" class="card-img-top card-img-custom" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h5><a class="card-title custom-link" href="/News/20230502.html">CNCC 2023 学术论坛 | 网络空间测绘技术及其应用</a></h5>
+                                    <hr>
+                                    <p class="card-text abstract">
+                                        国际计算语言学年会（Annual Meeting of the Association for Computational
+                                    Linguistics，ACL）是自然语言处理领域国际顶级学术会议，并在CCF分类中被评为A类会议，今年是第61届会议，将于7月9日-14日在加拿大多伦多召开。5月2日，ACL
+                                    2023结果公布，ASCII Lab组投稿4篇均被主会录用。
+                                    </p>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2023-05-02</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Academic News</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/JRP2.png" class="card-img-top card-img-custom" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h5><a class="card-title custom-link" href="/News/20230419.html">【榜样的力量】贾瑞鹏师兄荣获中国科学院院长特别奖</a></h5>
+                                    <hr>
+                                    <p class="card-text abstract">贾瑞鹏，导师是曹亚男老师。主要研究方向是自然语言处理、自动文本摘要等，读博期间发表学术论文12篇，包括7篇一作论文（3篇CCF-A、2篇CCF-B、2篇CCF-C）。作为核心开发人员参与组内5个项目，包括3个网安中心项目和2个科技部项目。</p>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2023-04-19</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Academic News</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/20230327-1.jpg" class="card-img-top card-img-custom" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h5><a class="card-title custom-link" href="/News/20230327.html">CNCC 2023 学术论坛 | 网络空间测绘技术及其应用</a></h5>
+                                    <hr>
+                                    <p class="card-text abstract">
+                                        2023年3月27日上午，由中国科学院信息工程研究所牵头，中国科学院计算技术研究所、国家计算机网络与信息安全管理中心共同承担的“十四五”国家重点研发计划“网络空间安全治理”重点专项青年科学家项目“网络空间与自然社会安全行为协同关联理论”项目启动暨实施方案论证会顺利召开。参加项目启动暨实施方案论证汇报的领导和专家包括：责任专家、中国互联网络信息中心副主任汪立东，中国科学院信息工程研究所党委副书记郭莉，中国科学院信息工程研究所副所长王伟平，工业和信息化部产促中心项目主管周由胜，北京科技大学计算机与通信工程学院院长殷绪成，北京邮电大学网络空间安全学院副院长张熙，某部队吕琳老师，中国科学院计算技术研究所研究员沈华伟，中国科学院信息工程研究所第二研究室副主任熊刚，中国科学院信息工程研究所内容计算组组长刘燕兵
+                                    </p>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2023-03-27</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Academic News</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/20230301-1.jpg" class="card-img-top card-img-custom" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h5><a class="card-title custom-link" href="/News/20230301.html">2023届毕业生预答辩成功举办！</a></h5>
+                                    <hr>
+                                    <p class="card-text abstract">
+                                        为提升学位论文撰写水平，助力学生毕业论文送审成功通过，3月1日下午，中科院信工所第二研究室举办2023届毕业生预答辩评审，评委组北京大学王厚峰教授（组长）、中科院计算所靳小龙研究员、北京航空航天大学张日崇教授、中科院计算所冯洋研究员、中科院信工所王蕊研究员为学生论文提出宝贵意见。会议由中科院信工所曹亚男研究员主持。
+                                    </p>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2023-03-01</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Academic News</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/20221017.png" class="card-img-top card-img-custom" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h5><a class="card-title custom-link" href="/News/20221017.html">【喜报】团队带头人曹亚男老师荣获2022年度中国科学院优秀导师称号</a></h5>
+                                    <hr>
+                                    <p class="card-text abstract">近日，2022年度中国科学院优秀导师奖揭晓。中国科学院信息工程研究所黄庆明、曹亚男、王斌等3位研究生指导教师荣获该称号。获奖名单如下：2022年，共有80人获中国科学院院长特别奖，100篇毕业生博士学位论文获得中国科学院优秀博士学位论文。按照《中国科学院院长奖管理办法》和《中国科学院优秀博士学位论文评选办法》有关规定，向院长特别奖获得者和院优秀博士学位论文作者的指导教师授予中国科学院优秀导师奖。</p>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2022-10-17</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Academic News</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/20221210.PNG" class="card-img-top card-img-custom" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h5><a class="card-title custom-link" href="/News/20221210.html">CNCC 2022 学术论坛 | 网络空间测绘的前沿技术与挑战</a></h5>
+                                    <hr>
+                                    <p class="card-text abstract">
+                                        CNCC2022将于12月8日至10日举办，今年CNCC技术论坛数量达到122个，内容涵盖了“计算+行业、人工智能、云计算、教育、安全”等30个方向。本文特别介绍将于12月10日举行的【第二届网络空间测绘前沿技术】论坛。
+                                    </p>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2022-12-10</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Academic News</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/20220811-1.png" class="card-img-top card-img-custom" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h5><a class="card-title custom-link" href="/News/20220811.html">中科院青促会信工所小组成功举办首届学术沙龙</a></h5>
+                                    <hr>
+                                    <p class="card-text abstract">
+                                        为深入贯彻落实中科院人才工作会议精神，进一步活跃研究所学术氛围，加强研究所人才培养工作，2022年7月29日上午，中国科学院青年创新促进会（以下简称“中科院青促会”）信息工程研究所（以下简称“信工所”）小组在信工所闵庄园区4314会议室召开首届学术沙龙活动。沙龙由人力资源处处长颜廷锐主持，中国工程院院士方滨兴，中科院青促会理事长、自动化所研究员边桂彬、信工所党委副书记郭莉、信工所青促会会员以及各部门青年人才代表共百名科研骨干参加。                                    </p>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2022-08-11</small>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="footer" class="container-fluid ">
-            <nav class="navbar navbar-default text-center navbar-fixed-bottom" >
-                <div class="navbar-inner navbar-text text-center col-sm-12 column">
-                    <p class="text-muted credit " style="padding: 0.1%;">
-                        ASCII Lab, Institute of Information Engineering, Chinese Academy of Sciences. No.19 Shucun Road, Haidian District, Beijing, China<a href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a> 100085
-                    </p>
+    </div>
 
-                </div>
-            </nav>
-        </div>
-        
-       
-    </body>
+    <div class="footer">
+        <p>ASCII Lab, Institute of Information Engineering, Chinese Academy of
+            Sciences. No.19 Shucun Road,
+            Haidian District, Beijing, China<a
+                href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a>
+            100085</p>
+    </div>
+
+    <script>
+        window.onscroll = function () {
+            const backToTopButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // 滚动到页面顶部
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth" // 平滑滚动
+            });
+        }
+    </script>
+
+    <script>
+        // 使用 fetch 动态加载 head.html
+        fetch('/head.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+</body>
+
 </html>

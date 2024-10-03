@@ -1,0 +1,147 @@
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    
+    }
+
+footer
+{
+    margin-top: auto;
+}
+.navbar-default
+{
+    background-color:transparent;
+    border-color:transparent;
+}
+@media (max-width: 767px)
+{
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a 
+    {
+        color: #ecf0f1;
+    }
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus 
+    {
+        color: #818083;
+    }
+    .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus
+     {
+        color: #818083;
+        background-color: #090909;
+    }
+    #menulist
+    {
+        margin-top: 6%;
+    }
+    .name_cao
+    {
+        font-size: large;
+        margin-top: 1%;
+        margin-left: 40%;
+    }
+    
+}
+#textid
+{
+    font-size: large;
+}
+.row
+{
+    margin-top: 2%;
+}
+
+.link
+{
+    font-size: large;
+    color: #000;
+}
+.content
+{
+    font-weight: lighter;
+}
+
+html
+{
+    height: 100%;
+}
+
+
+.img_person
+{
+    margin-left: 45%;
+}
+.name_person
+{
+    font-size: large;
+    margin-top: 3.5%;
+}
+.img_team
+{
+    margin-left: 45%;
+}
+.name_team
+{
+    font-size: large;
+    margin-top: 3.5%;
+}
+
+
+.introduction
+{
+    text-align: justify;
+    text-justify : inter-ideograph;
+    text-indent:4%
+}
+.list_ins
+{
+    text-align: justify;
+    text-justify : inter-ideograph;
+}
+.S_ins
+{
+    margin-top: 2%;
+    margin-left: -5%;
+}
+
+.txt_index
+{
+    text-align:center;
+    font-size: 44px;
+    background: #E6E6FA;
+}
+
+.txt_center
+{
+	text-align:center;
+	font-size: 24px;
+}
+
+.on {
+    color: red
+}
+.scroll-container {
+    position: relative;
+    width: 100%;
+    height: 30px; /* Adjust height as needed */
+    overflow: hidden;
+
+}
+.scroll-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 20s linear infinite;
+    font-size: 20px; /* Adjust font size as needed */
+    padding-left: 100%; /* Ensure it starts off screen */
+    font-family: 'Times New Roman', Times, serif;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

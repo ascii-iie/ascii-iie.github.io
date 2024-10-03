@@ -1,0 +1,102 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css_style.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        .navbar-inverse {
+            background-color: #696767;
+            border-color: #696767
+        }
+
+        .navbar-inverse .navbar-header {
+            margin-left: 5%;
+            height: 80px;
+        }
+
+        .navbar-inverse .navbar-header>a {
+            font-size: xx-large;
+            font-family: 'Times New Roman', Times, serif;
+            margin-top: 15px;
+        }
+
+        .navbar-inverse .navbar-brand {
+            color: #ecf0f1;
+        }
+
+        .navbar-inverse .navbar-brand:hover,
+        .navbar-inverse .navbar-brand:focus {
+            color: #818083;
+        }
+
+        .navbar-inverse .navbar-text {
+            color: #ecf0f1;
+        }
+
+        .navbar-inverse .navbar-nav>li {
+            font-size: x-large;
+            font-family: 'Times New Roman', Times, serif;
+            margin-top: 15px;
+        }
+
+        .navbar-inverse .navbar-nav>li>a {
+            color: #ecf0f1;
+        }
+
+        .navbar-inverse .navbar-nav>li>a:hover,
+        .navbar-inverse .navbar-nav>li>a:focus {
+            color: #818083;
+        }
+
+        .navbar-inverse .navbar-nav>li>.dropdown-menu {
+            background-color: #090909;
+        }
+
+        .navbar-inverse .navbar-nav>li>.dropdown-menu>li>a {
+            color: #ecf0f1;
+        }
+
+        .navbar-inverse .navbar-nav>li>.dropdown-menu>li>a:hover,
+        .navbar-inverse .navbar-nav>li>.dropdown-menu>li>a:focus {
+            color: #090909;
+            background-color: #747272;
+
+        }
+    </style>
+</head>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1"
+                aria-expanded="true">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="ASCII.html" target="headframe">ASCII LAB</a>
+        </div>
+        <div class="navbar-collapse collapse in" id="navbar-collapse-1" aria-expanded="true">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html" target="headframe">Home</a></li>
+                <li><a href="Team.html" target="headframe">Team</a></li>
+                <li><a href="News.html" target="headframe">News</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-has popup="true"
+                        aria-expanded="false" target="headframe">Group<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="NLG_Paperlist.html" target="headframe">Natural Language Generation,NLG</a></li>
+                        <li><a href="NLU_Paperlist.html" target="headframe">Natural Language Understanding,NLU</a></li>
+                        <li><a href="SN_Paperlist.html" target="headframe">Social Network Analysis,SNA</a></li>
+                    </ul>
+                </li>
+                <li><a href="Seminar.html" target="headframe">Seminar</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

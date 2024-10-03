@@ -1,0 +1,123 @@
+#head {
+    z-index: 3;
+}
+
+/* 左侧导航栏 */
+.sidenav-left {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    z-index: 1;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* 右侧导航栏 */
+.sidenav-right {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    z-index: 1;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 20px;
+    z-index: 2;
+}
+
+.row {
+    margin-top: 2%;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    /* 左右两端对齐 */
+    align-items: center;
+    /* 垂直居中 */
+    background: linear-gradient(45deg, #0c476c 30%, #3e81aa 60%, #e3e0de 60%, #e3e0de 71%, #f68229 71%, #f9ad72 87%);
+    color: #ffffff;
+}
+
+.card-text {
+    max-height: 4.5em;
+    /* 约3行 */
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    position: relative;
+}
+
+/* 展开的样式 */
+.card-text.expanded {
+    max-height: none;
+}
+
+/* 渐变效果，用来指示还有更多内容 */
+.fade-effect {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3em;
+    background: linear-gradient(to bottom, transparent, white);
+}
+
+/* 隐藏渐变效果时的样式 */
+.card-text.expanded .fade-effect {
+    display: none;
+}
+
+#volumelist .list-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(45deg, #0c476c 35%, #3e81aa 68.7%, #ffffff 68.7%, #ffffff 69%, #e3e0de 69%, #e3e0de 76.7%, #ffffff 76.7%, #ffffff 77%, #f68229 77%, #f9ad72 90%);
+}
+
+/* 展开/折叠按钮样式 */
+.toggle-btn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.svg-icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+#back-to-top {
+    display: none;
+    /* 初始隐藏 */
+}
+
+@media (max-width: 768px) {
+    .sidenav-left {
+        display: none !important;
+    }
+
+    .sidenav-right {
+        display: none !important;
+    }
+
+    .main {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        /* 小屏幕上不留白 */
+    }
+}

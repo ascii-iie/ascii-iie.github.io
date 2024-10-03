@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Seminar</title>
+	<link rel="icon" type="image/x-icon" href="../img/ASCII_1.ico" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.staticfile.net/bootstrap/5.3.2/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.net/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css_style.css" />
+	<link rel="stylesheet" type="text/css" href="./Seminar_pages.css" />
+</head>
+
+
+<body>
+	<div id="navbar"></div> <!-- 用于插入导航栏的容器 -->
+
+	<div class="container-fluid" style="margin-top: 100px;">
+
+		<nav class="sidenav-left d-flex flex-column p-3">
+			<div class="list-group" id="volumelist">
+				<a href="#" class="list-group-item list-group-item-action list-header" style="background: #f6f6f6;">
+					<h5 style="text-align: center;">专辑</h5>
+				</a>
+				<a href="#2023年5-6月：后ChatGPT时代，研究生做科研的思路探讨" class="list-group-item list-group-item-action">
+					<span class="badge text-bg-primary">2023年5-6月</span><br>后ChatGPT时代，研究生做科研的思路探讨</a>
+				<a href="#2023年5月：ACL 2023中稿论文分享会" class="list-group-item list-group-item-action">
+					<span class="badge text-bg-primary">2023年5月</span><br>ACL 2023中稿论文分享会</a>
+				<a href="#2023年3-4月：图网络及其应用" class="list-group-item list-group-item-action">
+					<span class="badge text-bg-primary">2023年3-4月</span><br>图网络及其应用</a>
+				<a href="#2023年2-3月：ChatGPT的前世今生" class="list-group-item list-group-item-action">
+					<span class="badge text-bg-primary">2023年2-3月</span><br>ChatGPT的前世今生</a>
+			</div>
+		</nav>
+
+		<nav class="sidenav-right d-flex flex-column p-3">
+			<!-- 控制所有卡片折叠/展开的按钮 -->
+			<button type="button" id="back-to-top" class="btn btn-outline-danger" onclick="scrollToTop()">
+				回到顶部
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+					class="bi bi-chevron-bar-up" viewBox="0 0 16 16">
+					<path fill-rule="evenodd"
+						d="M3.646 11.854a.5.5 0 0 0 .708 0L8 8.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708M2.4 5.2c0 .22.18.4.4.4h10.4a.4.4 0 0 0 0-.8H2.8a.4.4 0 0 0-.4.4" />
+				</svg>
+			</button>
+			<br>
+			<button type="button" class="btn btn-outline-primary toggle-all-btn" onclick="toggleAllCards(this)">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+					class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+					<path
+						d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+				</svg>
+				展开 | 折叠
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+					class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+					<path
+						d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+				</svg>
+			</button>
+			<br>
+			<nav aria-label="Page navigation">
+				<ul class="pagination">
+					<li class="page-item disabled">
+						<a class="page-link" href="./Seminar_1.html" aria-label="Previous">
+							<span aria-hidden="true">&laquo;</span>
+						</a>
+					</li>
+					<li class="page-item active"><a class="page-link" href="./Seminar_1.html">1</a></li>
+					<li class="page-item"><a class="page-link" href="./Seminar_2.html">2</a></li>
+					<li class="page-item">
+						<a class="page-link" href="./Seminar_3.html" aria-label="Next">
+							<span aria-hidden="true">&raquo;</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</nav>
+
+		<div class="main">
+
+			<div class="row justify-content-center">
+                <div class="col-12">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/index.html">Index</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Seminar</li>
+                        </ol>
+                    </nav>
+                    <hr>
+                </div>
+            </div>
+
+			<div class="period-title">
+				<h2 id="2023年5-6月：后ChatGPT时代，研究生做科研的思路探讨"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+						fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16">
+						<path
+							d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+					</svg>&nbsp;2023年5-6月：后ChatGPT时代，研究生做科研的思路探讨</h2>
+			</div>
+			<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 g-4">
+				<!-- 在小屏幕下每行显示1列，在中等屏幕下每行显示3列，在大屏幕下每行显示4列 -->
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第76期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-06-16</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Advances in LLM Capabilities</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;李豪</h6>
+							<hr>
+							<p class="card-text" id="card-text-76">
+								大模型在自然语言处理中展现了优秀的性能，然而仍然面临一些固有的局限性，例如局限的应用场景、无法获取实时的信息、无法进行精确的数学推理。为了解决这些问题，研究者开始关注使用即插即用的工具或模块来增强大模型的能力。本次讨论班将从增强大模型能力的角度进行讨论，希望对大家的工作有所启发。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-76', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/230630-Advances in LLM Capabilities by Tools-李豪.pdf"
+								class="card-link">演示文稿</a>
+							<a href="https://pan.baidu.com/s/18VrL7bSPZetpkMbGw_g8UA" class="card-link"
+								data-bs-container="body" data-bs-title="提取码" data-bs-content="swem"
+								data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right">
+								录屏链接
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第75期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-06-09</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">大模型的应用</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;李英杰</h6>
+							<hr>
+							<p class="card-text" id="card-text-75">
+								GPT4等大模型具有非常强的任务理解能力和泛化性能，因此出现了许多应用大模型来进行辅助下游任务的工作，如数据增强、垂域适配、zero-shot、few-shot等。本期讨论班主要介绍研究大模型应用的几篇典型工作，并讨论如何应用大模型的能力来辅助研究工作。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-75', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/230625-大模型的应用-李英杰.pdf" class="card-link">演示文稿</a>
+							<a href="https://pan.baidu.com/s/18VrL7bSPZetpkMbGw_g8UA" class="card-link"
+								data-bs-container="body" data-bs-title="提取码" data-bs-content="swem"
+								data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right">
+								录屏链接
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第74期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-06-02</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Technology Behind LLM Training</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;刘益</h6>
+							<hr>
+							<p class="card-text" id="card-text-74">
+								随着语言模型参数规模增至数十亿或上百亿的级别，以往采用全量微调范式的训练方式面临以下挑战: 1) 完整模型所需的存储空间远超过GPU显存的容量；2)
+								大规模模型的训练所需计算操作数量巨大，导致训练时间过长。本期讨论班将介绍在大语言模型训练中采用的分布式并行策略与内存优化技术，通过将模型参数分片到不同的设备上，以降低对存储资源的需求。随后，我们将为大家介绍参数高效微调
+								(PEFT) 的方法，该方法仅微调少量或额外的模型参数，同时固定大部分预训练参数，以在大幅降低计算和存储成本的前提下，实现与全量微调相当的性能。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-74', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/230609-Technology behind LLM Training-刘益.pdf" class="card-link">演示文稿</a>
+							<a href="https://pan.baidu.com/s/18VrL7bSPZetpkMbGw_g8UA" class="card-link"
+								data-bs-container="body" data-bs-title="提取码" data-bs-content="swem"
+								data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right">
+								录屏链接
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第73期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-05-26</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">After ChatGPT</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;任昱冰</h6>
+							<hr>
+							<p class="card-text" id="card-text-73">
+								ChatGPT之后涌现出许多优秀工作，无论是学术界还是工业界都在快速跟进大模型相关研究，大模型为其带来了全新的机遇，值得深入探索。本期讨论班将首先按时间线介绍2023年最新大模型相关工作如LLaMA、Dolly
+								2.0、PaLM 2等，接着跟大家整体探讨后ChatGPT时代研究生做科研的几个思路。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-73', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/230526-After ChatGPT-任昱冰.pdf" class="card-link">演示文稿</a>
+							<a href="https://pan.baidu.com/s/18VrL7bSPZetpkMbGw_g8UA" class="card-link"
+								data-bs-container="body" data-bs-title="提取码" data-bs-content="swem"
+								data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right">
+								录屏链接
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<br>
+			<hr><br><br>
+
+			<div class="period-title">
+				<h2 id="2023年5月：ACL 2023中稿论文分享会"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+						fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16">
+						<path
+							d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+					</svg>&nbsp;2023年5月：ACL 2023中稿论文分享会</h2>
+			</div>
+			<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 g-4">
+				<!-- 在小屏幕下每行显示1列，在中等屏幕下每行显示3列，在大屏幕下每行显示4列 -->
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第72期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-05-19</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Retrieve-and-Sample: Document-level Event Argument Extraction via
+								Hybrid Retrieval Augmentation</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;任昱冰</h6>
+							<hr>
+							<p class="card-text" id="card-text-72-4">
+								最近的研究表明，检索增强技术在许多生成式自然语言处理任务中的有效性已得到证明。这些技术能够以非参数化的方式显式地获取外部先验知识，并将检索到的参考样例视为增强文本生成的线索。检索增强技术通常使用基于相似性的检索策略，该策略基于一种简单的假设：检索的样例与原始输入越相似，其标签与输入标签越可能相似。然而，在篇章级事件论元抽取任务中，由于事件标签的复杂性和事件论元的稀疏性，这种假设并不总是成立。因此，本文提出了一个有趣的问题：如何为篇章级事件论元抽取任务设计检索策略？本文从输入分布和标签分布的视角探究了多种检索设置，并进一步提出了一种新颖的混合检索增强范式，该范式定义了事件语义区域，并通过从该区域中采样出伪样例以提高模型的类比能力。通过在
+								RAMS和WikiEvents上进行充分实验，展示了所提出的检索增强方法的有效性，并对其有效性进行了进一步深入的分析。<span
+									class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-72-4', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/230519-ACL分享-Retrieve-and-Sample_Document-level Event Argument Extraction via Hybrid Retrieval Augmentation-任昱冰.pdf"
+								class="card-link">演示文稿</a>
+							<a href="https://pan.baidu.com/s/1vyV0mHXr1GWdbaX9R0DRBg" class="card-link"
+								data-bs-container="body" data-bs-title="提取码" data-bs-content="e8yd"
+								data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right">
+								录屏链接
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第72期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-05-19</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Towards Better Entity Linking with Multi-View enhanced Distillation
+							</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;刘益</h6>
+							<hr>
+							<p class="card-text" id="card-text-72-3">
+								稠密检索被广泛用于实体链接之中，以从大规模知识库中检索与提及相关的实体。主流的稠密检索技术基于双编码器框架，分别将提及和实体的文本内容编码为单个向量
+								，并通过点积等粗粒度的交互策略来建模两者之间的相关性，导致双编码器难以准确地对实体中与提及相关的部分进行建模，以匹配具有不同上下文的提及。针对此问题，本文提出了一种多视图增强的蒸馏框架，可以有效地将实体中提及相关部分的知识从具有深层次语境交互的交叉编码器转移到双编码器上，来学习多样化的，提及相关的实体表征。每个实体被分成多个视图，以避免提及无关的信息被引入到实体表征中。我们进一步为该框架设计了交叉对齐和自对齐机制，通过对齐交叉编码器与双编码器间提及相关的实体表征，来促进教师模型到学生模型的细粒度知识蒸馏。此外，我们保留了一个全局视图来对实体进行整体的建模，以避免全局的信息被分散到局部的视图中。实验证明，我们的方法在若干实体链接基准上取得了最佳的效果。<br>具体而言，本方法引入了交流机制、对话意图和语义框架作为多粒度信号，对共情回复实现粗粒度和细粒度的控制。此外，设计了一个特定的掩码策略来反映多粒度信号和回复词语之间的关系，并将其集成到扩散模型中，以影响生成过程。在基准数据集EmpatheticDialogue上的实验结果表明，我们的框架在不丢失上下文相关性的情况下，在可控性、信性和多样性方面优于竞争性基线。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-72-3', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/230519-ACL分享-Towards Better Entity Linking with Multi-View enhanced Distillation-刘益.pdf"
+								class="card-link">演示文稿</a>
+							<a href="https://pan.baidu.com/s/1vyV0mHXr1GWdbaX9R0DRBg" class="card-link"
+								data-bs-container="body" data-bs-title="提取码" data-bs-content="e8yd"
+								data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right">
+								录屏链接
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第72期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-05-19</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">DiffusEmp: A Diffusion Model-Based Framework with Multi-Grained
+								Control for Empathetic Response Generation</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;毕冠群</h6>
+							<hr>
+							<p class="card-text" id="card-text-72-2">
+								在开放域对话中，共情是一个至关重要的因素，它自然地表达了一个人对他人的关心和理解。虽然已有方法对共情回复生成进行了研究，但这些方法生成的共情内容往往较为单调，即表达比较通用且枯燥。本文提出用显式控制来引导共情表达，并设计了一个基于条件扩散语言模型的框架DiffusEmp，以统一对话历史和面向属性的控制信号的使用。<br>具体而言，本方法引入了交流机制、对话意图和语义框架作为多粒度信号，对共情回复实现粗粒度和细粒度的控制。此外，设计了一个特定的掩码策略来反映多粒度信号和回复词语之间的关系，并将其集成到扩散模型中，以影响生成过程。在基准数据集EmpatheticDialogue上的实验结果表明，我们的框架在不丢失上下文相关性的情况下，在可控性、信性和多样性方面优于竞争性基线。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-72-2', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/230519-ACL分享-DiffusEmp_A Diffusion Model-Based Framework with Multi-Grained Control for Empathetic Response Generation-毕冠群.pdf"
+								class="card-link">演示文稿</a>
+							<a href="https://pan.baidu.com/s/1vyV0mHXr1GWdbaX9R0DRBg" class="card-link"
+								data-bs-container="body" data-bs-title="提取码" data-bs-content="e8yd"
+								data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right">
+								录屏链接
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第72期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-05-19</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Divide, Conquer, and Combine: Mixture of Semantic-Independent Experts
+								for Zero-Shot Dialogue State Tracking</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;王青悦</h6>
+							<hr>
+							<p class="card-text" id="card-text-72-1">
+								零样本的迁移学习旨在帮助任务型对话脱离标注数据适配多领域场景。已有工作大多从数据/模型层面提升通用性，忽略了样本的语义解耦，限制了零样本下对话状态追踪的表现。在本篇工作中，我们提出了简单高效的方案——“划分，解决和合并”，即明确地解耦可见数据的语义信息，利用混合专家机制提升健壮性。具体地，我们先独立地划分可见数据并训练多个语义独立的专家，随后通过我们设计的聚合机制来映射和推理未见样本。我们的方案在不添加任何额外知识的前提下，仅使用10M的可训练参数使模型在MultiWOZ
+								2.1数据集上提升至SOTA性能。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-72-1', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/230519-ACL分享-Divide_Conquer_and Combine Mixture of Semantic-Independent Experts for Zero-Shot Dialogue State Tracking-王青悦.pdf"
+								class="card-link">演示文稿</a>
+							<a href="https://pan.baidu.com/s/1vyV0mHXr1GWdbaX9R0DRBg" class="card-link"
+								data-bs-container="body" data-bs-title="提取码" data-bs-content="e8yd"
+								data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right">
+								录屏链接
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<br>
+			<hr><br><br>
+
+
+			<div class="period-title">
+				<h2 id="2023年3-4月：图网络及其应用"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+						fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16">
+						<path
+							d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+					</svg>&nbsp;2023年3-4月：图网络及其应用</h2>
+			</div>
+			<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 g-4">
+				<!-- 在小屏幕下每行显示1列，在中等屏幕下每行显示3列，在大屏幕下每行显示4列 -->
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第71期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-04-28</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">图神经网络在推荐系统中的应用</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;吴咏萱</h6>
+							<hr>
+							<p class="card-text" id="card-text-71">
+								在生物化学领域，药物分子化合物、蛋白质等经常被作为研究对象，而它们也具有天然的图结构。例如将原子看作节点，化学键看作边，分子则可以看成是原子图。基于上述背景，目前已有很多工作将图数据分析挖掘技术应用到生物化学领域，如蛋白质交互预测、药物研发、分子化学性质预测等等。本次讨论班，我们将重点探讨图网络在生物化学领域相关的应用。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-71', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/230427-图神经网络在推荐系统中的应用-吴咏萱.pdf" class="card-link">演示文稿</a>
+							<a href="https://pan.baidu.com/s/1bnKNrPX6qrlyhrpSaRoPSg " class="card-link"
+								data-bs-container="body" data-bs-title="提取码" data-bs-content="a8s5"
+								data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right">
+								录屏链接
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第70期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-04-21</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">图神经网络在社会网络中的应用</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;宋传承</h6>
+							<hr>
+							<p class="card-text" id="card-text-70">
+								在生物化学领域，药物分子化合物、蛋白质等经常被作为研究对象，而它们也具有天然的图结构。例如将原子看作节点，化学键看作边，分子则可以看成是原子图。基于上述背景，目前已有很多工作将图数据分析挖掘技术应用到生物化学领域，如蛋白质交互预测、药物研发、分子化学性质预测等等。本次讨论班，我们将重点探讨图网络在生物化学领域相关的应用。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-70', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/230421-图网络在社会网络中的应用-宋传承.pdf" class="card-link">演示文稿</a>
+							<a href="https://pan.baidu.com/s/1bnKNrPX6qrlyhrpSaRoPSg " class="card-link"
+								data-bs-container="body" data-bs-title="提取码" data-bs-content="a8s5"
+								data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right">
+								录屏链接
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第69期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-04-14</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">图神经网络在生物化学领域的应用</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;周玉晨</h6>
+							<hr>
+							<p class="card-text" id="card-text-69">
+								在生物化学领域，药物分子化合物、蛋白质等经常被作为研究对象，而它们也具有天然的图结构。例如将原子看作节点，化学键看作边，分子则可以看成是原子图。基于上述背景，目前已有很多工作将图数据分析挖掘技术应用到生物化学领域，如蛋白质交互预测、药物研发、分子化学性质预测等等。本次讨论班，我们将重点探讨图网络在生物化学领域相关的应用。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-69', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/230414-图在生物化学领域的应用-周玉晨.pdf" class="card-link">演示文稿</a>
+							<a href="https://pan.baidu.com/s/1bnKNrPX6qrlyhrpSaRoPSg " class="card-link"
+								data-bs-container="body" data-bs-title="提取码" data-bs-content="a8s5"
+								data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right">
+								录屏链接
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第68期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-04-07</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">图神经网络赋能的知识图谱研究与应用</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;刘瑜</h6>
+							<hr>
+							<p class="card-text" id="card-text-68">
+								知识图谱是人工智能在知识工程理论和技术发展中的前沿知识图谱方法、技术与应用在新一代人工智能由“感知智能”迈向“认知智能”的过程中扮演重要角色。知识图谱本身采用图结构的方式来构建和关联知识数据，应用图神经网络技术能够实现更强大的推理能力、更清晰的解释过程和更可信的人工智能技术。本次讨论班旨在介绍图神经网络赋能的知识图谱在理论体系、技术方法、系统实践等方面的最新成果和进展。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-68', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/230407-图神经网络赋能知识图谱研究与应用-刘瑜.pdf" class="card-link">演示文稿</a>
+							<a href="https://pan.baidu.com/s/1bnKNrPX6qrlyhrpSaRoPSg " class="card-link"
+								data-bs-container="body" data-bs-title="提取码" data-bs-content="a8s5"
+								data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right">
+								录屏链接
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第67期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-03-31</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">图神经网络在金融领域的应用</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;石逢钊</h6>
+							<hr>
+							<p class="card-text" id="card-text-67">
+								金融领域存在着大量的用户交互信息，这些信息使得用户之间构成了一张张密不可分的关系图，通过对这些关系图的挖掘可以解决金融领域的很多重要问题。本文将以基于图的金融欺诈检测为代表，着重介绍图神经网络在金融领域的应用落地。同时，作为本次图领域讨论班的开篇，也将对后续的报告内容做一个简单的介绍。(RLHF)是ChatGPT的核心技术之一，是使其具有“人味”的关键。使用强化学习的方法直接优化带有人类反馈的语言模型，使语言模型能够开始将训练在一般文本数据语料库上的模型与复杂的人类价值观模型对齐。本次讨论班，我们将从强化学习的相关背景、具体算法以及与人工反馈结合这几方面介绍RLHF方法。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-67', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/230331-图神经网络在金融领域的应用-石逢钊.pdf" class="card-link">演示文稿</a>
+							<a href="https://pan.baidu.com/s/1bnKNrPX6qrlyhrpSaRoPSg " class="card-link"
+								data-bs-container="body" data-bs-title="提取码" data-bs-content="a8s5"
+								data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right">
+								录屏链接
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<br>
+			<hr><br><br>
+
+
+			<div class="period-title">
+				<h2 id="2023年2-3月：ChatGPT的前世今生"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+						fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16">
+						<path
+							d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+					</svg>&nbsp;2023年2-3月：ChatGPT的前世今生</h2>
+			</div>
+			<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 g-4">
+				<!-- 在小屏幕下每行显示1列，在中等屏幕下每行显示3列，在大屏幕下每行显示4列 -->
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第66期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-03-10</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">大语言模型的能力和未来</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;王青悦</h6>
+							<hr>
+							<p class="card-text" id="card-text-66">
+								据统计，ChatGPT的日用户增速远超现有的互联网产品，国内外非常重视ChatGPT引发的科学浪潮。一方面，chatgpt市场反应强烈，商业化序幕俨然拉开，另一方面，chatgpt在短期发展也存在一定阻力，有待解决。在本期讨论班，我们探究“chatgpt”们的应用价值、存在缺陷和未来方向。(RLHF)是ChatGPT的核心技术之一，是使其具有“人味”的关键。使用强化学习的方法直接优化带有人类反馈的语言模型，使语言模型能够开始将训练在一般文本数据语料库上的模型与复杂的人类价值观模型对齐。本次讨论班，我们将从强化学习的相关背景、具体算法以及与人工反馈结合这几方面介绍RLHF方法。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-66', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/230310-大语言模型的能力和未来-王青悦.pdf" class="card-link">演示文稿</a>
+							<a href="https://pan.baidu.com/s/1bEcuOBW8wgHsYeW94te7dg" class="card-link"
+								data-bs-container="body" data-bs-title="提取码" data-bs-content="5568"
+								data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right">
+								录屏链接
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第65期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-03-03</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">基于人类反馈的强化学习</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;毕冠群</h6>
+							<hr>
+							<p class="card-text" id="card-text-65">
+								在过去的几年里，语言模型通过从人类输入提示生成多样化和引人注目的文本，展示了令人印象深刻的能力。然而，“好”文本在本质上很难定义，因为它依赖于是主观和上下文的信息。基于人类反馈的强化学习(RLHF)是ChatGPT的核心技术之一，是使其具有“人味”的关键。使用强化学习的方法直接优化带有人类反馈的语言模型，使语言模型能够开始将训练在一般文本数据语料库上的模型与复杂的人类价值观模型对齐。本次讨论班，我们将从强化学习的相关背景、具体算法以及与人工反馈结合这几方面介绍RLHF方法。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-65', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/230303-ChatGPT-RLHF-毕冠群.pdf" class="card-link">演示文稿</a>
+							<a href="https://pan.baidu.com/s/1bEcuOBW8wgHsYeW94te7dg" class="card-link"
+								data-bs-container="body" data-bs-title="提取码" data-bs-content="5568"
+								data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right">
+								录屏链接
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第64期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-02-24</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Instruct tuning & Prompt tuning</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;张琬悦</h6>
+							<hr>
+							<p class="card-text" id="card-text-64">
+								ChatGPT和InstructGPT在模型结构及训练方式上都完全一致，即都使用了指示学习和人工反馈的强化学习来指导模型的训练。指示学习(Instruct
+								Learning)期望通过prompt来提升模型效果，激发语言模型在大数据上训练获得语言补全能力;提示学习(Prompt
+								Learning)被称为NLP领域的第四范式，在少样本和零样本中能够带来超越微调的能力。本次讨论班将介绍指示学习和提示学习的异同点以及相关拓展概念，并探讨ChatGPT和InstructGPT是如何进行指示学习的。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-64', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/230224-Instruction tuning & Prompt tuning-张琬悦.pdf"
+								class="card-link">演示文稿</a>
+							<a href="https://pan.baidu.com/s/1bEcuOBW8wgHsYeW94te7dg" class="card-link"
+								data-bs-container="body" data-bs-title="提取码" data-bs-content="5568"
+								data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right">
+								录屏链接
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第63期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2023-02-17</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">GPTs & ChatGPT</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp;张岚雪</h6>
+							<hr>
+							<p class="card-text" id="card-text-63">
+								从2018年至今，OpenAl致力于GPT系列模型的研究，每一次GPT模型的发布都会引发热烈的关注。ChatGPT的发布更是风靡全网，它以强大的语言处理能力、海量的数据积累等特点让用户感到惊讶甚至震撼。本次讨论班从GPT系列模型的发展过程来剖析其功能的进化，走近神探揭开ChatGPT的面纱，让我们一起讨论ChatGPT究竟会让大家失业，还是机遇与挑战并存。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-63', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/230217-GPTs&ChatGPT-张岚雪.pdf" class="card-link">演示文稿</a>
+							<a href="https://pan.baidu.com/s/1bEcuOBW8wgHsYeW94te7dg" class="card-link"
+								data-bs-container="body" data-bs-title="提取码" data-bs-content="5568"
+								data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="right">
+								录屏链接
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<footer>
+			<br>
+			<hr><br><br>
+			<nav aria-label="Page navigation">
+				<ul class="pagination justify-content-center">
+					<li class="page-item disabled">
+						<a class="page-link" href="./Seminar_1.html" aria-label="Previous">
+							<span aria-hidden="true">&laquo;</span>
+						</a>
+					</li>
+					<li class="page-item active"><a class="page-link" href="./Seminar_1.html">1</a></li>
+					<li class="page-item"><a class="page-link" href="./Seminar_2.html">2</a></li>
+					<li class="page-item">
+						<a class="page-link" href="./Seminar_3.html" aria-label="Next">
+							<span aria-hidden="true">&raquo;</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+	</div>
+	<div class="footer">
+		<p>ASCII Lab, Institute of Information Engineering, Chinese Academy of
+			Sciences. No.19 Shucun Road,
+			Haidian District, Beijing, China<a
+				href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a>
+			100085</p>
+	</div>
+
+	<script>
+		const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+		const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+		function toggleText(id, btn) {
+			const textElement = document.getElementById(id);
+			const svgIcon = btn.querySelector('svg path'); // 获取SVG路径
+
+			if (textElement.classList.contains('expanded')) {
+				// 折叠状态，显示向下箭头
+				textElement.classList.remove('expanded');
+				svgIcon.setAttribute('d', 'M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'); // 向下箭头路径
+			} else {
+				// 展开状态，显示向上箭头
+				textElement.classList.add('expanded');
+				svgIcon.setAttribute('d', 'M7.247 4.86l4.796 5.48c.566.645.106 1.658-.753 1.658H3.204a1 1 0 0 1-.753-1.659l4.796-5.48a1 1 0 0 1 1.506 0z'); // 向上箭头路径
+			}
+		}
+		// 控制所有卡片折叠/展开
+		// 控制所有卡片的展开/折叠，确保按钮状态也正确
+		function toggleAllCards(btn) {
+			const allCardTexts = document.querySelectorAll('.card-text'); // 获取所有卡片的 card-text
+			const allToggleButtons = document.querySelectorAll('.toggle-btn'); // 获取所有控制每个卡片的按钮
+			let isExpanded = false;
+
+			// 判断当前是否有任意一个卡片已经展开
+			allCardTexts.forEach(text => {
+				if (text.classList.contains('expanded')) {
+					isExpanded = true;
+				}
+			});
+
+			// 如果有展开的卡片，则全部折叠；否则全部展开
+			allCardTexts.forEach(text => {
+				if (isExpanded) {
+					text.classList.remove('expanded');
+				} else {
+					text.classList.add('expanded');
+				}
+			});
+
+			// 更新每个按钮的图标
+			allToggleButtons.forEach((button, index) => {
+				if (isExpanded) {
+					button.innerHTML = `
+				<svg xmlns="http://www.w3.org/2000/svg" class="bi bi-caret-down-fill svg-icon" viewBox="0 0 16 16">
+					<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+				</svg>
+			`;
+				} else {
+					button.innerHTML = `
+				<svg xmlns="http://www.w3.org/2000/svg" class="bi bi-caret-up-fill svg-icon" viewBox="0 0 16 16">
+					<path d="M7.247 4.86l4.796 5.48c.566.645.106 1.658-.753 1.658H3.204a1 1 0 0 1-.753-1.659l4.796-5.48a1 1 0 0 1 1.506 0z"/>
+				</svg>
+			`;
+				}
+			});
+		}
+		window.onscroll = function () {
+			const backToTopButton = document.getElementById("back-to-top");
+			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+				backToTopButton.style.display = "block";
+			} else {
+				backToTopButton.style.display = "none";
+			}
+		};
+
+		// 滚动到页面顶部
+		function scrollToTop() {
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth" // 平滑滚动
+			});
+		}
+	</script>
+
+	<script>
+		// 使用 fetch 动态加载 head.html
+		fetch('/head.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('navbar').innerHTML = data;
+			})
+			.catch(error => console.error('Error loading navbar:', error));
+	</script>
+
+</body>
+
+</html>

@@ -1,114 +1,187 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>刘瑜 Yu Liu</title>
-        <link rel="icon" type="image/x-icon" href="img/ASCII_1.ico"/>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
-        <link rel="stylesheet" href="../css_style.css">
-        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-      fetch("../Team.html")
-        .then(response => response.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const otherDoc = parser.parseFromString(html, "text/html");
 
-          const otherUL = otherDoc.getElementById("sourceList");
-          const targetList = document.getElementById("targetList");
+<head>
+    <title>刘瑜 Yu Liu</title>
+    <link rel="icon" type="image/x-icon" href="/img/ASCII_1.ico" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.net/bootstrap/5.3.2/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.net/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css_style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("../Team.html")
+                .then(response => response.text())
+                .then(html => {
+                    const parser = new DOMParser();
+                    const otherDoc = parser.parseFromString(html, "text/html");
+    
+                    const otherUL = otherDoc.getElementById("sourceList");
+                    const targetList = document.getElementById("targetList");
+    
+                    const liElements = otherUL.getElementsByTagName("li");
+                    const searchString = "Yu Liu";
+    
+                    let hasMatch = false; // 标记是否有匹配的li元素
+    
+                    // 正则表达式：允许两边有空格，并允许结尾有逗号或句号
+                    const searchPattern = new RegExp(`\\b${searchString}\\b\\s*[.,]?`);
+    
+                    for (let i = 0; i < liElements.length; i++) {
+                        const li = liElements[i];
+                        // 使用正则表达式进行匹配
+                        if (searchPattern.test(li.textContent)) {
+                            hasMatch = true;
+                            const newLI = document.createElement("li");
+                            newLI.innerHTML = li.innerHTML;
+                            newLI.classList.add("list-group-item");
+                            newLI.classList.add("list_ins"); // 添加保持样式的类名
+                            targetList.appendChild(newLI);
+                        }
+                    }
+    
+                    if (!hasMatch) {
+                        const newLI = document.createElement("li");
+                        newLI.textContent = "";
+                        newLI.classList.add("list-group-item");
+                        newLI.classList.add("list_ins"); // 添加保持样式的类名
+                        targetList.appendChild(newLI);
+                    }
+                })
+                .catch(error => console.log(error));
+        });
+    </script>
 
-          const liElements = otherUL.getElementsByTagName("li");
-          const searchString = "Yu Liu";
 
-          let hasMatch = false; // 标记是否有匹配的li元素
+</head>
 
-          for (let i = 0; i < liElements.length; i++) {
-            const li = liElements[i];
-            if (li.textContent.includes(searchString)) {
-              hasMatch = true;
-              const newLI = document.createElement("li");
-              newLI.innerHTML = li.innerHTML;
-              newLI.classList.add("list-group-item"); 
-	      newLI.classList.add("list_ins");// 添加保持样式的类名 // 添加自定义类名
-              targetList.appendChild(newLI);
-            }
-          }
-
-          if (!hasMatch) {
-            const newLI = document.createElement("li");
-            newLI.textContent = "暂无";
-	    newLI.classList.add("list-group-item"); 
-	    newLI.classList.add("list_ins");// 添加保持样式的类名 // 添加自定义类名
-            targetList.appendChild(newLI);
-          }
-        })
-        .catch(error => console.log(error));
-	 });
-  </script>
-
-      </head>
 <body>
 
-  <div id="head">
-    <iframe MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no src="../head.html" width="100%"  height="auto">
-    </iframe>
- </div>
+    <div id="navbar"></div> <!-- 用于插入导航栏的容器 -->
 
-        
-        <div class="col-sm-12 column container-fluid">
-            <div class="row">
-                <div class="col-sm-2 col-md-offset-1 col-lg-offset-1 col-xl-offset-1" id="menulist" >
-                    <a href="../Team.html" class="list-group-item list-group-item-info" id="textid">Team Leader</a>
-                    <a href="../Teacher.html" class="list-group-item list-group-item-info" id="textid">Teacher</a>
-                    <a href="../Student.html" class="list-group-item list-group-item-info active" id="textid">Student </a>
-                </div>
+    <div class="container-fluid  flex-grow-1" style="margin-top: 100px;">
 
-                <div class="col-sm-8 column ">
-                    <ol class="breadcrumb">
-                        <li class="active">Menu
-                        </li>
-                        <li class="active">Student
-                        </li>
-                    </ol>
-                <div class="col-sm-6 column ">
-                    <img src="../img/LY.jpg" class="img-responsive img_person" alt="Cinque Terre" width="150" height="200">
-                    </div> 
-                <div class="name_person">
-                                <P><strong>Name</strong>: 刘瑜 Yu Liu</P>
-                                <P><strong>Education</strong>: Ph.D. Student</P>
-                                <P><strong>Research Direction</strong>: NLP,SNA,ML</P>                         
-                                <P><strong>Email</strong>: liuyu2022&#64;iie.ac.cn </P>
-                </div>
+        <button type="button" id="back-to-top" class="btn btn-outline-danger" onclick="scrollToTop()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-bar-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M3.646 11.854a.5.5 0 0 0 .708 0L8 8.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708M2.4 5.2c0 .22.18.4.4.4h10.4a.4.4 0 0 0 0-.8H2.8a.4.4 0 0 0-.4.4" />
+            </svg>
+        </button>
 
-                <div  class="col-sm-12 column">
-                    <p style="font-size: large;"><strong>Introduction:</strong></p>
-                    <p class="introduction">刘瑜，2022级博士研究生。</p>
-                    <p class="introduction">Yu Liu, Ph.D. Student of the grade 2022.</p>
-					<br>
-			<p style="font-size: large;"><strong>Representative Works:</strong></p>
-                  <ul class="list-group list-group-flush" id="targetList">
-					</ul>
-                    <br>
-
-            </div>
-                
+        <div class="main">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/index.html">Index</a></li>
+                            <li class="breadcrumb-item"><a href="/Team.html">Team</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Student</li>
+                        </ol>
+                    </nav>
+                    <hr>
                 </div>
             </div>
+
+            <div class="row justify-content-center">
+                <div class="list-group col-sm-2 " id="menulist">
+                    <a href="/Team.html" class="list-group-item list-group-item-action list-group-item-action-custom shadow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                      </svg>&nbsp;&nbsp;Leader</a>
+                    <a href="/Teacher.html" class="list-group-item list-group-item-action list-group-item-action-custom shadow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                      </svg>&nbsp;&nbsp;Teacher</a>
+                    <a href="/Student.html" class="list-group-item active list-group-item-action list-group-item-action-custom shadow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                      </svg>&nbsp;&nbsp;Student</a>
+                </div>
+                <div class="col-sm-8">
+                    <div class="row" style="align-items: center;">
+                        <div class="col-md-6 text-center">
+                            <img src="/img/LY.jpg" class="img-responsive img_person" alt="Cinque Terre" height="200"
+                                width="auto">
+                        </div>
+
+                        <div class="col-md-4">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item list-group-item-info-custom"><strong>Name</strong>: 刘瑜 Yu Liu</li>
+                                <li class="list-group-item list-group-item-info-custom"><strong>Education</strong>: Ph.D. Student</li>
+                                <li class="list-group-item list-group-item-info-custom"><strong>Research Direction</strong>: NLP,SNA,ML</li>                         
+                                <li class="list-group-item list-group-item-info-custom"><strong>Email</strong>: liuyu2022&#64;iie.ac.cn </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <br><br>
+
+                    <div class="col-sm-12 column">
+                        <p style="font-size: large;"><strong>Introduction:</strong></p>
+                        <p class="introduction">刘瑜，2022级博士研究生。</p>
+                        <p class="introduction">Yu Liu, Ph.D. Student of the grade 2022.</p>
+                        <br>
+                        <!-- <p style="font-size: large;"><strong>Social Service:</strong></p>
+                        <ul class="list-group list-group-flush">
+
+                        </ul>
+                        <br> -->
+                        <!-- <p style="font-size: large;"><strong>Awards and Honors:</strong></p>
+                        <ul class="list-group list-group-flush">
+                        </ul>
+                        <br> -->
+                        <p style="font-size: large;"><strong>Representative Works:</strong></p>
+                        <ul class="list-group list-group-flush" id="targetList">
+                        </ul>
+                        <br>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
-        <div id="footer" class="container-fluid ">      
-            <nav class="navbar navbar-default text-center " >
-                <div class="navbar-inner navbar-text text-center col-sm-12 column">
-                    <p class="text-muted credit " style="padding: 0.1%;">
-                        ASCII Lab, Institute of Information Engineering, Chinese Academy of Sciences. No.19 Shucun Road, Haidian District, Beijing, China<a href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a> 100085
-                    </p>
-                    
-                </div>
-            </nav>
-            </div>   
-        
-       
-    </body>
+    </div>
+
+    <div class="footer">
+        <p>ASCII Lab, Institute of Information Engineering, Chinese Academy of
+            Sciences. No.19 Shucun Road,
+            Haidian District, Beijing, China<a
+                href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a>
+            100085</p>
+    </div>
+
+    <script>
+        window.onscroll = function () {
+            const backToTopButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // 滚动到页面顶部
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth" // 平滑滚动
+            });
+        }
+    </script>
+
+    <script>
+        // 使用 fetch 动态加载 head.html
+        fetch('/head.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+
+</body>
+
 </html>

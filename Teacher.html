@@ -1,78 +1,277 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Teacher</title>
-        <link rel="icon" type="image/x-icon" href="img/ASCII_1.ico"/>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
-        <link rel="stylesheet" href="css_style.css"> 
-        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<head>
+    <title>Teacher</title>
+    <link rel="icon" type="image/x-icon" href="../img/ASCII_1.ico" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.net/bootstrap/5.3.2/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.net/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css_style.css">
+    <style>
+        .card-body {
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+        .card-subtitle {
+            padding-top: 2px;
+        }
+    </style>
+</head>
 
-      </head>
 <body>
+    <div id="navbar"></div> <!-- 用于插入导航栏的容器 -->
 
-  <body>
-    <div id="head">
-        <iframe MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no src="head.html" width="100%"  height="auto">
-        </iframe>
-     </div>
+    <div class="container-fluid" style="margin-top: 100px;">
 
-        
-        <div class="col-sm-12 column container-fluid">
-            <div class="row">
-                <div class="col-sm-2 col-md-offset-1 col-lg-offset-1 col-xl-offset-1" id="menulist" >
-                    <a href="Team.html" class="list-group-item list-group-item-info" id="textid">Team Leader</a>
-                    <a href="Teacher.html" class="list-group-item list-group-item-info active" id="textid">Teacher</a>
-                    <a href="Student.html" class="list-group-item list-group-item-info" id="textid">Student </a>
+        <button type="button" id="back-to-top" class="btn btn-outline-danger" onclick="scrollToTop()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-bar-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M3.646 11.854a.5.5 0 0 0 .708 0L8 8.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708M2.4 5.2c0 .22.18.4.4.4h10.4a.4.4 0 0 0 0-.8H2.8a.4.4 0 0 0-.4.4" />
+            </svg>
+        </button>
+
+        <div class="main">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/index.html">Index</a></li>
+                            <li class="breadcrumb-item"><a href="/Team.html">Team</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Teacher</li>
+                        </ol>
+                    </nav>
+                    <hr>
                 </div>
-
-                <div class="col-sm-8 column ">
-                    <ol class="breadcrumb">
-                        <li class="active">Menu
-                        </li>
-                        <li class="active">Teacher
-                        </li>
-                    </ol>
-
-
-                <div  class="col-sm-12 column">
-
-                <p style="font-size: large;"><strong>Researcher</strong></p>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item list_ins"><a href="./Teachers/SYM.html">尚燕敏 Yanmin Shang</a></li>
-                    <li class="list-group-item list_ins"><a href="./Teachers/FF.html">方芳 Fang Fang</a></li>
-					<li class="list-group-item list_ins"><a href="./Teachers/LXX.html">林希珣 Xixun Lin</a></li>
-                    <li class="list-group-item list_ins"><a href="./Teachers/RYB.html">任昱冰 Yubing Ren</a></li>
-                </ul>
-
-                <br>
-
-                    <p style="font-size: large;"><strong>Engineer</strong></p>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item list_ins"><a href="./Teachers/YPF.html">尹鹏飞 Pengfei Yin</a></li>
-                    <li class="list-group-item list_ins"><a href="./Teachers/SF.html">石福 Fu Shi</a></li>
-                                       </ul>
-
-
             </div>
-                
+            <div class="row justify-content-center">
+                <div class="list-group col-sm-2 " id="menulist">
+                    <a href="Team.html" class="list-group-item list-group-item-action list-group-item-action-custom shadow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                      </svg>&nbsp;&nbsp;Leader</a>
+                    <a href="Teacher.html" class="list-group-item active list-group-item-action list-group-item-action-custom shadow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                      </svg>&nbsp;&nbsp;Teacher</a>
+                    <a href="Student.html" class="list-group-item list-group-item-action list-group-item-action-custom shadow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                      </svg>&nbsp;&nbsp;Student</a>
+                </div>
+                <div class="col-sm-8">
+                    <div class="block-title" style="margin-bottom: 2%;">
+                        <h2 id="Researcher"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                            </svg>&nbsp;Researcher</h2>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 g-4">
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Teacher</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/SYM.jpg" class="card-img-top card-img-custom" alt="SYM">
+                                </div>
+                                <div class="card-body" style="text-align: center;">
+                                    <a class="card-title" href="/Teachers/SYM.html">尚燕敏 Yanmin Shang</a>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary"><span
+                                            class="badge text-bg-success">Associate<br>Research Fellow</span></h6>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2024-10-02</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Teacher</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/FF.jpg" class="card-img-top card-img-custom" alt="FF">
+                                </div>
+                                <div class="card-body" style="text-align: center;">
+                                    <a class="card-title" href="/Teachers/FF.html">方芳 Fang Fang</a>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary"><span
+                                            class="badge text-bg-success">Associate<br>Research Fellow</span></h6>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2024-10-02</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Teacher</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/LXX.jpg" class="card-img-top card-img-custom" alt="LXX">
+                                </div>
+                                <div class="card-body" style="text-align: center;">
+                                    <a class="card-title" href="/Teachers/LXX.html">林希珣 Xixun Lin</a>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary"><span
+                                            class="badge text-bg-success">Assistant<br>Research Fellow</span></h6>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2024-10-02</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Teacher</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/RYB.jpg" class="card-img-top card-img-custom" alt="RYB">
+                                </div>
+                                <div class="card-body" style="text-align: center;">
+                                    <a class="card-title" href="/Teachers/RYB.html">任昱冰 Yubing Ren</a>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary"><span
+                                            class="badge text-bg-success">Tenure-track<br>Associate Professor</span></h6>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2024-10-02</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <br>
+                    <hr><br>
+
+
+                    <div class="block-title" style="margin-bottom: 2%;">
+                        <h2 id="Engineer"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                            </svg>&nbsp;Engineer</h2>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 g-4">
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Engineer</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/compressed/YPF.jpg" class="card-img-top card-img-custom" alt="YPF">
+                                </div>
+                                <div class="card-body" style="text-align: center;">
+                                    <a class="card-title" href="/Teachers/YPF.html">尹鹏飞 Pengfei Yin</a>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary"><span
+                                            class="badge text-bg-success">Staff</span></h6>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2024-10-02</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Engineer</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/ASCII.jpg" class="card-img-top card-img-custom" alt="SF">
+                                </div>
+                                <div class="card-body" style="text-align: center;">
+                                    <a class="card-title" href="/Teachers/SF.html">石福 Fu Shi</a>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary"><span
+                                            class="badge text-bg-success">Staff</span></h6>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2024-10-02</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Engineer</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/ASCII.jpg" class="card-img-top card-img-custom" alt="LJJ">
+                                </div>
+                                <div class="card-body" style="text-align: center;">
+                                    <a class="card-title" href="/Teachers/LJJ.html">刘俊剑 Junjian Liu</a>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary"><span
+                                            class="badge text-bg-success">Staff</span></h6>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2024-10-02</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <div>Engineer</div>
+                                </div>
+                                <div class="card-img-wrapper">
+                                    <img src="/img/ASCII.jpg" class="card-img-top card-img-custom" alt="LBY">
+                                </div>
+                                <div class="card-body" style="text-align: center;">
+                                    <a class="card-title" href="/Teachers/LBY.html">李博宇 Boyu Li</a>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary"><span
+                                            class="badge text-bg-success">Staff</span></h6>
+                                </div>
+                                <div class="card-footer" style="text-align: center;">
+                                    <small class="text-body-secondary">Last updated 2024-10-02</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="footer" class="container-fluid ">
-            <nav class="navbar navbar-default text-center navbar-fixed-bottom" >
-                <div class="navbar-inner navbar-text text-center col-sm-12 column">
-                    <p class="text-muted credit " style="padding: 0.1%;">
-                        ASCII Lab, Institute of Information Engineering, Chinese Academy of Sciences. No.19 Shucun Road, Haidian District, Beijing, China<a href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a> 100085
-                    </p>
+    </div>
 
-                </div>
-            </nav>
-        </div> 
-        
-       
-    </body>
+    <div class="footer">
+        <p>ASCII Lab, Institute of Information Engineering, Chinese Academy of
+            Sciences. No.19 Shucun Road,
+            Haidian District, Beijing, China<a
+                href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a>
+            100085</p>
+    </div>
+
+    <script>
+        window.onscroll = function () {
+            const backToTopButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // 滚动到页面顶部
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth" // 平滑滚动
+            });
+        }
+    </script>
+
+    <script>
+        // 使用 fetch 动态加载 head.html
+        fetch('/head.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+</body>
+
 </html>

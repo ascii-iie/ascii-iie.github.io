@@ -1,74 +1,133 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>News</title>
-        <link rel="icon" type="image/x-icon" href="img/ASCII_1.ico"/>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
-        <link rel="stylesheet" href="../css_style.css">
-        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<head>
+    <title>News</title>
+    <link rel="icon" type="image/x-icon" href="/img/ASCII_1.ico" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.net/bootstrap/5.3.2/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.net/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css_style.css">
+</head>
 
-      </head>
 <body>
 
-  <div id="head">
-    <iframe MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no src="../head.html" width="100%"  height="auto">
-    </iframe>
- </div>
-        
-        <div class="col-sm-12 column container-fluid">
-            <div class="row">
-                <div class="col-sm-2 col-md-offset-1 col-lg-offset-1 col-xl-offset-1" id="menulist" >
-                    <a href="../News.html" class="list-group-item list-group-item-info active" id="textid">Acadamic News</a>
-                    <a href="../News.html" class="list-group-item list-group-item-info" id="textid">Daily News</a>
+    <div id="navbar"></div> <!-- 用于插入导航栏的容器 -->
 
+    <div class="container-fluid" style="margin-top: 100px;">
+
+        <button type="button" id="back-to-top" class="btn btn-outline-danger" onclick="scrollToTop()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-bar-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M3.646 11.854a.5.5 0 0 0 .708 0L8 8.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708M2.4 5.2c0 .22.18.4.4.4h10.4a.4.4 0 0 0 0-.8H2.8a.4.4 0 0 0-.4.4" />
+            </svg>
+        </button>
+
+        <div class="main">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/index.html">Index</a></li>
+                            <li class="breadcrumb-item"><a href="/News.html">News</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Academic News</li>
+                        </ol>
+                    </nav>
+                    <hr>
                 </div>
+            </div>
 
-                <div class="col-sm-8 column ">
-                    <ol class="breadcrumb">
-                        <li class="active">Menu
-                        </li>
-                        <li class="active">Acadamic News
-                        </li>
-                    </ol>
+            <div class="row justify-content-center">
+                <div class="list-group col-sm-2 " id="menulist">
+                    <a href="/News.html" class="list-group-item list-group-item-action active shadow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
+                        <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5z"/>
+                        <path d="M2 3h10v2H2zm0 3h4v3H2zm0 4h4v1H2zm0 2h4v1H2zm5-6h2v1H7zm3 0h2v1h-2zM7 8h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2z"/>
+                      </svg>&nbsp;&nbsp;Academic News</a>
+                    <a href="/DailyNews.html" class="list-group-item list-group-item-action shadow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
+                        <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5z"/>
+                        <path d="M2 3h10v2H2zm0 3h4v3H2zm0 4h4v1H2zm0 2h4v1H2zm5-6h2v1H7zm3 0h2v1h-2zM7 8h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2z"/>
+                      </svg>&nbsp;&nbsp;Daily News</a>
+                </div>
+                <div class="col-sm-8">
 
-
-		<div  class="col-sm-12 column">
-            <ul class="list-group list-group-flush">
-                <h3 align="center">【榜样的力量】贾瑞鹏师兄荣获中国科学院院长特别奖</h3>
-                <p align="center"><font size="2" color="616460">发布时间：2023年4月19日</font></p>
-                <hr align size="3" color="#eee">
-				<p style="text-align: center"><img src="../img/JRP2.png" width="300" height="400" align="center"></p>
-                <div style="text-align: center;"><span style="text-align: start;">贾瑞鹏</span></div>
-                <p style="text-indent:2em;"><font size="3">贾瑞鹏，导师是曹亚男老师。主要研究方向是自然语言处理、自动文本摘要等，读博期间发表学术论文12篇，包括7篇一作论文（3篇CCF-A、2篇CCF-B、2篇CCF-C）。作为核心开发人员参与组内5个项目，包括3个网安中心项目和2个科技部项目。</font></p>
-                <br>
-				<p style="text-indent:2em;"><font size="3">根据科发函字〔2022〕255号文件《中国科学院关于公布2022年度中国科学院院长奖评审结果的通知》，信息工程研究所10名学生荣获中国科学院院长奖，其中2名获得院长特别奖，8名获得院长优秀奖。贾瑞鹏师兄成为信息工程研究所中国科学院院长特别奖的唯二得主。</font></p>
-                <br>
-                <p style="text-indent:2em;"><font size="3">中国科学院院长奖是对中国科学院在学研究生的最高奖励，分为院长特别奖和院长优秀奖两种，每年评选一次。2022年，共有80人获“中国科学院院长特别奖”，400人获“中国科学院院长优秀奖”。</font></p>
-                <br>
-			</ul>
-			
-			
-			</div>
-			</div>
+                    <div class="col-sm-12 column">
+                        <ul class="list-group list-group-flush">
+                            <h3 align="center">【榜样的力量】贾瑞鹏师兄荣获中国科学院院长特别奖</h3>
+                            <p align="center">
+                                <font size="2" color="616460">发布时间：2023年4月19日</font>
+                            </p>
+                            <hr align size="3" color="#eee">
+                            <p style="text-align: center"><img class="img-news" src="../img/JRP2.png" width="300" height="400"
+                                    align="center"></p>
+                            <div style="text-align: center;"><span style="text-align: start;">贾瑞鹏</span></div>
+                            <p style="text-indent:2em;">
+                                <font size="3">
+                                    贾瑞鹏，导师是曹亚男老师。主要研究方向是自然语言处理、自动文本摘要等，读博期间发表学术论文12篇，包括7篇一作论文（3篇CCF-A、2篇CCF-B、2篇CCF-C）。作为核心开发人员参与组内5个项目，包括3个网安中心项目和2个科技部项目。
+                                </font>
+                            </p>
+                            <br>
+                            <p style="text-indent:2em;">
+                                <font size="3">
+                                    根据科发函字〔2022〕255号文件《中国科学院关于公布2022年度中国科学院院长奖评审结果的通知》，信息工程研究所10名学生荣获中国科学院院长奖，其中2名获得院长特别奖，8名获得院长优秀奖。贾瑞鹏师兄成为信息工程研究所中国科学院院长特别奖的唯二得主。
+                                </font>
+                            </p>
+                            <br>
+                            <p style="text-indent:2em;">
+                                <font size="3">
+                                    中国科学院院长奖是对中国科学院在学研究生的最高奖励，分为院长特别奖和院长优秀奖两种，每年评选一次。2022年，共有80人获“中国科学院院长特别奖”，400人获“中国科学院院长优秀奖”。
+                                </font>
+                            </p>
+                            <br>
+                        </ul>
+    
+    
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
 
-        <div id="footer" class="container-fluid ">      
-            <nav class="navbar navbar-default text-center " >
-                <div class="navbar-inner navbar-text text-center col-sm-12 column">
-                    <p class="text-muted credit " style="padding: 0.1%;">
-                        ASCII Lab, Institute of Information Engineering, Chinese Academy of Sciences. No.19 Shucun Road, Haidian District, Beijing, China<a href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a> 100085
-                    </p>
-                    
-                </div>
-            </nav>
-        </div>
-        
-       
-    </body>
+    <div class="footer">
+        <p>ASCII Lab, Institute of Information Engineering, Chinese Academy of
+            Sciences. No.19 Shucun Road,
+            Haidian District, Beijing, China<a
+                href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a>
+            100085</p>
+    </div>
+
+    <script>
+        window.onscroll = function () {
+            const backToTopButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // 滚动到页面顶部
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth" // 平滑滚动
+            });
+        }
+    </script>
+
+    <script>
+        // 使用 fetch 动态加载 head.html
+        fetch('/head.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+
+</body>
+
 </html>
