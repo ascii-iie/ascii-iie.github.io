@@ -44,12 +44,53 @@
                     <tbody>
                         <tr>
                             <th>
+                                <a href="https://dl.acm.org/doi/abs/10.1145/3715876" class="link">TOIS2025: Contrastive Modality-Disentangled Learning for Multimodal Recommendation</a>
+                                <p class="content">Xixun Lin, Rui Liu, Yanan Cao, Lixin Zou, Qian Li, Yongxuan Wu, Yang Liu, Dawei Yin, Guandong Xu.</p>
+                                <p class="content"><strong>Abstract: </strong>Multimodal recommendation, which utilizes rich multimodal information to learn user preferences, has attracted significant attention. Most works focus on designing powerful encoders for extracting multimodal features, and simply aggregate the learned features together to make prediction. Consequently, they have a limited capacity to learn the inter-modality knowledge including the modality-shared and modality-unique knowledge. In fact, learning the modality-shared knowledge enables us to align cross-modality data for fusing heterogeneous modality features. Learning the modality-unique knowledge is equally important when recommendation tasks only involve a small amount of shared features and the necessary information is contained within specific modality. In this paper, we propose Contrastive Modality-Disentangled Learning (CMDL) to overcome this critical limitation. CMDL exactly captures the inter-modality knowledge by achieving modality disentanglement. Specifically, CMDL first disentangles the initial representation into the modality-invariant and modality-specific representations. Afterwards, CMDL introduces a novel manner of contrastive learning to approximate the MI upper bounds for achieving disentanglement regularization. Building upon the proposed regularization, CMDL encourages the modality-invariant and modality-specific representations to capture the modality-shared and modality-unique knowledge respectively and to be statistically independent to each other. Empirically, extensive experiments are conducted on benchmark datasets, demonstrating the superior performance of CMDL compared with strong multimodal recommenders.</p>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <a href="https://openreview.net/forum?id=qIareorXas#discussion" class="link">WWW2025: Conformal Graph-level Out-of-distribution Detection with Adaptive Data Augmentation</a>
+                                <p class="content">Xixun Lin, Yanan Cao, Nan Sun, Lixin Zou, Chuan Zhou, Peng Zhang, Shuai Zhang, Ge Zhang, Jia Wu.</p>
+                                <p class="content"><strong>Abstract: </strong>Graph-level out-of-distribution (OOD) detection, which attempts to identify OOD graphs originated from an unknown distribution, is a vital building block for safety-critical applications in Web and society. Current approaches concentrate on how to learn better graph representations, but fail to provide any statistically guarantee on detection results, therefore impeding their deployments in the scenario where detection errors would result in serious consequences. To overcome this critical issue, we propose the Conformal Graph-level Out-of-distribution Detection (CGOD), extending the theory of conformal prediction to graph-level OOD detection with a rigorous control over the false positive rate. In CGOD, we develop a new aggregated non-conformity score function based on the proposed adaptive data augmentation. Through the guidance from two designed metrics, i.e., score consistency and representation diversity, our augmentation strategy can generate multiple non-conformity scores, and aggregating these generated non-conformity scores together is robust to the misleading information. Meanwhile, our score function can perceive the subsequent process of conformal inference, enabling the aggregated non-conformity score to be adaptive to different input graphs and deriving a more accurate score estimation. We conduct experiments on multiple real-world datasets with different empirical settings. Extensive results and model analyses demonstrate the superior performance of our approach over several competitive baselines.</p>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <a href="" class="link">AAAI2025: UniFORM: Towards Unified Framework for Anomaly Detection on Graphs</a>
+                                <p class="content">Chuancheng Song, Xixun Lin, Hanyang Shen, Yanmin Shang, Yanan Cao.</p>
+                                <p class="content"><strong>Abstract: Graph anomaly detection has attracted significant attention due to its critical applications, such as identifying money laundering in financial systems and detecting fake reviews on social networks. However, two major challenges persist: (1) anomaly detection at the node, edge, and graph levels is often addressed in isolation, hindering the integration of complementary information to identify anomalies arising from collective behaviors; and (2) the inherent label sparsity in graph data, coupled with the difficulty of obtaining high-quality annotations, exacerbates bias in detection. To address these challenges, we propose UniFORM, a unified self-supervised anomaly detection framework comprising three modules: UIO, UMC and UPL. UIO unifies node-, edge-, and graph-level tasks from a subgraph perspective, leveraging an energy-based GNN for iterative multi-granular anomaly detection. UMC enhances meta-learning through contrastive learning and employs Langevin dynamics to generate phantom samples as substitutes for anomalous data, reducing reliance on labeled data. UPL design unified loss in intra-inter perspectives. Extensive experiments on real-world datasets demonstrate that UniFORM significantly outperforms state-of-the-art methods across multiple granularities.</strong></p>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <a href="https://link.springer.com/article/10.1007/s11280-024-01320-0" class="link">WWWJ2024: A Data-centric Framework of Improving Graph Neural Networks for Knowledge Graph Embedding</a>
+                                <p class="content">Yanan Cao, Xixun Lin*, Yongxuan Wu, Fengzhao Shi, Yanmin Shang, Qingfeng Tan, Chuan Zhou, Peng Zhang.</p>
+                                <p class="content"><strong>Abstract: </strong>Knowledge Graph Embedding (KGE) aims to learn representations of entities and relations of knowledge graph (KG). Recently Graph Neural Networks (GNNs) have gained great success on KGE, but for the reason behind it, most views simply attribute to the well learning of knowledge graph structure, which still remains a limited understanding of the internal mechanism. In this work, we first study a fundamental problem, i.e., what are the important factors for GNNs to help KGE. To investigate this problem, we discuss the core idea of current GNN models for KG, and propose a new assumption of relational homophily that connected nodes possess similar features after relation’s transforming, to explain why aggregating neighbors with relation can help KGE. Based on the model and empirical analyses, we then introduce a novel data-centric framework for applying GNNs to KGE called KSG-GNN. In KSG-GNN, we construct a new graph structure from KG named Knowledge Similarity Graph (KSG), where each node connects with its similar nodes as neighbors, and then we apply GNNs on this graph to perform KGE. Instead of following the relational homophily assumption in KG, KSG aligns with homogeneous graphs that can directly satisfy homophily assumption. Hence, any GNN developed on homogeneous graphs like GCN, GAT, GraphSAGE, etc., can be applied out-of-the-box as KSG-GNN without modification, which provides a more general and effective GNN paradigm. Finally, we conduct extensive experiments on two benchmark datasets, i.e., FB15k-237 and WN18RR, demonstrating the superior performance of KSG-GNN over multiple strong baselines.</p>
+                                <a href="https://github.com/advancer99/WWWJ-KGE">https://github.com/advancer99/WWWJ-KGE</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <a href="https://link.springer.com/article/10.1007/s11280-024-01261-8" class="link">WWWJ2024: VR-GNN: Variational Relation Vector Graph Neural Network for Modeling Homophily and Heterophily</a>
+                                <p class="content">Fengzhao Shi, Yanan Cao, Ren Li, Xixun Lin, Yanmin Shang, Chuan Zhou, Jia Wu, Shirui Pan.</p>
+                                <p class="content"><strong>Abstract: </strong>Graph Neural Networks (GNNs) have achieved remarkable success in diverse real-world applications. Traditional GNNs are designed based on homophily, which leads to poor performance under heterophily scenarios. Most current solutions deal with heterophily mainly by modeling the heterophily edges as data noises or high-frequency signals, treating all heterophilic edges as being of the same semantic. Consequently, they ignore the rich semantic information of these edges in heterophily graphs. To overcome this critic problem, we propose a novel GNN model based on relation vector translation named as Variational Relation Vector Graph Neural Network (VR-GNN). VR-GNN models relation generation and graph aggregation into an end-to-end model based on a variational inference framework. To be specific, the encoder utilizes the structure, feature and label to generate a fine-grained relation vector for each edge, which aims to infer its implicit semantic information. The decoder incorporates the generated relation vectors into the message-passing framework for deriving better node representations. We conduct extensive experiments on eight real-world datasets with different homophily-heterophily properties to verify model effectiveness. Extensive experimental results show that VR-GNN gains consistent and significant improvements against existing strong GNN methods under heterophily and competitive performance under homophily.</p>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
                                 <a href="https://openreview.net/pdf?id=xJUhgvM2u8" class="link">ICDM2024: Graph
                                     Neural Stochastic Diffusion for Estimating Uncertainty in Node Classification.
                                 </a>
                                 <p class="content">Xixun Lin, Wenxiao Zhang, Fengzhao Shi, Chuan Zhou, Lixin Zou,
                                     Xiangyu Zhao, Dawei Yin, Shirui Pan, Yanan Cao</p>
-                                <p class="content"><strong>Abstract:</strong> Graph neural networks (GNNs) have
+                                <p class="content"><strong>Abstract: </strong>Graph neural networks (GNNs) have
                                     advanced the state of the art in various domains. Despite their remarkable
                                     success, the uncertainty estimation of GNN predictions remains under-explored,
                                     which limits their practical applications especially in risk-sensitive areas.
@@ -73,7 +114,7 @@
                                 <a href="https://dl.acm.org/doi/pdf/10.1145/3616855.3635804" class="link">WSDM2024:
                                     Generative Models for Complex Logical Reasoning over Knowledge Graphs. </a>
                                 <p class="content">Yu Liu, Yanan Cao, Shi Wang, Qingyue Wang, Guanqun Bi</p>
-                                <p class="content"><strong>Abstract:</strong>Answering complex logical queries over
+                                <p class="content"><strong>Abstract: </strong>Answering complex logical queries over
                                     knowledge graphs (KGs) is a fundamental yet challenging task. Recently, query
                                     representation has been a mainstream approach to complex logical reasoning,
                                     making the target answer and query closer in the embedding space. However, there
@@ -102,7 +143,7 @@
                                     Multi-Aspect Heterogeneous Graph Augmentation. </a>
                                 <p class="content">Yuchen Zhou, Yanan Cao, Yongchao Liu, Yanmin Shang, Peng Zhang,
                                     Zheng Lin, Yun Yue, Baokun Wang, Xing Fu, Weiqiang Wang</p>
-                                <p class="content"><strong>Abstract:</strong>Data augmentation has been widely
+                                <p class="content"><strong>Abstract: </strong>Data augmentation has been widely
                                     studied as it can be used to improve the generalizability of graph
                                     representation learning models. However, existing works focus only on the data
                                     augmentation on homogeneous graphs. Data augmentation for heterogeneous graphs
@@ -134,7 +175,7 @@
                                 </a>
                                 <p class="content">Yuchen Zhou, Yanan Cao, Yanmin Shang, Chuan Zhou, Shirui Pan,
                                     Zheng Lin, Qian Li</p>
-                                <p class="content"><strong>Abstract:</strong>Recommender systems which captures
+                                <p class="content"><strong>Abstract: </strong>Recommender systems which captures
                                     dynamic user interest based on time-ordered user-item interactions plays a
                                     critical role in the real-world. Although existing deep learning-based
                                     recommendation systems show good performances, these methods have two main
@@ -171,7 +212,7 @@
                                     Neural Network. </a>
                                 <p class="content">Yuchen Zhou, Yanmin Shang, Yanan Cao, Qian Li, Chuan Zhou,
                                     Guandong Xu.</p>
-                                <p class="content"><strong>Abstract:</strong>Attributed graph embedding aims to
+                                <p class="content"><strong>Abstract: </strong>Attributed graph embedding aims to
                                     learn node representation based on the graph topology and node attributes. The
                                     current mainstream GNN-based methods learn the representation of the target node
                                     by aggregating the attributes of its neighbor nodes. These methods still face
@@ -201,7 +242,7 @@
                                 </a>
                                 <p class="content">Yuchen Zhou, Yanan Cao, Yanmin Shang, Chuan Zhou, Chuancheng
                                     Song, Fengzhao Shi, Qian Li</p>
-                                <p class="content"><strong>Abstract:</strong>Graph meta-learning which is used to
+                                <p class="content"><strong>Abstract: </strong>Graph meta-learning which is used to
                                     deal with graph few-shot learning attracts more and more research interests.
                                     Existing graph meta-learning methods mainly focus on capturing node-level
                                     relations, but they ignore task-level relations which are beneficial for
@@ -228,7 +269,7 @@
                                     Connections </a>
                                 <p class="content">Fengzhao Shi, Yanan Cao, Yanmin Shang, Yuchen Zhou,Chuan Zhou,Jia
                                     Wu</p>
-                                <p class="content"><strong>Abstract:</strong>In the fraud graph, fraudsters often
+                                <p class="content"><strong>Abstract: </strong>In the fraud graph, fraudsters often
                                     interact with a large number of benign entities to hide themselves. So, there
                                     are not only the homophilic connections formed by the same label nodes (similar
                                     nodes), but also the heterophilic connections formed by the different label
@@ -257,7 +298,7 @@
                                 </a>
                                 <p class="content">Ren Li, Yanan Cao, Qiannan Zhu, Guanqun Bi, Fang Fang, Yi Liu,
                                     Qian Li</p>
-                                <p class="content"><strong>Abstract:</strong>Knowledge Graph Embedding (KGE) aims to
+                                <p class="content"><strong>Abstract: </strong>Knowledge Graph Embedding (KGE) aims to
                                     learn representations for entities and relations. Most KGE models have gained
                                     great success, especially on extrapolation scenarios. Specifically, given an
                                     unseen triple (h, r, t), a trained model can still correctly predict t from (h,
@@ -292,7 +333,7 @@
                                     Reinforcement Learning for User Identity Linkage</a>
                                 <p class="content">Xiaoxue Li, Yanan Cao*, Yanmin Shang, Yangxi Li, Qian Li,
                                     Guandong Xu</p>
-                                <p class="content"><strong>Abstract:</strong>User identity linkage is a task of
+                                <p class="content"><strong>Abstract: </strong>User identity linkage is a task of
                                     recognizing the identities of the same user across different social networks
                                     (SN). Previous works tackle this problem via estimating the pairwise similarity
                                     between identities from different SN, predicting the label of identity pairs or
@@ -317,7 +358,7 @@
                                     Networks based on Graph Attention Network </a>
                                 <p class="content">Xiaoxue Li, Yanan Cao*, Yanmin Shang, Yangxi Li, Yanbing Liu,
                                     Jianlong Tan</p>
-                                <p class="content"><strong>Abstract:</strong>Anchor Link Prediction (ALP) across
+                                <p class="content"><strong>Abstract: </strong>Anchor Link Prediction (ALP) across
                                     heterogeneous networks plays a pivotal role in inter-network applications. The
                                     difficulty of anchor link prediction in heterogeneous networks lies in how to
                                     consider the factors affecting nodes alignment comprehensively. In recent years,
