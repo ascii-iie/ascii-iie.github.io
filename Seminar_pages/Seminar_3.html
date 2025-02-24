@@ -23,8 +23,6 @@
 				<a href="#" class="list-group-item list-group-item-action list-header" style="background: #f6f6f6;">
 					<h5 style="text-align: center;">专辑</h5>
 				</a>
-				<a href="#2024年12月-2025年1月：2025新年专辑" class="list-group-item list-group-item-action">
-					<span class="badge text-bg-primary">2024年12月-2025年1月</span><br>2025新年专辑</a>
 				<a href="#2024年11-12月：专家讲座" class="list-group-item list-group-item-action">
 					<span class="badge text-bg-primary">2024年11-12月</span><br>专家讲座</a>
 				<a href="#2024年8-10月：大模型安全主题调研" class="list-group-item list-group-item-action">
@@ -70,8 +68,9 @@
 					</li>
 					<li class="page-item"><a class="page-link" href="./Seminar_2.html">2</a></li>
 					<li class="page-item active"><a class="page-link" href="./Seminar_3.html">3</a></li>
-					<li class="page-item disabled">
-						<a class="page-link" href="./Seminar_3.html" aria-label="Next">
+					<li class="page-item"><a class="page-link" href="./Seminar_4.html">4</a></li>
+					<li class="page-item">
+						<a class="page-link" href="./Seminar_4.html" aria-label="Next">
 							<span aria-hidden="true">&raquo;</span>
 						</a>
 					</li>
@@ -92,142 +91,6 @@
 					<hr>
 				</div>
 			</div>
-
-			<div class="period-title">
-				<h2 id="2024年12月-2025年1月：2025新年专辑"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-						fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16">
-						<path
-							d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
-					</svg>&nbsp;2024年12月-2025年1月：2025新年专辑</h2>
-			</div>
-			<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 g-4">
-				<div class="col">
-					<div class="card shadow">
-						<div class="card-header">
-							<div>第122期讨论班</div>
-							<div><span class="badge text-bg-secondary rounded-pill">2025-01-16</span></div>
-						</div>
-						<div class="card-body">
-							<h5 class="card-title">证据学习与OOD检测</h5>
-							<h6 class="card-subtitle mb-2 text-body-secondary"><span
-									class="badge text-bg-success">主讲人</span>&nbsp; 宋传承</h6>
-							<hr>
-							<p class="card-text" id="card-text-122-1">
-								证据学习（Evidential Deep Learning, EDL）引入了证据理论（Evidential Theory）将类别概率分布建模为一个Dirichlet分布，将模型输出的logits作为主观意见的证据（evidence），从中计算预测的置信度和不确定性，因为EDL量化地提供了分类任务的不确定性估计，因此天然适用于OOD检测任务。本次讨论班回顾了EDL的理论基础，并探讨其用于OOD检测的不同尝试。
-								<span class="fade-effect"></span>
-							</p>
-							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
-								onclick="toggleText('card-text-122-1', this)">
-								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-									<path
-										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-								</svg>
-							</button>
-						</div>
-						<div class="card-footer" style="text-align: center;">
-							<a href="../Seminar/250116-证据学习与OOD检测-宋传承.pptx" class="card-link">演示文稿</a>
-							<a href="https://meeting.tencent.com/crm/Kmy5GGzv0c" class="card-link">录屏链接</a>
-						</div>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card shadow">
-						<div class="card-header">
-							<div>第121期讨论班</div>
-							<div><span class="badge text-bg-secondary rounded-pill">2025-01-09</span></div>
-						</div>
-						<div class="card-body">
-							<h5 class="card-title">DDPM及其在用户建模中的应用</h5>
-							<h6 class="card-subtitle mb-2 text-body-secondary"><span
-									class="badge text-bg-success">主讲人</span>&nbsp; 朱孝伟</h6>
-							<hr>
-							<p class="card-text" id="card-text-121-1">
-								不断更新迭代的LLM具备越发强大的文本生成能力，其生成文本与人类书写文本也越来越相似。LLM在科研与工业领域中提高众人生产力的同时，也存在潜在的危害，不法分子可能利用LLM生成虚假新闻、垃圾邮件、恶意评论等，因此开发先进的AI生成文本检测方法是迫切需要的。自2018年以前至2024年，涌现了许多的AI文本检测方法，包括可监督的方法（例如RADAR、MMD-MP、MPU等）以及零样本方法（DetectGPT、Binoculars等）。本次讨论班让我们走进NeuIPS 2024的相关研究，追踪AI文本检测领域的最新研究。
-								<span class="fade-effect"></span>
-							</p>
-							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
-								onclick="toggleText('card-text-121-1', this)">
-								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-									<path
-										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-								</svg>
-							</button>
-						</div>
-						<div class="card-footer" style="text-align: center;">
-							<a href="../Seminar/250109-Machine-generated Text Detection in NeurIPS 2024-朱孝伟.pptx" class="card-link">演示文稿</a>
-							<a href="https://meeting.tencent.com/crm/l51OZkWr8b" class="card-link">录屏链接</a>
-						</div>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card shadow">
-						<div class="card-header">
-							<div>第120期讨论班</div>
-							<div><span class="badge text-bg-secondary rounded-pill">2025-01-03</span></div>
-						</div>
-						<div class="card-body">
-							<h5 class="card-title">DDPM及其在用户建模中的应用</h5>
-							<h6 class="card-subtitle mb-2 text-body-secondary"><span
-									class="badge text-bg-success">主讲人</span>&nbsp; 周红</h6>
-							<hr>
-							<p class="card-text" id="card-text-120-1">
-								扩散模型是一类逐渐兴起的生成模型，通过模拟数据生成过程中的逐步扩散与去噪，实现高质量的数据生成。作为该领域的经典代表，Denoising Diffusion Probabilistic Models (DDPM) 在生成图像、音频等多种任务中表现出色，其背后的数学原理奠定了扩散模型的理论基础。同时，扩散模型在推荐系统中的应用也逐步显现出潜力。例如，通过扩散模型，推荐系统能够更精准地进行用户建模，捕捉用户行为中的潜在模式。这种方法利用扩散模型重新定义了个性化推荐任务，为复杂的用户行为建模提供了新的解决方案。本期讨论班将介绍扩散模型的基本概念，并深入探讨Denoising Diffusion Probabilistic Models (DDPM) 的数学原理，最后我们将讨论DDPM如何在推荐系统中进行用户建模。
-								<span class="fade-effect"></span>
-							</p>
-							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
-								onclick="toggleText('card-text-120-1', this)">
-								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-									<path
-										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-								</svg>
-							</button>
-						</div>
-						<div class="card-footer" style="text-align: center;">
-							<a href="../Seminar/250103-DDPM及其在用户建模中的应用-周红.pdf" class="card-link">演示文稿</a>
-							<!-- <a href="" class="card-link">录屏链接</a> -->
-						</div>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card shadow">
-						<div class="card-header">
-							<div>第119期讨论班</div>
-							<div><span class="badge text-bg-secondary rounded-pill">2024-12-27</span></div>
-						</div>
-						<div class="card-body">
-							<h5 class="card-title">暗语（行话/黑话）识别与发现</h5>
-							<h6 class="card-subtitle mb-2 text-body-secondary"><span
-									class="badge text-bg-success">主讲人</span>&nbsp; 董方龙</h6>
-							<hr>
-							<p class="card-text" id="card-text-119-1">
-								暗语（也称行话、黑话）是一种用户为规避监管、掩饰非法活动而对敏感词汇进行特殊替代或歪曲的表达方式。它具有高度的隐蔽性。专业性和创造性，传统的基于规则或简单语义分析的方法难以应对。因此，收集并标注与暗语相关的高质量文本、深度提取特征捕捉隐晦的语义表达、设计高效的暗语识别框架与评估体系，是暗语识别发现的研究核心。本次讨论班将重点围绕这三方面展开，并探索与大语言模型结合的可行性。
-								<span class="fade-effect"></span>
-							</p>
-							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
-								onclick="toggleText('card-text-119-1', this)">
-								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-									<path
-										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-								</svg>
-							</button>
-						</div>
-						<div class="card-footer" style="text-align: center;">
-							<a href="../Seminar/241230-Identification of jargons-董方龙.pdf" class="card-link">演示文稿</a>
-							<a href="https://meeting.tencent.com/crm/KeYqj8LPe9" class="card-link">录屏链接</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-
-
-			<br>
-			<hr><br><br>
-
 
 			<div class="period-title">
 				<h2 id="2024年11-12月：专家讲座"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
@@ -1423,8 +1286,9 @@
 					</li>
 					<li class="page-item"><a class="page-link" href="./Seminar_2.html">2</a></li>
 					<li class="page-item active"><a class="page-link" href="./Seminar_3.html">3</a></li>
-					<li class="page-item disabled">
-						<a class="page-link" href="./Seminar_3.html" aria-label="Next">
+					<li class="page-item"><a class="page-link" href="./Seminar_4.html">4</a></li>
+					<li class="page-item">
+						<a class="page-link" href="./Seminar_4.html" aria-label="Next">
 							<span aria-hidden="true">&raquo;</span>
 						</a>
 					</li>

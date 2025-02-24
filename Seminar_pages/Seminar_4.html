@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Seminar</title>
+	<link rel="icon" type="image/x-icon" href="../img/ASCII_1.ico" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.staticfile.net/bootstrap/5.3.2/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.net/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css_style.css" />
+	<link rel="stylesheet" type="text/css" href="./Seminar_pages.css" />
+</head>
+
+
+<body>
+	<div id="navbar"></div> <!-- 用于插入导航栏的容器 -->
+
+	<div class="container-fluid" style="margin-top: 100px;">
+
+		<nav class="sidenav-left d-flex flex-column p-3">
+			<div class="list-group" id="volumelist">
+				<a href="#" class="list-group-item list-group-item-action list-header" style="background: #f6f6f6;">
+					<h5 style="text-align: center;">专辑</h5>
+				</a>
+				<a href="#2025年2月-2025年3月：2025春季（一）" class="list-group-item list-group-item-action">
+					<span class="badge text-bg-primary">2025年2月-2025年3月</span><br>2025春季（一）</a>
+				<a href="#2024年12月-2025年1月：2025新年专辑" class="list-group-item list-group-item-action">
+					<span class="badge text-bg-primary">2024年12月-2025年1月</span><br>2025新年专辑</a>
+			</div>
+		</nav>
+
+		<nav class="sidenav-right d-flex flex-column p-3">
+			<!-- 控制所有卡片折叠/展开的按钮 -->
+			<button type="button" id="back-to-top" class="btn btn-outline-danger" onclick="scrollToTop()">
+				回到顶部
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+					class="bi bi-chevron-bar-up" viewBox="0 0 16 16">
+					<path fill-rule="evenodd"
+						d="M3.646 11.854a.5.5 0 0 0 .708 0L8 8.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708M2.4 5.2c0 .22.18.4.4.4h10.4a.4.4 0 0 0 0-.8H2.8a.4.4 0 0 0-.4.4" />
+				</svg>
+			</button>
+			<br>
+			<button type="button" class="btn btn-outline-primary toggle-all-btn" onclick="toggleAllCards(this)">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+					class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+					<path
+						d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+				</svg>
+				展开 | 折叠
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+					class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+					<path
+						d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+				</svg>
+			</button>
+			<br>
+			<nav aria-label="Page navigation">
+				<ul class="pagination">
+					<li class="page-item">
+						<a class="page-link" href="./Seminar_1.html" aria-label="Previous">
+							<span aria-hidden="true">&laquo;</span>
+						</a>
+					</li>
+					<li class="page-item"><a class="page-link" href="./Seminar_3.html">3</a></li>
+					<li class="page-item active"><a class="page-link" href="./Seminar_4.html">4</a></li>
+					<li class="page-item disabled">
+						<a class="page-link" href="./Seminar_4.html" aria-label="Next">
+							<span aria-hidden="true">&raquo;</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</nav>
+
+		<div class="main">
+
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="/index.html">Index</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Seminar</li>
+						</ol>
+					</nav>
+					<hr>
+				</div>
+			</div>
+
+			<div class="period-title">
+				<h2 id="2025年2月-2025年3月：2025春季（一）"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+						fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16">
+						<path
+							d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+					</svg>&nbsp;2025年2月-2025年3月：2025春季（一）</h2>
+			</div>
+			<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 g-4">
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第124期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2025-02-21</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">水印在版权保护上的应用</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp; 李豪</h6>
+							<hr>
+							<p class="card-text" id="card-text-124-1">
+								随着人工智能技术的发展和普及，版权保护成为人工智能领域中值得关注的难题。尤其是在生成式AI技术蓬勃发展的背景下，如何确保原创内容不被非法复制和滥用，成为了业内亟待解决的问题。水印因其有效性成为一种有希望的版权保护候选技术，在多个场景中均有应用。前期讨论班已介绍了语言模型水印的最新进展，本次讨论班将介绍水印在Prompt、模型和数据集版权保护上的应用，希望对大家的工作有所启发。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-124-1', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<!-- <a href="" class="card-link">演示文稿</a> -->
+							<a href="https://meeting.tencent.com/crm/lJ4yXagE84" class="card-link">录屏链接</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第123期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2025-02-14</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Why DeepSeek?</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp; 张岚雪</h6>
+							<hr>
+							<p class="card-text" id="card-text-123-1">
+								自1月20日发布以来，Deepseek R1以低成本、高性能的颠覆性优势，成为大语言模型迈向推理时代的标杆，并对高价闭源模型（如OpenAI O1）形成强力冲击。为什么Deepseek R1能够走向成功，相较于之前的版本保留了什么又更新了什么？训练过程中的一些现象如何解释？让我们一起在本次讨论班揭晓答案。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-123-1', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<!-- <a href="" class="card-link">演示文稿</a> -->
+							<a href="https://meeting.tencent.com/crm/2347P7eJ90" class="card-link">录屏链接</a>
+						</div>
+					</div>
+				</div>
+			</div>
+						
+
+
+			<br>
+			<hr><br><br>
+
+
+
+			<div class="period-title">
+				<h2 id="2024年12月-2025年1月：2025新年专辑"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+						fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16">
+						<path
+							d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+					</svg>&nbsp;2024年12月-2025年1月：2025新年专辑</h2>
+			</div>
+			<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 g-4">
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第122期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2025-01-16</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">证据学习与OOD检测</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp; 宋传承</h6>
+							<hr>
+							<p class="card-text" id="card-text-122-1">
+								证据学习（Evidential Deep Learning, EDL）引入了证据理论（Evidential Theory）将类别概率分布建模为一个Dirichlet分布，将模型输出的logits作为主观意见的证据（evidence），从中计算预测的置信度和不确定性，因为EDL量化地提供了分类任务的不确定性估计，因此天然适用于OOD检测任务。本次讨论班回顾了EDL的理论基础，并探讨其用于OOD检测的不同尝试。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-122-1', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/250116-证据学习与OOD检测-宋传承.pptx" class="card-link">演示文稿</a>
+							<a href="https://meeting.tencent.com/crm/Kmy5GGzv0c" class="card-link">录屏链接</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第121期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2025-01-09</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">机生文本检测最新进展</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp; 朱孝伟</h6>
+							<hr>
+							<p class="card-text" id="card-text-121-1">
+								不断更新迭代的LLM具备越发强大的文本生成能力，其生成文本与人类书写文本也越来越相似。LLM在科研与工业领域中提高众人生产力的同时，也存在潜在的危害，不法分子可能利用LLM生成虚假新闻、垃圾邮件、恶意评论等，因此开发先进的AI生成文本检测方法是迫切需要的。自2018年以前至2024年，涌现了许多的AI文本检测方法，包括可监督的方法（例如RADAR、MMD-MP、MPU等）以及零样本方法（DetectGPT、Binoculars等）。本次讨论班让我们走进NeuIPS 2024的相关研究，追踪AI文本检测领域的最新研究。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-121-1', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/250109-Machine-generated Text Detection in NeurIPS 2024-朱孝伟.pptx" class="card-link">演示文稿</a>
+							<a href="https://meeting.tencent.com/crm/l51OZkWr8b" class="card-link">录屏链接</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第120期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2025-01-03</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">DDPM及其在用户建模中的应用</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp; 周红</h6>
+							<hr>
+							<p class="card-text" id="card-text-120-1">
+								扩散模型是一类逐渐兴起的生成模型，通过模拟数据生成过程中的逐步扩散与去噪，实现高质量的数据生成。作为该领域的经典代表，Denoising Diffusion Probabilistic Models (DDPM) 在生成图像、音频等多种任务中表现出色，其背后的数学原理奠定了扩散模型的理论基础。同时，扩散模型在推荐系统中的应用也逐步显现出潜力。例如，通过扩散模型，推荐系统能够更精准地进行用户建模，捕捉用户行为中的潜在模式。这种方法利用扩散模型重新定义了个性化推荐任务，为复杂的用户行为建模提供了新的解决方案。本期讨论班将介绍扩散模型的基本概念，并深入探讨Denoising Diffusion Probabilistic Models (DDPM) 的数学原理，最后我们将讨论DDPM如何在推荐系统中进行用户建模。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-120-1', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/250103-DDPM及其在用户建模中的应用-周红.pdf" class="card-link">演示文稿</a>
+							<!-- <a href="" class="card-link">录屏链接</a> -->
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第119期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2024-12-27</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">暗语（行话/黑话）识别与发现</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp; 董方龙</h6>
+							<hr>
+							<p class="card-text" id="card-text-119-1">
+								暗语（也称行话、黑话）是一种用户为规避监管、掩饰非法活动而对敏感词汇进行特殊替代或歪曲的表达方式。它具有高度的隐蔽性。专业性和创造性，传统的基于规则或简单语义分析的方法难以应对。因此，收集并标注与暗语相关的高质量文本、深度提取特征捕捉隐晦的语义表达、设计高效的暗语识别框架与评估体系，是暗语识别发现的研究核心。本次讨论班将重点围绕这三方面展开，并探索与大语言模型结合的可行性。
+								<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-119-1', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<a href="../Seminar/241230-Identification of jargons-董方龙.pdf" class="card-link">演示文稿</a>
+							<a href="https://meeting.tencent.com/crm/KeYqj8LPe9" class="card-link">录屏链接</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<footer>
+			<br>
+			<hr><br><br>
+			<nav aria-label="Page navigation">
+				<ul class="pagination justify-content-center">
+					<li class="page-item">
+						<a class="page-link" href="./Seminar_1.html" aria-label="Previous">
+							<span aria-hidden="true">&laquo;</span>
+						</a>
+					</li>
+					<li class="page-item"><a class="page-link" href="./Seminar_3.html">3</a></li>
+					<li class="page-item active"><a class="page-link" href="./Seminar_4.html">4</a></li>
+					<li class="page-item disabled">
+						<a class="page-link" href="./Seminar_4.html" aria-label="Next">
+							<span aria-hidden="true">&raquo;</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+	</div>
+
+	<div class="footer">
+		<p>ASCII Lab, Institute of Information Engineering, Chinese Academy of
+			Sciences. No.19 Shucun Road,
+			Haidian District, Beijing, China<a
+				href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a>
+			100085</p>
+	</div>
+
+
+	<script>
+		const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+		const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+		function toggleText(id, btn) {
+			const textElement = document.getElementById(id);
+			const svgIcon = btn.querySelector('svg path'); // 获取SVG路径
+
+			if (textElement.classList.contains('expanded')) {
+				// 折叠状态，显示向下箭头
+				textElement.classList.remove('expanded');
+				svgIcon.setAttribute('d', 'M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'); // 向下箭头路径
+			} else {
+				// 展开状态，显示向上箭头
+				textElement.classList.add('expanded');
+				svgIcon.setAttribute('d', 'M7.247 4.86l4.796 5.48c.566.645.106 1.658-.753 1.658H3.204a1 1 0 0 1-.753-1.659l4.796-5.48a1 1 0 0 1 1.506 0z'); // 向上箭头路径
+			}
+		}
+		// 控制所有卡片折叠/展开
+		// 控制所有卡片的展开/折叠，确保按钮状态也正确
+		function toggleAllCards(btn) {
+			const allCardTexts = document.querySelectorAll('.card-text'); // 获取所有卡片的 card-text
+			const allToggleButtons = document.querySelectorAll('.toggle-btn'); // 获取所有控制每个卡片的按钮
+			let isExpanded = false;
+
+			// 判断当前是否有任意一个卡片已经展开
+			allCardTexts.forEach(text => {
+				if (text.classList.contains('expanded')) {
+					isExpanded = true;
+				}
+			});
+
+			// 如果有展开的卡片，则全部折叠；否则全部展开
+			allCardTexts.forEach(text => {
+				if (isExpanded) {
+					text.classList.remove('expanded');
+				} else {
+					text.classList.add('expanded');
+				}
+			});
+
+			// 更新每个按钮的图标
+			allToggleButtons.forEach((button, index) => {
+				if (isExpanded) {
+					button.innerHTML = `
+				<svg xmlns="http://www.w3.org/2000/svg" class="bi bi-caret-down-fill svg-icon" viewBox="0 0 16 16">
+					<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+				</svg>
+			`;
+				} else {
+					button.innerHTML = `
+				<svg xmlns="http://www.w3.org/2000/svg" class="bi bi-caret-up-fill svg-icon" viewBox="0 0 16 16">
+					<path d="M7.247 4.86l4.796 5.48c.566.645.106 1.658-.753 1.658H3.204a1 1 0 0 1-.753-1.659l4.796-5.48a1 1 0 0 1 1.506 0z"/>
+				</svg>
+			`;
+				}
+			});
+		}
+		window.onscroll = function () {
+			const backToTopButton = document.getElementById("back-to-top");
+			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+				backToTopButton.style.display = "block";
+			} else {
+				backToTopButton.style.display = "none";
+			}
+		};
+
+		// 滚动到页面顶部
+		function scrollToTop() {
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth" // 平滑滚动
+			});
+		}
+	</script>
+
+	<script>
+		// 使用 fetch 动态加载 head.html
+		fetch('/head.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('navbar').innerHTML = data;
+			})
+			.catch(error => console.error('Error loading navbar:', error));
+	</script>
+
+</body>
+
+</html>
