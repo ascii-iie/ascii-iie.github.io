@@ -86,6 +86,16 @@ body {
     height: auto;
 }
 
+@media (min-width: 576px) {
+    #menulist {
+        position: sticky;
+        top: 200px;  /* 距离顶部 10px，防止紧贴页面顶部 */
+        height: fit-content;  /* 让菜单适应内容 */
+        max-height: 90vh; /* 避免菜单超出屏幕 */
+        overflow-y: auto; /* 如果内容太多，允许滚动 */
+    }
+}
+
 
 #menulist .list-group-item.list-group-item-action {
     background-color: #bbc6d2;
