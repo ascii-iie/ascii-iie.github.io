@@ -35,6 +35,23 @@
                 font-size: small;
             }
         }
+
+        #Layer1 {
+            z-index: 1;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .bg-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;   /* 核心：保持比例、填满容器 */
+            opacity: 0.8;
+        }
     </style>
 
 </head>
@@ -43,8 +60,11 @@
 
     <div id="navbar"></div> <!-- 用于插入导航栏的容器 -->
 
-    <div id="Layer1" style="z-index: 1;position:fixed; left:0px; top:0px; width:100%; height:100%;">
+    <!-- <div id="Layer1" style="z-index: 1;position:fixed; left:0px; top:0px; width:100%; height:100%;">
         <img src="img/bg3.jpg" width="100%" height="100%" opacity=0.8 />
+    </div> -->
+    <div id="Layer1">
+        <img src="img/bg3.jpg" class="bg-img">
     </div>
     <!-- <div class="scroll-container">
         <div class="scroll-text"><a href="./News/20240516.html"
