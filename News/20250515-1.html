@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>News</title>
+    <link rel="icon" type="image/x-icon" href="/img/ASCII_1.ico" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.net/bootstrap/5.3.2/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.net/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css_style.css">
+</head>
+
+<body>
+
+    <div id="navbar"></div> <!-- 用于插入导航栏的容器 -->
+
+    <div class="container-fluid" style="margin-top: 100px;">
+
+        <button type="button" id="back-to-top" class="btn btn-outline-danger" onclick="scrollToTop()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-bar-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M3.646 11.854a.5.5 0 0 0 .708 0L8 8.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708M2.4 5.2c0 .22.18.4.4.4h10.4a.4.4 0 0 0 0-.8H2.8a.4.4 0 0 0-.4.4" />
+            </svg>
+        </button>
+
+        <div class="main">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/index.html">Index</a></li>
+                            <li class="breadcrumb-item"><a href="/News.html">News</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Academic News</li>
+                        </ol>
+                    </nav>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="list-group col-sm-2 " id="menulist">
+                    <a href="/News.html" class="list-group-item list-group-item-action active shadow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
+                        <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5z"/>
+                        <path d="M2 3h10v2H2zm0 3h4v3H2zm0 4h4v1H2zm0 2h4v1H2zm5-6h2v1H7zm3 0h2v1h-2zM7 8h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2z"/>
+                      </svg>&nbsp;&nbsp;Academic News</a>
+                    <a href="/DailyNews.html" class="list-group-item list-group-item-action shadow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
+                        <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5z"/>
+                        <path d="M2 3h10v2H2zm0 3h4v3H2zm0 4h4v1H2zm0 2h4v1H2zm5-6h2v1H7zm3 0h2v1h-2zM7 8h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2z"/>
+                      </svg>&nbsp;&nbsp;Daily News</a>
+                </div>
+                <div class="col-sm-8">
+
+                    
+                <div class="col-sm-12 column">
+                    <ul class="list-group list-group-flush">
+                        <h3 align="center"><strong>CCKS 2025技术评测</strong>——大模型生成文本检测
+                            #<strong>￥20,000</strong></h3>
+                        <p align="center">
+                            <font size="2" color="616460">发布时间：2025年05月15日</font>
+                        </p>
+                        <hr align size="3" color="#eee">
+                        <p>
+                            <font size="3">&emsp;&emsp;
+                                CCKS 2025组织知识图谱相关评测竞赛，旨在促进知识图谱领域的技术发展，以及学术成果与产业需求的融合和对接。在2024年，CCKS评测竞赛环节共包含11项竞赛，涵盖知识编辑、知识抽取、复杂问答等多项任务，吸引了超过2400支队伍、近5300人参赛，共计24万奖金，单任务最高5万元，在工业界和学术界形成较高影响力。
+                            </font>
+                        </p>
+                        <br>
+                        <p>
+                            <font size="3">&emsp;&emsp;今年，经过评测任务第一轮征集和评测组委会筛选，CCKS 2025目前共设8项评测任务（详细信息请访问：<a href="https://sigkg.cn/ccks2025/evaluation-2/">https://sigkg.cn/ccks2025/evaluation-2/</a>）。中国科学院信息工程研究所ASCII LAB主办了<strong>任务五</strong>，现开启报名。</font>
+                        </p>
+                        <br>
+
+                        <div class="col-sm-12 column ">
+                            <p>
+                                <font size="3"><strong>&emsp;任务五</strong>大模型生成文本检测评测主页：</font>
+                            </p>
+                            <p>
+                                <font size="3"><a href="https://tianchi.aliyun.com/competition/entrance/532358"
+                                        style="text-decoration: none;">&emsp;https://tianchi.aliyun.com/competition/entrance/532358</a>
+                                </font>
+                            </p>
+                            <p style="text-align: center">&emsp;<img class="img-news" src="../img/CCKS_2025-1.png" width="400" height="200"></p>
+                        </div>
+
+                        <p style="text-align: center;">
+                            <font size="4" style="text-align: center; color: red;">欢迎大家踊跃报名参加，奖品丰厚!</font>
+                        </p>
+
+                        <br>
+                        <p style="font-size: large;"><strong>评测背景</strong></p>
+                        <p>
+                            <font size="3">
+                                &emsp;&emsp;随着人工智能技术的不断发展，人工智能生成内容（AIGC）的质量日益提升，尤其是大型语言模型生成的文本，已经逐步接近甚至在某些场景中超越人类撰写的水平。因此，AIGC在教育、媒体、商业以及社交平台等领域得到了广泛的应用。然而，大模型技术的高速发展也带来了诸多挑战，例如学术不端、虚假信息传播以及有害内容的生成等负面问题。面对这些问题，如何准确地区分由大模型生成的文本与人类撰写的文本，成为当前学术界和工业界亟需解决的重要课题，并对于维护信息生态安全、促进技术规范发展以及国家层面的监管具有深远意义。
+
+                                大模型生成文本检测的挑战主要体现在以下几个方面：（1）文本风格日益逼真：随着模型规模的扩大和训练数据的丰富，生成文本在语法结构、上下文连贯性以及语义表达方面日益接近人类写作风格，传统基于语言特征的检测方法逐渐失效。（2）模型与训练数据的黑盒性：多数主流大模型为闭源产品，外界难以获取其训练数据和参数细节，进而难以构建针对性的检测机制。此外，同一模型在不同参数设置或提示语下生成的文本差异较大，进一步增加了检测难度。（3）对抗性伪装与改写：恶意用户可通过同义改写、语序调整或语言风格变换等方式对生成文本进行伪装，以规避检测系统，从而增强生成内容的“人类伪装性”。（4）数据分布漂移与新模型涌现：随着新一代语言模型不断推出，其生成风格可能与现有检测方法的训练样本存在分布差异，导致检测准确率下降。因此，尽管这项任务具有重要的应用价值，但要实现高效准确的检测机制，仍需克服上述挑战。
+                            </font>
+                        </p>
+                        <br>
+
+                        <p style="font-size: large;"><strong>赛程安排</strong></p>
+                        <ul style="list-style-type: disc;">
+                            <li>
+                                <font size="3">报名时间：5月10日—7月15日</font>
+                            </li>
+                            <li>
+                                <font size="3">训练数据发布：5月15日</font>
+                            </li>
+                            <li>
+                                <font size="3">测试A榜数据(测试集A)发布：5月15日</font>
+                            </li>
+                            <li>
+                                <font size="3">测试A榜评测截止：7月15日</font>
+                            </li>
+                            <li>
+                                <font size="3">测试B榜数据(测试集B)发布：7月16日</font>
+                            </li>
+                            <li>
+                                <font size="3">测试B榜评测截止：7月21日</font>
+                            </li>
+                            <li>
+                                <font size="3">公布测试结果：8月1日</font>
+                            </li>
+                            <li>
+                                <font size="3">参与评奖队伍审核材料提交：8月8日</font>
+                            </li>
+                            <li>
+                                <font size="3">评测论文提交：9月1日</font>
+                            </li>
+                            <li>
+                                <font size="3">CCKS会议日期(评测报告及颁奖)：9月19日—22日</font>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <p style="font-size: large;"><strong>奖金设置</strong></p>
+                        <p>
+                            <font size="3">&emsp;&emsp;第一名：人民币10000元，1名</font>
+                        </p>
+                        <p>
+                            <font size="3">&emsp;&emsp;第二名：人民币5000元，1名</font>
+                        </p>
+                        <p>
+                            <font size="3">&emsp;&emsp;第三名：人民币2500元，1名</font>
+                        </p>
+                        <p>
+                            <font size="3">&emsp;&emsp;创新奖：人民币2500元，1名</font>
+                        </p>
+                        <p>
+                            <font size="2">&emsp;&emsp;备注：比赛优胜者会获得中国中文信息学会颁发的获奖证书，并有机会录用EI检索的评测论文。</font>
+                        </p>
+                        <br>
+
+                        <p style="font-size: large;"><strong>任务组织者</strong></p>
+                        <p>
+                            <font size="3"><a href="../Team.html"
+                                    style="color: inherit; text-decoration: none;">&emsp;&emsp;曹亚男 （中国科学院信息工程研究所）</a>
+                            </font>
+                        </p>
+                        <p>
+                            <font size="3">&emsp;&emsp;任昱冰 （中国科学院信息工程研究所）</font>
+                        </p>
+                        <p>
+                            <font size="3">&emsp;&emsp;王一丹 （中国科学院信息工程研究所）</font>
+                        </p>
+                        <br>
+
+                        <p style="font-size: large;"><strong>任务联系人</strong></p>
+                        <p>
+                            <font size="3">&emsp;&emsp;任昱冰：renyubing@iie.ac.cn</font>
+                        </p>
+                        <p>
+                            <font size="3">&emsp;&emsp;王一丹：wangyidan@iie.ac.cn</font>
+                        </p>
+                        <br>
+
+                        <p style="font-size: large;"><strong>学术指导组</strong></p>
+                        <p>
+                            <font size="3">&emsp;&emsp;虎嵩林（中国科学院信息工程研究所）</font>
+                        </p>
+                        <p>
+                            <font size="3">&emsp;&emsp;刘燕兵（中国科学院信息工程研究所）</font>
+                        </p>
+                        <br>
+
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <p>ASCII Lab, Institute of Information Engineering, Chinese Academy of
+            Sciences. No.19 Shucun Road,
+            Haidian District, Beijing, China<a
+                href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a>
+            100085</p>
+    </div>
+
+    <script>
+        window.onscroll = function () {
+            const backToTopButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // 滚动到页面顶部
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth" // 平滑滚动
+            });
+        }
+    </script>
+
+    <script>
+        // 使用 fetch 动态加载 head.html
+        fetch('/head.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+
+</body>
+
+</html>
