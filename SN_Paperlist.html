@@ -94,7 +94,7 @@
 
                         <tr>
                             <th>
-                                <a href="https://openreview.net/pdf?id=xJUhgvM2u8" class="link">ICDM2024: Graph
+                                <a href="https://openreview.net/pdf?id=xJUhgvM2u8" class="link">ICML2024: Graph
                                     Neural Stochastic Diffusion for Estimating Uncertainty in Node Classification.
                                 </a>
                                 <p class="content">Xixun Lin, Wenxiao Zhang, Fengzhao Shi, Chuan Zhou, Lixin Zou,
@@ -179,7 +179,7 @@
 
                         <tr>
                             <th>
-                                <a href="https://dl.acm.org/doi/10.1145/3570501" class="link">TOIS2022: Explainable
+                                <a href="https://dl.acm.org/doi/10.1145/3570501" class="link">TOIS2023: Explainable
                                     Hyperbolic Temporal Point Process for User-Item Interaction Sequence Generation.
                                 </a>
                                 <p class="content">Yuchen Zhou, Yanan Cao, Yanmin Shang, Chuan Zhou, Shirui Pan,
@@ -217,7 +217,7 @@
                         <tr>
                             <th>
                                 <a href="https://dl.acm.org/doi/10.1007/s11280-021-00987-z"
-                                    class="link">WWWJ2022:API-GNN: Attribute Preserving Oriented Interactive Graph
+                                    class="link">WWWJ2022: API-GNN: Attribute Preserving Oriented Interactive Graph
                                     Neural Network. </a>
                                 <p class="content">Yuchen Zhou, Yanmin Shang, Yanan Cao, Qian Li, Chuan Zhou,
                                     Guandong Xu.</p>
@@ -429,6 +429,28 @@
             })
             .catch(error => console.error('Error loading navbar:', error));
     </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll("a").forEach(function (aTag) {
+            if (/CIKM2020|COLING2024|COLING2023|COLING2022|EMNLP2023|EMNLP2021|EMNLP2020|ICASSP2024|ICASSP2021|ICDM2022|ICME2019|NAACL2024|WSDM2024|WWWJ2024|WWWJ2023|WWWJ2022|WWWJ2020/.test(aTag.innerHTML)) {
+            aTag.innerHTML = aTag.innerHTML.replace(/CIKM2020:|COLING2024:|COLING2023:|COLING2022:|EMNLP2023:|EMNLP2021:|EMNLP2020:|ICASSP2024:|ICASSP2021:|ICDM2022:|ICME2019:|NAACL2024:|WSDM2024:|WWWJ2024:|WWWJ2023:|WWWJ2022:|WWWJ2020:/g, function (matched) {
+                return '<span class="badge text-bg-success">' + matched.slice(0, -1) + '</span> <span class="badge text-bg-warning rounded-pill">CCF-B</span>';
+            });
+            }
+            else if (/AAAI2025|AAAI2023|AAAI2022|AAAI2021|AAAI2020|ACL2025|ACL2024|ACL2023|ACL2022|ACL2021|ICML2024|KDD2025|TOIS2025|TOIS2023|WWW2025|WWW2023|WWW2022|WWW2020|WWW2019/.test(aTag.innerHTML)) {
+            aTag.innerHTML = aTag.innerHTML.replace(/AAAI2025:|AAAI2023:|AAAI2022:|AAAI2021:|AAAI2020:|ACL2025:|ACL2024:|ACL2023:|ACL2022:|ACL2021:|ICDM2024:|ICDM2023:|ICML2024:|KDD2025:|TOIS2025:|TOIS2023:|WWW2025:|WWW2023:|WWW2022:|WWW2020:|WWW2019:/g, function (matched) {
+                return '<span class="badge text-bg-success">' + matched.slice(0, -1) + '</span> <span class="badge text-bg-danger rounded-pill">CCF-A</span>';
+            });
+            }
+            else if (/IJCNN2021|NLPCC2023|PAKDD2020|KSEM2018/.test(aTag.innerHTML)) {
+            aTag.innerHTML = aTag.innerHTML.replace(/IJCNN2021:|NLPCC2023:|PAKDD2020:|KSEM2018:/g, function (matched) {
+                return '<span class="badge text-bg-success">' + matched.slice(0, -1) + '</span> <span class="badge text-bg-info rounded-pill">CCF-C</span>';
+            });
+            }
+        });
+    });
+</script>
 
 </body>
 

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LLMs Safety Paper List</title>
+    <link rel="icon" type="image/x-icon" href="/img/ASCII_1.ico" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.net/bootstrap/5.3.2/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.net/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css_style.css">
+</head>
+
+<body>
+
+    <div id="navbar"></div> <!-- 用于插入导航栏的容器 -->
+
+    <div class="container-fluid" style="margin-top: 100px;">
+
+        <button type="button" id="back-to-top" class="btn btn-outline-danger" onclick="scrollToTop()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-bar-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M3.646 11.854a.5.5 0 0 0 .708 0L8 8.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708M2.4 5.2c0 .22.18.4.4.4h10.4a.4.4 0 0 0 0-.8H2.8a.4.4 0 0 0-.4.4" />
+            </svg>
+        </button>
+
+
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/index.html">Index</a></li>
+                        <li class="breadcrumb-item">Group (Paper List)</li>
+                        <li class="breadcrumb-item active" aria-current="page">Large Language Models Safety</li>
+                    </ol>
+                </nav>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row" style="align-items: center; justify-content: center;">
+            <div class="col-sm-10 col-md-offset-1 col-lg-offset-1 col-xl-offset-1">
+                <table class="table table-striped">
+                    <tbody>
+
+                        <tr>
+                            <th>
+                                <a href="" class="link">ACL2025: From Trade-off to Synergy: A Versatile Symbiotic Watermarking Framework for Large Language Models</a>
+                                <p class="content">Yidan Wang, Yubing Ren, Yanan Cao, Binxing Fang</p>
+                                <p class="content"><strong>Abstract: </strong>The rise of Large Language Models (LLMs) has heightened concerns about the misuse of AI-generated text, making watermarking a promising solution. Mainstream watermarking schemes for LLMs fall into two categories: logits-based and sampling-based. However, current schemes entail trade-offs among robustness, text quality, and security. To mitigate this, we integrate logits-based and sampling-based schemes, harnessing their respective strengths to achieve synergy. In this paper, we propose a versatile symbiotic watermarking framework with three strategies: serial, parallel, and hybrid. The hybrid framework adaptively embeds watermarks using token entropy and semantic entropy, optimizing the balance between detectability, robustness, text quality, and security. Furthermore, we validate our approach through comprehensive experiments on various datasets and models. Experimental results indicate that our method outperforms existing baselines and achieves state-of-the-art (SOTA) performance. We believe this framework provides novel insights into diverse watermarking paradigms. Our code is available at https://github.com/redwyd/SymMark.</p>
+                                <a href="https://github.com/redwyd/SymMark">https://github.com/redwyd/SymMark</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <a href="" class="link">ACL2025: PIG: Privacy Jailbreak Attack on LLMs via Gradient-based Iterative In-Context Optimization</a>
+                                <p class="content">Yidan Wang, Yanan Cao, Yubing Ren, Fang Fang, Zheng Lin, Binxing Fang</p>
+                                <p class="content"><strong>Abstract: </strong>Large Language Models (LLMs) excel in various domains but pose inherent privacy risks. Existing methods to evaluate privacy leakage in LLMs often use memorized prefixes or simple instructions to extract data, both of which well-alignment models can easily block. Meanwhile, Jailbreak attacks bypass LLM safety mechanisms to generate harmful content, but their role in privacy scenarios remains underexplored. In this paper, we examine the effectiveness of jailbreak attacks in extracting sensitive information, bridging privacy leakage and jailbreak attacks in LLMs. Moreover, we propose PIG, a novel framework targeting Personally Identifiable Information (PII) and addressing the limitations of current jailbreak methods. Specifically, PIG identifies PII entities and their types in privacy queries, uses in-context learning to build a privacy context, and iteratively updates it with three gradient-based strategies to elicit target PII. We evaluate PIG and existing jailbreak methods using two privacy-related datasets. Experiments on four white-box and two black-box LLMs show that PIG outperforms baseline methods and achieves state-of-the-art (SoTA) results. The results underscore significant privacy risks in LLMs, emphasizing the need for stronger safeguards. Our code is availble at https://github.com/redwyd/PrivacyJailbreak.</p>
+                                <a href="https://github.com/redwyd/PrivacyJailbreak">https://github.com/redwyd/PrivacyJailbreak</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <a href="" class="link">ACL2025: Dynamic Evaluation with Cognitive Reasoning for Multi-turn Safety of Large Language Models</a>
+                                <p class="content">Lanxue Zhang, Yanan Cao, Yuqiang Xie, Fang Fang, Yangxi Li</p>
+                                <p class="content"><strong>Abstract: </strong>The rapid advancement of Large Language Models (LLMs) poses significant challenges for safety evaluation. Current static datasets struggle to identify emerging vulnerabilities due to three limitations: (1) they risk being exposed in model training data, leading to evaluation bias; (2) their limited prompt diversity fails to capture real-world application scenarios; (3) they are limited to provide human-like multi-turn interactions. To address these limitations, we propose a dynamic evaluation framework, CogSafe, for comprehensive and automated multi-turn safety assessment of LLMs. We introduce CogSafe based on cognitive theories to simulate the real chatting process. To enhance assessment diversity, we introduce scenario simulation and strategy decision to guide the dynamic generation, enabling coverage of application situations. Furthermore, we incorporate the cognitive process to simulate multi-turn dialogues that reflect the cognitive dynamics of real-world interactions. Extensive experiments demonstrate the scalability and effectiveness of our framework, which has been applied to evaluate the safety of widely used LLMs.</p>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <a href="" class="link">ACL2025: Reliably Bounding False Positives: A Zero-Shot Machine-Generated Text Detection Framework via Multiscaled Conformal Prediction</a>
+                                <p class="content">Xiaowei Zhu, Yubing Ren, Yanan Cao, Xixun Lin, Fang Fang, Yangxi Li</p>
+                                <p class="content"><strong>Abstract: </strong>The rapid advancement of large language models has raised significant concerns regarding their potential misuse by malicious actors. As a result, developing effective detectors to mitigate these risks has become a critical priority. However, most existing detection methods focus excessively on detection accuracy, often neglecting the societal risks posed by high false positive rates (FPRs). This paper addresses this issue by leveraging Conformal Prediction (CP), which effectively constrains the upper bound of FPRs. While directly applying CP constrains FPRs, it also leads to a significant reduction in detection performance. To overcome this trade-off, this paper proposes a Zero-Shot Machine-Generated Text Detection Framework via Multiscaled Conformal Prediction (MCP), which both enforces the FPR constraint and improves detection performance. This paper also introduces RealDet, a high-quality dataset that spans a wide range of domains, ensuring realistic calibration and enabling superior detection performance when combined with MCP. Empirical evaluations demonstrate that MCP effectively constrains FPRs, significantly enhances detection performance, and increases robustness against adversarial attacks across multiple detectors and datasets.</p>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <a href="https://openreview.net/forum?id=stFVHso95H" class="link">WWW2025: Bridging the Gap: Aligning Language Model Generation with Structured Information Extraction via Controllable State Transition</a>
+                                <p class="content">Hao Li, Yubing Ren, Yanan Cao, Yingjie Li, Fang Fang, Zheng Lin, Shi Wang</p>
+                                <p class="content"><strong>Abstract: </strong>Large language models (LLMs) achieve superior performance in generative tasks. However, due to the natural gap between language model generation and structured information extraction in three dimensions: task type, output format, and modeling granularity, they often fall short in structured information extraction, a crucial capability for effective data utilization on the web. In this paper, we define the generation process of the language model as the controllable state transition, aligning the generation and extraction processes to ensure the integrity of the output structure and adapt to the goals of the information extraction task. Furthermore, we propose the Structure2Text decider to help the language model understand the fine-grained extraction information, which converts the structured output into natural language and makes state decisions, thereby focusing on the task-specific information kernels, and alleviating language model hallucinations and incorrect content generation. We conduct extensive experiments and detailed analyses on myriad information extraction tasks, including named entity recognition, relation extraction, and event argument extraction. Our method not only achieves significant performance improvements but also considerably enhances the model's capability to generate precise and relevant content, making the extracted content easy to parse.</p>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <a href="" class="link">ACL2024: Subtle Signatures, Strong Shields: Advancing
+                                    Robust and Imperceptible Watermarking in Large Language Models</a>
+                                <p class="content">Yubing Ren, Ping Guo, Yanan Cao, Wei Ma</p>
+                                <p class="content"><strong>Abstract:</strong>The widespread adoption of Large
+                                    Language Models (LLMs) has led to an increase in AI-generated text on the
+                                    Internet, presenting a crucial challenge to differentiate AI-created content
+                                    from human-written text. This challenge is critical to prevent issues of
+                                    authenticity, trust, and potential copyright violations. Current research
+                                    focuses on watermarking LLM-generated text, but traditional techniques
+                                    struggle to balance robustness with text quality. We introduce a novel
+                                    watermarking approach, Robust and Imperceptible Watermarking (RIW) for LLMs,
+                                    which leverages token prior probabilities to improve detectability and
+                                    maintain watermark imperceptibility. RIW methodically embeds watermarks by
+                                    partitioning selected tokens into two distinct groups based on their prior
+                                    probabilities and employing tailored strategies for each group. In the
+                                    detection stage, the RIW method employs the ‘voted z-test’ to provide a
+                                    statistically robust framework to identify the presence of a watermark
+                                    accurately. The effectiveness of RIW is evaluated across three key
+                                    dimensions: success rate, text quality, and robustness against removal
+                                    attacks. Our experimental results on various LLMs, including GPT2-XL,
+                                    OPT-1.3B, and LLaMA2-7B, indicate that RIW surpasses existing models, and
+                                    also exhibits increased robustness against various attacks and good
+                                    imperceptibility, thus promoting the responsible use of LLMs.</p>
+                                <a href="https://github.com/Lilice-r/RIW">https://github.com/Lilice-r/RIW</a>
+                            </th>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <p>ASCII Lab, Institute of Information Engineering, Chinese Academy of
+            Sciences. No.19 Shucun Road,
+            Haidian District, Beijing, China<a
+                href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a>
+            100085</p>
+    </div>
+
+    <script>
+        window.onscroll = function () {
+            const backToTopButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // 滚动到页面顶部
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth" // 平滑滚动
+            });
+        }
+    </script>
+
+    <script>
+        // 使用 fetch 动态加载 head.html
+        fetch('/head.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll("a").forEach(function (aTag) {
+            if (/CIKM2020|COLING2024|COLING2023|COLING2022|EMNLP2023|EMNLP2021|EMNLP2020|ICASSP2024|ICASSP2021|ICDM2022|ICME2019|NAACL2024|WSDM2024|WWWJ2024|WWWJ2023|WWWJ2022|WWWJ2020/.test(aTag.innerHTML)) {
+            aTag.innerHTML = aTag.innerHTML.replace(/CIKM2020:|COLING2024:|COLING2023:|COLING2022:|EMNLP2023:|EMNLP2021:|EMNLP2020:|ICASSP2024:|ICASSP2021:|ICDM2022:|ICME2019:|NAACL2024:|WSDM2024:|WWWJ2024:|WWWJ2023:|WWWJ2022:|WWWJ2020:/g, function (matched) {
+                return '<span class="badge text-bg-success">' + matched.slice(0, -1) + '</span> <span class="badge text-bg-warning rounded-pill">CCF-B</span>';
+            });
+            }
+            else if (/AAAI2025|AAAI2023|AAAI2022|AAAI2021|AAAI2020|ACL2025|ACL2024|ACL2023|ACL2022|ACL2021|ICML2024|KDD2025|TOIS2025|TOIS2023|WWW2025|WWW2023|WWW2022|WWW2020|WWW2019/.test(aTag.innerHTML)) {
+            aTag.innerHTML = aTag.innerHTML.replace(/AAAI2025:|AAAI2023:|AAAI2022:|AAAI2021:|AAAI2020:|ACL2025:|ACL2024:|ACL2023:|ACL2022:|ACL2021:|ICDM2024:|ICDM2023:|ICML2024:|KDD2025:|TOIS2025:|TOIS2023:|WWW2025:|WWW2023:|WWW2022:|WWW2020:|WWW2019:/g, function (matched) {
+                return '<span class="badge text-bg-success">' + matched.slice(0, -1) + '</span> <span class="badge text-bg-danger rounded-pill">CCF-A</span>';
+            });
+            }
+            else if (/IJCNN2021|NLPCC2023|PAKDD2020|KSEM2018/.test(aTag.innerHTML)) {
+            aTag.innerHTML = aTag.innerHTML.replace(/IJCNN2021:|NLPCC2023:|PAKDD2020:|KSEM2018:/g, function (matched) {
+                return '<span class="badge text-bg-success">' + matched.slice(0, -1) + '</span> <span class="badge text-bg-info rounded-pill">CCF-C</span>';
+            });
+            }
+        });
+    });
+</script>
+</body>
+
+</html>
