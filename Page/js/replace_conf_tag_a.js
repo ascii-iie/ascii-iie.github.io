@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       level: "CCF-C",
       colorClass: "text-bg-info",
-      confs: ["IJCNN2021", "NLPCC2023", "PAKDD2020", "KSEM2018"]
+      confs: ["IJCNN2021", "NLPCC2025", "NLPCC2023", "PAKDD2020", "KSEM2018"]
     },
     {
         level: "CCF-None",
