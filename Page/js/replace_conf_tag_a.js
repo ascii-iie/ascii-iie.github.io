@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       level: "CCF-B",
       colorClass: "text-bg-warning",
-      confs: ["CIKM2020", "COLING2024", "COLING2023", "COLING2022", "ECAI2023", "ECML2025", "ECML2021",
+      confs: ["CIKM2020", "COLING2024", "COLING2023", "COLING2022", "ECAI2025", "ECAI2023", "ECML2025", "ECML2021",
               "EMNLP2023", "EMNLP2022", "EMNLP2021", "EMNLP2020", "ICASSP2024", "ICASSP2022", "ICASSP2021",
               "ICDM2024", "ICDM2022", "ICDM2021", "ICDM2020", "ICDM2019", "ICME2019", "NAACL2024", "PR2022", "TNNLS2022", "WSDM2024", "WSDM2021",
               "WWWJ2024", "WWWJ2023", "WWWJ2022", "WWWJ2020"]
