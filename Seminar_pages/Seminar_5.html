@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Seminar</title>
+	<link rel="icon" type="image/x-icon" href="../img/ASCII_1.ico" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.staticfile.net/bootstrap/5.3.2/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.net/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css_style.css" />
+	<link rel="stylesheet" type="text/css" href="./Seminar_pages.css" />
+</head>
+
+
+<body>
+	<div id="navbar"></div> <!-- 用于插入导航栏的容器 -->
+
+	<div class="container-fluid" style="margin-top: 100px;">
+
+		<nav class="sidenav-left d-flex flex-column p-3" style="background-color: rgb(250, 250, 250);">
+			<div class="list-group" id="volumelist">
+				<a href="#" class="list-group-item list-group-item-action list-header" style="background: #f6f6f6;">
+					<h5 style="text-align: center;">专辑</h5>
+				</a>
+				<a href="#2025专题：持续学习" class="list-group-item list-group-item-action">
+					<span class="badge text-bg-primary">2025专题</span><br>持续学习</a>
+			</div>
+		</nav>
+
+		<nav class="sidenav-right d-flex flex-column p-3" style="background-color: rgb(250, 250, 250);">
+			<!-- 控制所有卡片折叠/展开的按钮 -->
+			<button type="button" id="back-to-top" class="btn btn-outline-danger" onclick="scrollToTop()">
+				回到顶部
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+					class="bi bi-chevron-bar-up" viewBox="0 0 16 16">
+					<path fill-rule="evenodd"
+						d="M3.646 11.854a.5.5 0 0 0 .708 0L8 8.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708M2.4 5.2c0 .22.18.4.4.4h10.4a.4.4 0 0 0 0-.8H2.8a.4.4 0 0 0-.4.4" />
+				</svg>
+			</button>
+			<br>
+			<button type="button" class="btn btn-outline-primary toggle-all-btn" onclick="toggleAllCards(this)">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+					class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+					<path
+						d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+				</svg>
+				展开 | 折叠
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+					class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+					<path
+						d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+				</svg>
+			</button>
+			<br>
+			<nav aria-label="Page navigation">
+				<ul class="pagination">
+					<li class="page-item">
+						<a class="page-link" href="./Seminar_1.html" aria-label="Previous">
+							<span aria-hidden="true">&laquo;</span>
+						</a>
+					</li>
+					<li class="page-item"><a class="page-link" href="./Seminar_3.html">3</a></li>
+					<li class="page-item active"><a class="page-link" href="./Seminar_4.html">4</a></li>
+					<li class="page-item disabled">
+						<a class="page-link" href="./Seminar_4.html" aria-label="Next">
+							<span aria-hidden="true">&raquo;</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</nav>
+
+		<div class="main">
+
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="/index.html">Index</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Seminar</li>
+						</ol>
+					</nav>
+					<hr>
+				</div>
+			</div>
+
+
+			<div class="period-title">
+				<h2 id="2025专题：持续学习"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+						fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16">
+						<path
+							d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+					</svg>&nbsp;2025专题：持续学习</h2>
+			</div>
+			<div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-3 row-cols-xxl-4 g-4">
+				<div class="col">
+					<div class="card shadow">
+						<div class="card-header">
+							<div>第138期讨论班</div>
+							<div><span class="badge text-bg-secondary rounded-pill">2025-09-05</span></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">大模型持续学习</h5>
+							<h6 class="card-subtitle mb-2 text-body-secondary"><span
+									class="badge text-bg-success">主讲人</span>&nbsp; 张岚雪</h6>
+							<hr>
+							<p class="card-text" id="card-text-137-1">
+								在大模型优化过程中，由于知识高度密集，模型常常会遭遇灾难性遗忘的问题，即在学习新任务时容易丧失对旧任务的掌握。为缓解这一问题，研究者通常采用持续学习的方法，旨在使模型在动态环境中不断获取新知识的同时，有效保持对已有任务的记忆。本期讨论班专题将围绕如何在模型优化过程中缓解灾难性遗忘展开，从多种优化方式的角度进行探讨。本次讨论班重点关注如何通过上下文信息实现模型的长期记忆，避免因微调模型参数而产生的记忆干扰，并进一步讨论如何评估大模型的长期记忆能力以及长期记忆的管理策略。希望本次讨论能够对大家的研究工作有所启发。
+							<span class="fade-effect"></span>
+							</p>
+							<button type="button" class="btn btn-outline-secondary btn-sm toggle-btn"
+								onclick="toggleText('card-text-137-1', this)">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+									<path
+										d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+								</svg>
+							</button>
+						</div>
+						<div class="card-footer" style="text-align: center;">
+							<!-- <a href="" class="card-link">演示文稿</a> -->
+							<a href="https://meeting.tencent.com/crm/K0BbAeBWce" class="card-link">录屏链接</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<footer>
+			<br>
+			<hr><br><br>
+			<nav aria-label="Page navigation">
+				<ul class="pagination justify-content-center">
+					<li class="page-item">
+						<a class="page-link" href="./Seminar_1.html" aria-label="Previous">
+							<span aria-hidden="true">&laquo;</span>
+						</a>
+					</li>
+					<li class="page-item"><a class="page-link" href="./Seminar_3.html">3</a></li>
+					<li class="page-item active"><a class="page-link" href="./Seminar_4.html">4</a></li>
+					<li class="page-item disabled">
+						<a class="page-link" href="./Seminar_4.html" aria-label="Next">
+							<span aria-hidden="true">&raquo;</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+	</div>
+
+	<div class="footer">
+		<p>ASCII Lab, Institute of Information Engineering, Chinese Academy of
+			Sciences. No.19 Shucun Road,
+			Haidian District, Beijing, China<a
+				href="https://map.baidu.com/poi/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80/@12947450.025,4841838.03,19z?uid=dcaaf0f6ea39b2f7badf8f48&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl">(Map)</a>
+			100085</p>
+	</div>
+
+
+	<script>
+		const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+		const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+		function toggleText(id, btn) {
+			const textElement = document.getElementById(id);
+			const svgIcon = btn.querySelector('svg path'); // 获取SVG路径
+
+			if (textElement.classList.contains('expanded')) {
+				// 折叠状态，显示向下箭头
+				textElement.classList.remove('expanded');
+				svgIcon.setAttribute('d', 'M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'); // 向下箭头路径
+			} else {
+				// 展开状态，显示向上箭头
+				textElement.classList.add('expanded');
+				svgIcon.setAttribute('d', 'M7.247 4.86l4.796 5.48c.566.645.106 1.658-.753 1.658H3.204a1 1 0 0 1-.753-1.659l4.796-5.48a1 1 0 0 1 1.506 0z'); // 向上箭头路径
+			}
+		}
+		// 控制所有卡片折叠/展开
+		// 控制所有卡片的展开/折叠，确保按钮状态也正确
+		function toggleAllCards(btn) {
+			const allCardTexts = document.querySelectorAll('.card-text'); // 获取所有卡片的 card-text
+			const allToggleButtons = document.querySelectorAll('.toggle-btn'); // 获取所有控制每个卡片的按钮
+			let isExpanded = false;
+
+			// 判断当前是否有任意一个卡片已经展开
+			allCardTexts.forEach(text => {
+				if (text.classList.contains('expanded')) {
+					isExpanded = true;
+				}
+			});
+
+			// 如果有展开的卡片，则全部折叠；否则全部展开
+			allCardTexts.forEach(text => {
+				if (isExpanded) {
+					text.classList.remove('expanded');
+				} else {
+					text.classList.add('expanded');
+				}
+			});
+
+			// 更新每个按钮的图标
+			allToggleButtons.forEach((button, index) => {
+				if (isExpanded) {
+					button.innerHTML = `
+				<svg xmlns="http://www.w3.org/2000/svg" class="bi bi-caret-down-fill svg-icon" viewBox="0 0 16 16">
+					<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+				</svg>
+			`;
+				} else {
+					button.innerHTML = `
+				<svg xmlns="http://www.w3.org/2000/svg" class="bi bi-caret-up-fill svg-icon" viewBox="0 0 16 16">
+					<path d="M7.247 4.86l4.796 5.48c.566.645.106 1.658-.753 1.658H3.204a1 1 0 0 1-.753-1.659l4.796-5.48a1 1 0 0 1 1.506 0z"/>
+				</svg>
+			`;
+				}
+			});
+		}
+		window.onscroll = function () {
+			const backToTopButton = document.getElementById("back-to-top");
+			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+				backToTopButton.style.display = "block";
+			} else {
+				backToTopButton.style.display = "none";
+			}
+		};
+
+		// 滚动到页面顶部
+		function scrollToTop() {
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth" // 平滑滚动
+			});
+		}
+	</script>
+
+	<script>
+		// 使用 fetch 动态加载 head.html
+		fetch('/head.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('navbar').innerHTML = data;
+			})
+			.catch(error => console.error('Error loading navbar:', error));
+	</script>
+
+</body>
+
+</html>
