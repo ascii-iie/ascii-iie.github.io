@@ -47,6 +47,48 @@
     /* 垂直居中 */
     background: linear-gradient(45deg, #0c476c 30%, #3e81aa 60%, #e3e0de 60%, #e3e0de 71%, #f68229 71%, #f9ad72 87%);
     color: #ffffff;
+    white-space: nowrap;
+    /* 防止文字换行 */
+}
+
+.card-header > div:first-child {
+    flex-shrink: 1;
+    /* 允许左侧内容收缩 */
+    min-width: 0;
+    /* 允许文本溢出处理 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 文本过长时显示省略号 */
+}
+
+.card-header > div:last-child {
+    flex-shrink: 0;
+    /* 防止右侧日期收缩 */
+    margin-left: 10px;
+    /* 添加间距 */
+}
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    /* 添加边框作为分割线 */
+}
+
+.card {
+    border: none;
+    /* 移除默认边框 */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    /* 保留阴影效果 */
 }
 
 .card-text {
@@ -55,6 +97,12 @@
     overflow: hidden;
     transition: max-height 0.5s ease;
     position: relative;
+    flex: 1;
+}
+
+/* 展开的样式 */
+.card-text.expanded {
+    max-height: none;
 }
 
 /* 展开的样式 */
