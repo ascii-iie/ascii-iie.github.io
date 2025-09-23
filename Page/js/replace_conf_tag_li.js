@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       level: "CCF-A",
       colorClass: "text-bg-danger",
-      confs: ["AAAI2025", "AAAI2023", "AAAI2022", "AAAI2021", "AAAI2020",
+      confs: ["NeurIPS2025","AAAI2025", "AAAI2023", "AAAI2022", "AAAI2021", "AAAI2020",
               "ACL2025", "ACL2024", "ACL2023", "ACL2022", "ACL2021",
               "ICML2024", "KDD2025", "SIGIR2024", "SIGIR2022", "TKDE2023", "TOIS2025", "TOIS2023",
               "WWW2025", "WWW2024", "WWW2023", "WWW2022", "WWW2021", "WWW2020", "WWW2019"]
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cfg.confs.forEach(conf => {
         const regex = new RegExp(`\\(${conf}\\)`, "g");
         html = html.replace(regex, 
-          `<span class="badge text-bg-success">${conf}</span> <span class="badge ${cfg.colorClass} rounded-pill">${cfg.level}</span>`);
+          `<span class="badge ${cfg.colorClass}">${conf}</span> <span class="badge ${cfg.colorClass} rounded-pill">${cfg.level}</span>`);
       });
     });
 
